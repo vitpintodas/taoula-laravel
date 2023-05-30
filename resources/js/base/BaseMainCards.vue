@@ -30,8 +30,12 @@
   const getImagePath = (type) => {
     // lien suceptible de changer en fonction de l'ordinateur ou du serveur
     // return `http://[::1]:5174/resources/assets/svg/${type}.svg`
-    return `./resources/assets/svg/${type}.svg`
-
+    // return `../../../resources/assets/svg/${type}.svg`
+    // console.log(import.meta.url)
+    //return the path of the svg using import.meta.url
+    // console.log(`${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`)
+    // console.log(`${import.meta.url.split('resources')[0]}`)
+    return `${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`
   }
 
 </script>
@@ -40,10 +44,11 @@
     <div class="baseMainCard-container">
           <div class="baseMainCard-type">
             <img :src="getImagePath(type)"/>
+
           </div>
           <div class="baseMainCard-textContainer">
           <div>
-            <h2 class="titre2">{{ title }}</h2>
+            <h2 class="titre2">{{ title }} </h2>
             <p class="description">{{ description }}</p>
           </div>
 
