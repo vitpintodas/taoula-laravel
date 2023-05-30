@@ -1,3 +1,5 @@
+@import 'baseMainCard.css';
+
 /* VARIABLES DES COULEURS */
 :root {
     /* VARIABLES DES COULEURS */
@@ -15,7 +17,7 @@
     /* TITRE 2 */
     --title2: 'Inter', sans-serif;
     --title2Width: 700;
-    --title2Size: 17px;
+    --title2Size: 20px;
 
     /* TEXTES */
     --text: 'Inter', sans-serif;
@@ -24,8 +26,8 @@
 
     /* DESCRIPTION */
     --description: 'Inter', sans-serif;
-    --descriptionWidth: 400;
-    --descriptionSize: 12px;
+    --descriptionWidth: 500;
+    --descriptionSize: 13px;
 
     /* PETITE DESCRIPTION 2 */
     --smallDescription: 'Inter', sans-serif;
@@ -40,8 +42,16 @@
     --labelSize: 12px;
   }
 
+/* supression des comportements par défauts des liens */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
-
+/* suppression du comportement par défaut des textes */
+h2, p{
+    margin: 0;
+  }
 
 body {
     color: white;
@@ -50,9 +60,32 @@ body {
     font-size: var(--title2Size);
 }
 
-/* supression des comportements par défauts des liens */
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+.titre{
+    font-family: var(--title);
+    font-weight: var(--titleWidth);
+    font-size: var(--titleSize);
+}
 
+.titre2 {
+    font-family: var(--title2);
+    font-weight: var(--title2Width);
+    font-size: var(--title2Size);
+}
+
+.description {
+    font-family: var(--description);
+    font-weight: var(--descriptionWidth);
+    font-size: var(--descriptionSize);
+}
+
+.small-description {
+    font-family: var(--smallDescription);
+    font-weight: var(--smallDescriptionWidth);
+    font-size: var(--smallDescriptionSize);
+}
+
+.label {
+    font-family: var(--label);
+    font-weight: var(--labelWidth);
+    font-size: var(--labelSize);
+}
