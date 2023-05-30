@@ -29,70 +29,30 @@
   //s'occupe de générer le chemin du svg
   const getImagePath = (type) => {
     // lien suceptible de changer en fonction de l'ordinateur ou du serveur
-    return `http://[::1]:5174/resources/assets/svg/${type}.svg`
+    // return `http://[::1]:5174/resources/assets/svg/${type}.svg`
+    return `./resources/assets/svg/${type}.svg`
+
   }
 
 </script>
 <template>
   <a :href="link">
-    <div class="container">
-          <div class="type">
+    <div class="baseMainCard-container">
+          <div class="baseMainCard-type">
             <img :src="getImagePath(type)"/>
           </div>
-          <div class="textContainer">
+          <div class="baseMainCard-textContainer">
           <div>
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
+            <h2 class="titre2">{{ title }}</h2>
+            <p class="description">{{ description }}</p>
           </div>
 
 
-            <p class="info">{{ info }}</p>
+            <p class="small-description">{{ info }}</p>
           </div>
     </div>
   </a>
 
 </template>
-<style>
-@import '././resources/css/app.css';
-/* ce code sert à tej les marges par défauts sur les textes */
-h2, p{
-  margin: 0;
-}
 
-.container {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  height: 98px;
-  background-color: #393939;
-  flex-direction: row;
-  min-width: auto;
-  max-width: 450px;
-  color: #fff;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.textContainer {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.type {
-display: flex;
-width: 86px;
-height: 98px;
-background: #F05CC8;
-
-border-radius: 10px 0px 0px 10px;
-justify-content: center;
-align-items: center;
-}
-
-.info{
-  font-size: small;
-  color : #777777;
-}
-</style>
-
+<!-- css : BaseMainCards.css -->

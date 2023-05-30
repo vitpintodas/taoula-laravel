@@ -1,3 +1,91 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'baseMainCard.css';
+
+/* VARIABLES DES COULEURS */
+:root {
+    /* VARIABLES DES COULEURS */
+    --black: #000000;
+    --secondBlack: #393939;
+    --pink: #F05CC8;
+    --white: #FFFFFF;
+
+    /* VARIABLES DES POLICES */
+    /* TITRE */
+    --title: 'Inter', sans-serif;
+    --titleWidth: 700;
+    --titleSize: 28px;
+
+    /* TITRE 2 */
+    --title2: 'Inter', sans-serif;
+    --title2Width: 700;
+    --title2Size: 20px;
+
+    /* TEXTES */
+    --text: 'Inter', sans-serif;
+    --textWidth: 600;
+    --textSize: 14px;
+
+    /* DESCRIPTION */
+    --description: 'Inter', sans-serif;
+    --descriptionWidth: 500;
+    --descriptionSize: 13px;
+
+    /* PETITE DESCRIPTION 2 */
+    --smallDescription: 'Inter', sans-serif;
+    --smallDescriptionWidth: 400;
+    --smallDescriptionSize: 10px;
+    /* PETITE DESCRIPTION BOLD */
+    --smallDescriptionBoldWidth: 600;
+
+    /* LABELS */
+    --label: 'Inter', sans-serif;
+    --labelWidth: 600;
+    --labelSize: 12px;
+  }
+
+/* supression des comportements par défauts des liens */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+/* suppression du comportement par défaut des textes */
+h2, p{
+    margin: 0;
+  }
+
+body {
+    color: white;
+    background-color: #000000;
+    font-family: var(--title);
+    font-size: var(--title2Size);
+}
+
+.titre{
+    font-family: var(--title);
+    font-weight: var(--titleWidth);
+    font-size: var(--titleSize);
+}
+
+.titre2 {
+    font-family: var(--title2);
+    font-weight: var(--title2Width);
+    font-size: var(--title2Size);
+}
+
+.description {
+    font-family: var(--description);
+    font-weight: var(--descriptionWidth);
+    font-size: var(--descriptionSize);
+}
+
+.small-description {
+    font-family: var(--smallDescription);
+    font-weight: var(--smallDescriptionWidth);
+    font-size: var(--smallDescriptionSize);
+}
+
+.label {
+    font-family: var(--label);
+    font-weight: var(--labelWidth);
+    font-size: var(--labelSize);
+}
