@@ -28,7 +28,8 @@
 
   //s'occupe de générer le chemin du svg
   const getImagePath = (type) => {
-    return `resources/assets/svg/${type}.svg`
+    // lien suceptible de changer en fonction de l'ordinateur ou du serveur
+    return `http://[::1]:5174/resources/assets/svg/${type}.svg`
   }
 
 </script>
@@ -37,7 +38,6 @@
     <div class="container">
           <div class="type">
             <img :src="getImagePath(type)"/>
-
           </div>
           <div class="textContainer">
           <div>
@@ -53,6 +53,7 @@
 
 </template>
 <style>
+@import '././resources/css/app.css';
 /* ce code sert à tej les marges par défauts sur les textes */
 h2, p{
   margin: 0;
@@ -64,7 +65,8 @@ h2, p{
   height: 98px;
   background-color: #393939;
   flex-direction: row;
-  width: 360px;
+  min-width: auto;
+  max-width: 450px;
   color: #fff;
   border-radius: 10px;
   margin: 10px;
@@ -81,7 +83,7 @@ h2, p{
 display: flex;
 width: 86px;
 height: 98px;
-background: #EC6A88;
+background: #F05CC8;
 
 border-radius: 10px 0px 0px 10px;
 justify-content: center;
