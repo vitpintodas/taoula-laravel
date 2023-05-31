@@ -1,15 +1,10 @@
-
-  
-  .baseMainCard-container {
+.smallCard-container {
     /* TEXTE */
-    font-family: var(--title2);
-    font-weight: var(--title2Width);
-    font-size: var(--title2Size);
-
     display: flex;
-    height: 98px;
+    height: 55px;
     background-color: var(--secondBlack);
     flex-direction: row;
+
     min-width: auto;
     max-width: 450px;
 
@@ -17,21 +12,31 @@
     border-radius: 10px;
     margin: 10px;
   }
-  
-  .baseMainCard-textContainer {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+  .smallCard-textContainer {
+    font-family: var(--title2);
+    font-weight: var(--title2Width);
+    font-size: var(--title2Size);
+
   }
-  
-  .baseMainCard-type {
+
+  .smallCard-textAndLike {
+    width: 100%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.smallCard-type {
   display: flex;
   min-width: 86px;
-  height: 98px;
+  height: 55px;
   background: var(--pink);
   
   border-radius: 10px 0px 0px 10px;
   justify-content: center;
   align-items: center;
-  }
+}

@@ -38,6 +38,13 @@
     return `${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`
   }
 
+  const cutTitle = (title) => {
+    if (title.length > 25) {
+      return title.substring(0, 25) + '...'
+    }
+    return title
+  }
+
 </script>
 <template>
   <a :href="link">
@@ -48,7 +55,7 @@
           </div>
           <div class="baseMainCard-textContainer">
           <div>
-            <h2 class="titre2">{{ title }} </h2>
+            <h2 class="titre2">{{ cutTitle(title) }} </h2>
             <p class="description">{{ description }}</p>
           </div>
 
