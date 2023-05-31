@@ -1,5 +1,6 @@
 <script setup>
   import { defineProps } from 'vue'
+  import { getImagePath } from '../utils/getImagePath';
 
   defineProps({
     title: {
@@ -27,10 +28,6 @@
     return title
   }
 
-  const getImagePath = (type) => {
-    return `${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`
-  }
-
 
 </script>
 <template>
@@ -42,7 +39,7 @@
             <div class="smallCard-textAndLike">
                 <h2 class="smallCard-textContainer">{{ cutTitle(title) }}</h2>
                 <img v-if="likeStatus" :src="getImagePath('liked')" @click="likeStatus = !likeStatus"/>
-                <img v-if="!likeStatus" :src="getImagePath('unLiked')" @click="likeStatus = !likeStatus"/>
+                <img v-if="!likeStatus" :src="getImagePath('unliked')" @click="likeStatus = !likeStatus"/>
             </div>
         </div>
     </a>

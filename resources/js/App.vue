@@ -1,8 +1,8 @@
 <script setup>
 
 import BaseMainCards from './base/BaseMainCards.vue';
+import BaseSettingsButton from './base/BaseSettingsButton.vue';
 import BaseSmallCards from './base/BaseSmallCards.vue';
-// import LiveSvg from './assets/vue.svg'
 
 
 </script>
@@ -14,7 +14,7 @@ import BaseSmallCards from './base/BaseSmallCards.vue';
   <BaseMainCards title="Smash mouth - All star" description="Heure musique" type="poll" link="#unLien" info="05:20:23"/>
   <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
   <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
-  
+  <BaseSettingsButton title="Paramètres" type="podcast"/>
 
 </template>
 

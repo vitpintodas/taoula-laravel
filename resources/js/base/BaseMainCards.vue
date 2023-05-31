@@ -1,5 +1,6 @@
 <script setup>
   import { defineProps } from 'vue'
+  import { getImagePath } from '../utils/getImagePath';
 
   defineProps({
     title: {
@@ -26,17 +27,6 @@
     }
   })
 
-  //s'occupe de générer le chemin du svg
-  const getImagePath = (type) => {
-    // lien suceptible de changer en fonction de l'ordinateur ou du serveur
-    // return `http://[::1]:5174/resources/assets/svg/${type}.svg`
-    // return `../../../resources/assets/svg/${type}.svg`
-    // console.log(import.meta.url)
-    //return the path of the svg using import.meta.url
-    // console.log(`${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`)
-    // console.log(`${import.meta.url.split('resources')[0]}`)
-    return `${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`
-  }
 
   const cutTitle = (title) => {
     if (title.length > 25) {
