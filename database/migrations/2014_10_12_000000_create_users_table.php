@@ -13,17 +13,25 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+
+            // informations utilisateur
             $table->string('prenom', 100);
             $table->string('nom', 100);
+
+            // informations de connexion
             $table->string('email')->unique();
-            //$table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            // monnaie virtuelle
             $table->integer('coins')->default(0);
+
+            // adresse utilisateur
             $table->string('NPA', 4);
             $table->string('localite', 100);
             $table->string('rue', 100);
-            //$table->rememberToken();
-            //$table->timestamps();
+
+            // table créé à et modifié à
+            $table->timestamps();
         });
     }
 
