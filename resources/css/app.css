@@ -1,7 +1,9 @@
 @import 'baseMainCard.css';
+@import 'TheHeader.css';
 @import 'baseSmallCard.css';
 @import 'baseSettingsButton.css';
 @import 'theHeader.css';
+@import 'baseLabel.css';
 
 /* VARIABLES DES COULEURS */
 :root {
@@ -58,7 +60,7 @@ h2, p{
 
 body {
     color: white;
-    background-color: #000000;
+    background-color: var(--black);
 }
 
 .titre{
