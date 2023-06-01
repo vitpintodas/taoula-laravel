@@ -1,39 +1,47 @@
-nav {
-    height: 98px;
-    background-color: #393939;
-    width: 100%;
-    position: fixed;
-    bottom: 0%;
-    left: 0%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--secondBlack);
 }
 
-nav ul {
-    height: 98px;
-    margin-top: 0px;
-    padding-left: 0px;
+.c3-logo {
+  flex-grow: 1;
+  text-align: center;
 }
 
-nav ul li {
-    display: inline-flex;
-    height: 98px;
-    width: 20%;
+.right-section {
+  display: flex;
+  align-items: center;
 }
 
-nav ul li a {
-    width: 100%;
-    text-align: center;
-    font-family: var(--smallDescription);
-    font-weight: var(--smallDescriptionWidth);
-    font-size: var(--smallDescriptionSize);
-    color: white;
+.coins {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: var(--black);
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
-    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
-        brightness(97%) contrast(94%);
+.coins p {
+  margin-left: 5px;
 }
 
-nav ul li a img {
-    height: 30px;
-    margin-top: 27px;
+.shop {
+  padding: 5px 10px;
+  background-color: var(--black);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .back-arrow {
+    display: none;
+  }
+
+  .coins,
+  .shop {
+    display: none;
+  }
 }

@@ -1,4 +1,5 @@
 <script setup>
+
 import { getImagePath } from '../utils/getImagePath';
 
 //A changer pour mettre le nombre de coins de l'utilisateur
