@@ -1,0 +1,29 @@
+.baseLabel-container {
+    background-color: var(--secondBlack);
+    height: 24px;
+    border-radius: 4px;
+    /* apparement firefox ne supporte pas ça */
+    width: fit-content;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.selected {
+    background-color: var(--pink);
+}
+
+.baseLabel-text {
+    font-family: var(--description);
+    font-weight: var(--descriptionWidth);
+    font-size: var(--descriptionSize);
+    text-align: center;
+
+}

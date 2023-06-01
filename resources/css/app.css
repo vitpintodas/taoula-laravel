@@ -1,6 +1,7 @@
 @import 'baseMainCard.css';
 @import 'baseSmallCard.css';
 @import 'baseSettingsButton.css';
+@import 'baseLabel.css';
 
 /* VARIABLES DES COULEURS */
 :root {

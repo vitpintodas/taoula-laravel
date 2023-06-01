@@ -1,8 +1,8 @@
 <script setup>
-  import { defineProps } from 'vue'
+  import { defineProps, ref} from 'vue'
   import { getImagePath } from '../utils/getImagePath';
 
-  defineProps({
+  const props = defineProps({
     title: {
       type: String,
       required: true
@@ -21,6 +21,9 @@
     }
   })
 
+  const isLiked = ref(props.likeStatus)
+
+  //coupe les titres trop long
   const cutTitle = (title) => {
     if (title.length > 20) {
       return title.substring(0, 20) + '...'
@@ -28,6 +31,9 @@
     return title
   }
 
+  const toggleLiked = () => {
+    isLiked.value = !isLiked.value
+  }
 
 </script>
 <template>
@@ -38,8 +44,8 @@
             </div>
             <div class="smallCard-textAndLike">
                 <h2 class="smallCard-textContainer">{{ cutTitle(title) }}</h2>
-                <img v-if="likeStatus" :src="getImagePath('liked')" @click="likeStatus = !likeStatus"/>
-                <img v-if="!likeStatus" :src="getImagePath('unliked')" @click="likeStatus = !likeStatus"/>
+                <img v-if="isLiked" :src="getImagePath('liked')" @click="toggleLiked()"/>
+                <img v-if="!isLiked" :src="getImagePath('unliked')" @click="toggleLiked()"/>
             </div>
         </div>
     </a>
