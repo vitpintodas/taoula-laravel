@@ -21,8 +21,7 @@
 
 </script>
 <template>
-      <div :class="{ selected: Isselected, 'baseLabel-container': true }"  @click="toggleSelect()">
-
+      <div class="baseLabel-container"  @click="toggleSelect()">
         <p class="baseLabel-text">{{ title }} </p>
     </div>
 </template>
