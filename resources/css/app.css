@@ -3,6 +3,7 @@
 @import 'baseSmallCard.css';
 @import 'baseSettingsButton.css';
 @import 'baseLabel.css';
+@import 'interest.css';
 
 /* VARIABLES DES COULEURS */
 :root {
@@ -20,13 +21,13 @@
 
     /* TITRE 2 */
     --title2: 'Inter', sans-serif;
-    --title2Width: 700;
-    --title2Size: 20px;
+    --title2Width: 600;
+    --title2Size: 17px;
 
     /* TEXTES */
     --text: 'Inter', sans-serif;
-    --textWidth: 600;
-    --textSize: 14px;
+    --textWidth: 500;
+    --textSize: 15px;
 
     /* DESCRIPTION */
     --description: 'Inter', sans-serif;
@@ -53,7 +54,7 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 /* suppression du comportement par défaut des textes */
-h2, p{
+h2, h1, p{
     margin: 0;
 }
 
@@ -72,6 +73,12 @@ body {
     font-family: var(--title2);
     font-weight: var(--title2Width);
     font-size: var(--title2Size);
+}
+
+.textes {
+    font-family: var(--text);
+    font-weight: var(--textWidth);
+    font-size: var(--textSize);
 }
 
 .description {

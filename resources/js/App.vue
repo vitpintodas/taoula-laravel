@@ -7,6 +7,7 @@ import TheFooter from './base/TheFooter.vue';
 import BaseSettingsButton from './base/BaseSettingsButton.vue';
 import BaseSmallCards from './base/BaseSmallCards.vue';
 import BaseLabel from './base/BaseLabel.vue';
+import Interests from './components/Login/Interests.vue';
 
 </script>
 
@@ -27,6 +28,7 @@ import BaseLabel from './base/BaseLabel.vue';
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/>
 
+      <!-- <Interests /> -->
 </template>
 
 <style scoped>

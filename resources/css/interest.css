@@ -1,0 +1,13 @@
+.interest-interestsDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+    /* les label ont un marge de 5px, pour bien aligner à gauche je la retire */
+    margin-left: -5px;
+}
+
+.interest-head {
+    margin-bottom: 30px;
+}
