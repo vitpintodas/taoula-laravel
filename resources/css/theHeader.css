@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--secondBlack);
+  }
+  
+  .c3-logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .coins {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: var(--black);
+    border-radius: 5px;
+  }
+  
+  .coins p {
+    margin-left: 5px;
+  }
+  
+  .shop {
+    padding: 5px 10px;
+    background-color: var(--black);
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .back-arrow {
+      display: none;
+    }
+  
+    .coins,
+    .shop {
+      display: none;
+    }
+  }
+  
