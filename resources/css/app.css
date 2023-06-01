@@ -1,4 +1,5 @@
 @import 'baseMainCard.css';
+@import 'TheHeader.css';
 
 /* VARIABLES DES COULEURS */
 :root {
@@ -55,7 +56,7 @@ h2, p{
 
 body {
     color: white;
-    background-color: #000000;
+    background-color: grey;
 }
 
 .titre{
