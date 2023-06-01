@@ -59,7 +59,7 @@ h2, p{
 
 body {
     color: white;
-    background-color: grey;
+    background-color: var(--black);
 }
 
 .titre{
