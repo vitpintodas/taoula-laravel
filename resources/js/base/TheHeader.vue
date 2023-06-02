@@ -7,7 +7,6 @@ const nbCoins = 0;
 //A changer pour mettre si le bouton back est possible ou non
 const backPossible = true;
 
-
 </script>
 
 <template>

@@ -1,10 +1,25 @@
 @import 'baseMainCard.css';
-@import 'TheHeader.css';
+@import 'theHeader.css';
 @import 'baseSmallCard.css';
 @import 'baseSettingsButton.css';
-@import 'theHeader.css';
+@import 'theFooter.css';
 @import 'baseLabel.css';
 @import 'interest.css';
+
+#un-test{ 
+    background-color: var(--pink);
+}
+#deux-test{ 
+    background-color: red;
+}
+#trois-test{ 
+    background-color: yellow;
+}
+.active{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
 
 /* VARIABLES DES COULEURS */
 :root {
