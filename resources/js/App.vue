@@ -22,18 +22,18 @@ import Interests from "./components/Login/Interests.vue";
 
     <TheHeader />
     <div id="un-test" class="active"></div>
-<div id="deux-test"></div>
-<div id="trois-test"></div>
-<div id="quatre-test"></div>
-<div id="cinq-test"></div>
-
-    <BaseMainCards
+<div id="deux-test"> <BaseMainCards
         title="Smash mouth - All star"
         description="Heure musique"
         type="live"
         link="#unLien"
         info="05:20:23"
-    />
+    /></div>
+<div id="trois-test"></div>
+<div id="quatre-test"></div>
+<div id="cinq-test"></div>
+
+   
     <BaseMainCards
         title="Billets pour paléo"
         description="Tente de ganger des billets pour paléo"

@@ -10,12 +10,18 @@
     background-color: var(--pink);
 }
 #deux-test{ 
+    display: none;
     background-color: red;
 }
 #trois-test{ 
     background-color: yellow;
 }
-.active{
+#un-test.active{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+#deux-test.active{
     display: block;
     width: 100%;
     height: 600px;
