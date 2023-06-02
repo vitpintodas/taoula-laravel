@@ -11,3 +11,11 @@
 .interest-head {
     margin-bottom: 30px;
 }
+
+.interestSelected {
+    display: none;
+}
+
+.interestSelected-pink {
+    background-color: var(--pink);
+}

@@ -70,6 +70,13 @@ import Interests from "./components/Login/Interests.vue";
     <BaseLabel title="Football" :selected="true" />
 
     <!-- <Interests /> -->
+    <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
+    <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
+    <BaseSettingsButton title="Paramètres" type="podcast"/>
+    <BaseLabel title="Basketball" :selected="false"/>
+    <BaseLabel title="Football" :selected="true"/> -->
+
+      <Interests />
 </template>
 
 <style scoped></style>

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nom', 100);
 
             // informations de connexion
+            $table->string('pseudo', 100)->unique();
             $table->string('email')->unique();
             $table->string('password');
 
