@@ -13,7 +13,6 @@ import Interests from "./components/Login/Interests.vue";
 </script>
 
 <template>
-    <h1>Accueil</h1>
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#un', '#deux', '#trois', '#quatre', '#cinq']"
@@ -21,17 +20,18 @@ import Interests from "./components/Login/Interests.vue";
     />
 
     <TheHeader />
-    <div id="un-test" class="active"></div>
-<div id="deux-test"> <BaseMainCards
+    <!-- <div id="un-test" class="active"></div>
+    <div id="deux-test"> 
+    <BaseMainCards
         title="Smash mouth - All star"
         description="Heure musique"
         type="live"
         link="#unLien"
         info="05:20:23"
     /></div>
-<div id="trois-test"></div>
-<div id="quatre-test"></div>
-<div id="cinq-test"></div>
+    <div id="trois-test"></div>
+    <div id="quatre-test"></div>
+    <div id="cinq-test"></div>
 
    
     <BaseMainCards
@@ -69,7 +69,6 @@ import Interests from "./components/Login/Interests.vue";
     <BaseLabel title="Basketball" :selected="false" />
     <BaseLabel title="Football" :selected="true" />
 
-    <!-- <Interests /> -->
     <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
     <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
     <BaseSettingsButton title="Paramètres" type="podcast"/>

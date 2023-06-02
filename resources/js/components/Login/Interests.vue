@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue';
 import BaseLabel from '../../base/BaseLabel.vue';
+import BaseInput from '../../base/BaseInput.vue';
 
 const interests = ref([
     {
@@ -158,16 +159,20 @@ watch(filtre, (val) => {
     });
 });
 
+const updateFiltre = (val) => {
+    filtre.value = val;
+};
+
 </script>
 <template>
     <div class="interest-head">
       <h1 class="titre">Quels sont tes centres d'intérêts ?</h1>
       <p class="textes">Tu pourras modifier tes centres d'inérêts plus tard dans les paramètres</p>
-      <input v-model="filtre" placeholder="edit me" />
+      <BaseInput :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)"/>
     </div>
 
       <p class="titre2" v-if="selectedInterests.length>0">Sélectionnés</p>
-        <div class="interest-interestsDiv">
+        <div class="interest-interestsSelectedDiv" v-if="selectedInterests.length>0">
             <BaseLabel v-for="interest in selectedInterests " :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
         </div>
       <p class="titre2">Intérêts à choisir</p>

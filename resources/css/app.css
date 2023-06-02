@@ -5,6 +5,7 @@
 @import 'theFooter.css';
 @import 'baseLabel.css';
 @import 'interest.css';
+@import 'baseInput.css';
 
 #un-test{ 
     background-color: var(--pink);
@@ -89,6 +90,7 @@ body {
     font-family: var(--title);
     font-weight: var(--titleWidth);
     font-size: var(--titleSize);
+    margin-bottom: 5px;
 }
 
 .titre2 {
