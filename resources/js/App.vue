@@ -3,6 +3,7 @@
 import BaseMainCards from './base/BaseMainCards.vue';
 import BaseSettingsButton from './base/BaseSettingsButton.vue';
 import BaseSmallCards from './base/BaseSmallCards.vue';
+import BaseShopCard from './base/BaseShopCard.vue';
 
 
 </script>
@@ -14,9 +15,25 @@ import BaseSmallCards from './base/BaseSmallCards.vue';
   <BaseMainCards title="Smash mouth - All star" description="Heure musique" type="poll" link="#unLien" info="05:20:23"/>
   <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
   <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
-  <BaseSettingsButton title="Paramètres" type="podcast"/>
+
+  <div class="test-container">
+  <BaseShopCard title="Stylo Couleur 3" price="100" imageLink="Stylo"/>
+  <BaseShopCard title="Tablier Couleur 3" price="500" imageLink="tablier"/>
+  <BaseShopCard title="Stickers Couleur 3" price="300" imageLink="stickers"/>
+  <BaseShopCard title="T-shirt Couleur 3" price="600" imageLink="t-shirt"/>
+  <BaseShopCard title="Visite de Couleur 3" price="100000" imageLink="studio"/>
+  </div>
+
+  
+
 
 </template>
 
 <style scoped>
+  .test-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 </style>
