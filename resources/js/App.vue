@@ -8,6 +8,7 @@ import BaseSmallCards from "./base/BaseSmallCards.vue";
 import TheHeader from "./base/TheHeader.vue";
 import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
+import Home from "./components/Home.vue";
 
 
 </script>
@@ -75,7 +76,8 @@ import Interests from "./components/Login/Interests.vue";
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/> -->
 
-      <Interests />
+      <!-- <Interests /> -->
+    <Home />
 </template>
 
 <style scoped></style>
