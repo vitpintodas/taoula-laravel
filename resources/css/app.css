@@ -52,6 +52,7 @@
     display: block;
     width: 100%;
 }
+@import 'baseShopCard.css';
 
 /* VARIABLES DES COULEURS */
 :root {
