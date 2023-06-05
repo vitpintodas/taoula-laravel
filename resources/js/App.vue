@@ -12,6 +12,7 @@ import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
 import Shop from "./components/Shop.vue";
 import BaseNotification from "./base/BaseNotification.vue";
+import Account from "./components/Account.vue";
 import BaseShopCard from "./base/BaseShopCard.vue";
 
 const testNotif = ref(false);
@@ -35,10 +36,9 @@ watch(testNotif, () => {
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    
-
-   
-    <!-- <div id="un-test"><Home /></div> -->
+    <TheHeader />
+    <div id="un-test"><Home /></div>
+    <div id="cinq-test"><Account /></div>
     <!-- <div id="deux-test"> 
     <BaseMainCards
         title="Smash mouth - All star"
@@ -49,7 +49,7 @@ watch(testNotif, () => {
     /></div>
     <div id="trois-test"></div>
     <div id="quatre-test"></div>
-    <div id="cinq-test"></div>
+    
 
    
     <BaseMainCards

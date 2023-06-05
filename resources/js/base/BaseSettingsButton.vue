@@ -24,7 +24,7 @@
             <div class="settingButton-type">
                 <img :src="getImagePath(type)"/>
             </div>
-                <h2 class="settingButton-textContainer">{{ title }} resr</h2>
+                <h2 class="settingButton-textContainer">{{ title }}</h2>
         </div>
     </a>
 </template>
