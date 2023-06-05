@@ -27,6 +27,9 @@ header {
 
 .coins p {
   margin-left: 5px;
+  font-family: var(--label);
+  font-weight: var(--labelWidth);
+  font-size: var(--labelSize);
 }
 
 .shop {

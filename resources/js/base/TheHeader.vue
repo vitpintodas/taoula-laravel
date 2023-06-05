@@ -34,9 +34,6 @@ const backPossible = true;
   </div>
 </header>
 
-
-
-
 </template>
 
 

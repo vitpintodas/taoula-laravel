@@ -163,7 +163,7 @@ watch(filtre, (val) => {
     <div class="interest-head">
       <h1 class="titre">Quels sont tes centres d'intérêts ?</h1>
       <p class="textes">Tu pourras modifier tes centres d'inérêts plus tard dans les paramètres</p>
-      <input v-model="filtre" placeholder="edit me" />
+      <input v-model="filtre" placeholder="Rechercher..." />
     </div>
 
       <p class="titre2" v-if="selectedInterests.length>0">Sélectionnés</p>
