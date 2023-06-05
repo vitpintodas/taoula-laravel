@@ -1,4 +1,5 @@
 <script setup>
+import { ref, watch } from "vue";
 import BaseMainCards from "./base/BaseMainCards.vue";
 import TheFooter from "./base/TheFooter.vue";
 // import LiveSvg from './assets/vue.svg'
@@ -8,7 +9,16 @@ import BaseSmallCards from "./base/BaseSmallCards.vue";
 import TheHeader from "./base/TheHeader.vue";
 import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
+import BaseNotification from "./base/BaseNotification.vue";
 
+const testNotif = ref(false)
+//au bout de 12 secondes, la notification disparait
+watch(testNotif, () => {
+        setTimeout(() => {
+            testNotif.value = false
+            console.log('testNotif', testNotif)
+        }, 12000)
+  })
 
 </script>
 
@@ -75,7 +85,9 @@ import Interests from "./components/Login/Interests.vue";
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/> -->
 
-      <Interests />
+      <!-- <Interests /> -->
+      <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
+        <button @click="testNotif = true">Test</button>
 </template>
 
 <style scoped></style>
