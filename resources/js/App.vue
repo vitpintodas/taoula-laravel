@@ -92,7 +92,6 @@ watch(testNotif, () => {
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/> -->
   <BaseShopCard title="Visite de Couleur 3" price="100000" imageLink="studio"/>
-  </div>
 
   
 
