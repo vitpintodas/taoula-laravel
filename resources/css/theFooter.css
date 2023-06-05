@@ -1,5 +1,5 @@
 nav {
-    height: 98px;
+    height: 58px;
     background-color: #393939;
     width: 100%;
     position: fixed;
@@ -8,14 +8,14 @@ nav {
 }
 
 nav ul {
-    height: 98px;
+    height: 58px;
     margin-top: 0px;
     padding-left: 0px;
 }
 
 nav ul li {
     display: inline-flex;
-    height: 98px;
+    height: 58px;
     width: 20%;
 }
 
@@ -34,6 +34,6 @@ nav ul li a:hover {
 }
 
 nav ul li a img {
-    height: 30px;
-    margin-top: 27px;
+    height: 28px;
+    margin-top: 9px;
 }
