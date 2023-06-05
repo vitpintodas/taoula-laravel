@@ -1,0 +1,31 @@
+.interest-interestsDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* les label ont un marge de 5px, pour bien aligner à gauche je la retire */
+    margin-left: -5px;
+}
+
+.interest-interestsSelectedDiv{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* les label ont un marge de 5px, pour bien aligner à gauche je la retire */
+    margin-left: -5px;
+    margin-bottom: 30px;
+}
+
+/* .interest-head {
+} */
+
+.interestSelected {
+    display: none;
+
+}
+
+.interestSelected-pink {
+    background-color: var(--pink);
+}

@@ -1,6 +1,32 @@
 @import 'baseMainCard.css';
+@import 'theHeader.css';
 @import 'baseSmallCard.css';
 @import 'baseSettingsButton.css';
+@import 'theFooter.css';
+@import 'baseLabel.css';
+@import 'interest.css';
+@import 'baseInput.css';
+@import 'baseNotification.css';
+
+#un-test{ 
+    display: none;
+}
+#deux-test{ 
+    display: none;
+    background-color: red;
+}
+#trois-test{ 
+    background-color: yellow;
+}
+#un-test.active{
+    display: block;
+    width: 100%;
+}
+#deux-test.active{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
 @import 'baseShopCard.css';
 
 /* VARIABLES DES COULEURS */
@@ -19,13 +45,13 @@
 
     /* TITRE 2 */
     --title2: 'Inter', sans-serif;
-    --title2Width: 700;
-    --title2Size: 20px;
+    --title2Width: 600;
+    --title2Size: 17px;
 
     /* TEXTES */
     --text: 'Inter', sans-serif;
-    --textWidth: 600;
-    --textSize: 14px;
+    --textWidth: 500;
+    --textSize: 15px;
 
     /* DESCRIPTION */
     --description: 'Inter', sans-serif;
@@ -52,25 +78,35 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 /* suppression du comportement par défaut des textes */
-h2, p{
+h2, h1, p{
     margin: 0;
 }
 
 body {
     color: white;
-    background-color: #000000;
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    
 }
 
 .titre{
     font-family: var(--title);
     font-weight: var(--titleWidth);
     font-size: var(--titleSize);
+    margin-bottom: 5px;
 }
 
 .titre2 {
     font-family: var(--title2);
     font-weight: var(--title2Width);
     font-size: var(--title2Size);
+}
+
+.textes {
+    font-family: var(--text);
+    font-weight: var(--textWidth);
+    font-size: var(--textSize);
 }
 
 .description {
@@ -90,3 +126,5 @@ body {
     font-weight: var(--labelWidth);
     font-size: var(--labelSize);
 }
+
+

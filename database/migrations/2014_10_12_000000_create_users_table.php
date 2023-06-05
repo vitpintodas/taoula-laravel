@@ -12,12 +12,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->increments('id');
+
+            // informations utilisateur
+            $table->string('prenom', 100);
+            $table->string('nom', 100);
+
+            // informations de connexion
+            $table->string('pseudo', 100)->unique();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+
+            // monnaie virtuelle
+            $table->integer('coins')->default(0);
+
+            // adresse utilisateur
+            $table->string('NPA', 4);
+            $table->string('localite', 100);
+            $table->string('rue', 100);
+
+            // table créé à et modifié à
             $table->timestamps();
         });
     }
