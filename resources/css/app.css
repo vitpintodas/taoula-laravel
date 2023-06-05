@@ -6,6 +6,7 @@
 @import 'baseLabel.css';
 @import 'interest.css';
 @import 'baseInput.css';
+@import 'baseNotification.css';
 
 #un-test{ 
     background-color: var(--pink);
