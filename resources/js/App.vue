@@ -11,6 +11,7 @@ import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
 import BaseNotification from "./base/BaseNotification.vue";
+import Account from "./components/Account.vue";
 
 const testNotif = ref(false)
 //au bout de 12 secondes, la notification disparait
@@ -32,6 +33,7 @@ watch(testNotif, () => {
 
     <TheHeader />
     <div id="un-test"><Home /></div>
+    <div id="cinq-test"><Account /></div>
     <!-- <div id="deux-test"> 
     <BaseMainCards
         title="Smash mouth - All star"
@@ -42,7 +44,7 @@ watch(testNotif, () => {
     /></div>
     <div id="trois-test"></div>
     <div id="quatre-test"></div>
-    <div id="cinq-test"></div>
+    
 
    
     <BaseMainCards
