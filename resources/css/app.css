@@ -9,7 +9,7 @@
 @import 'baseNotification.css';
 
 #un-test{ 
-    background-color: var(--pink);
+    display: none;
 }
 #deux-test{ 
     display: none;
@@ -21,7 +21,6 @@
 #un-test.active{
     display: block;
     width: 100%;
-    height: 600px;
 }
 #deux-test.active{
     display: block;
