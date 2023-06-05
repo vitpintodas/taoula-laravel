@@ -34,7 +34,7 @@ import BaseSettingsButton from "../base/BaseSettingsButton.vue";
     </div>
 </template>
 
-<style>
+<style scoped>
 #compte img {
     position: absolute;
     top: 91px;
