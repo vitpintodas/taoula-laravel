@@ -85,6 +85,9 @@ h2, h1, p{
 body {
     color: white;
     background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    
 }
 
 .titre{
@@ -123,3 +126,5 @@ body {
     font-weight: var(--labelWidth);
     font-size: var(--labelSize);
 }
+
+
