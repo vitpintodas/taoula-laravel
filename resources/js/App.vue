@@ -10,29 +10,35 @@ import TheHeader from "./base/TheHeader.vue";
 import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
+import Shop from "./components/Shop.vue";
 import BaseNotification from "./base/BaseNotification.vue";
-import BaseShopCard from './base/BaseShopCard.vue';
+import BaseShopCard from "./base/BaseShopCard.vue";
 
-const testNotif = ref(false)
+const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
 watch(testNotif, () => {
-        setTimeout(() => {
-            testNotif.value = false
-            console.log('testNotif', testNotif)
-        }, 12000)
-  })
-
+    setTimeout(() => {
+        testNotif.value = false;
+        console.log("testNotif", testNotif);
+    }, 12000);
+});
 </script>
 
 <template>
+    <TheHeader />
+
+    <Shop />
+
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#un', '#deux', '#trois', '#quatre', '#cinq']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <TheHeader />
-    <div id="un-test"><Home /></div>
+    
+
+   
+    <!-- <div id="un-test"><Home /></div> -->
     <!-- <div id="deux-test"> 
     <BaseMainCards
         title="Smash mouth - All star"
@@ -83,29 +89,20 @@ watch(testNotif, () => {
 
     <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
     <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
-  
-  <div class="test-container">
-  <BaseShopCard title="Stylo Couleur 3" price="100" imageLink="Stylo"/>
-  <BaseShopCard title="Tablier Couleur 3" price="500" imageLink="tablier"/>
-  <BaseShopCard title="Stickers Couleur 3" price="300" imageLink="stickers"/>
-  <BaseShopCard title="T-shirt Couleur 3" price="600" imageLink="t-shirt"/>
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/> -->
-  <BaseShopCard title="Visite de Couleur 3" price="100000" imageLink="studio"/>
-  </div>
 
-  
-
-
-      <!-- <Interests /> -->
-      <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
-        <button @click="testNotif = true">Test</button>
+    <!-- <Interests /> -->
+    <BaseNotification
+        type="brokenLike"
+        :active="testNotif"
+        link="#test"
+        title="Inscris-toi"
+        description="Inscris toi pour pouvoir liker du contenu"
+    />
+    <!-- <button @click="testNotif = true">Test</button> -->
 </template>
 
-<style scoped>  .test-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
+<style scoped>
+
 </style>
