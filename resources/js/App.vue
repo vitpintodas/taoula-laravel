@@ -87,7 +87,6 @@ watch(testNotif, () => {
     <BaseLabel title="Football" :selected="true"/> -->
 
       <!-- <Interests /> -->
-    
       <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
         <button @click="testNotif = true">Test</button>
 </template>
