@@ -11,6 +11,7 @@ import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
 import BaseNotification from "./base/BaseNotification.vue";
+import Live from "./components/Live.vue";
 
 const testNotif = ref(false)
 //au bout de 12 secondes, la notification disparait
@@ -87,9 +88,11 @@ watch(testNotif, () => {
     <BaseLabel title="Football" :selected="true"/> -->
 
       <!-- <Interests /> -->
-    <Home />
+    <!-- <Home />
       <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
-        <button @click="testNotif = true">Test</button>
+        <button @click="testNotif = true">Test</button> -->
+
+    <Live />
 </template>
 
 <style scoped></style>

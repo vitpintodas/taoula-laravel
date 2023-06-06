@@ -7,6 +7,10 @@
 @import 'interest.css';
 @import 'baseInput.css';
 @import 'baseNotification.css';
+@import 'poll.css';
+@import 'baseInteractPollButton.css';
+@import 'baseInteractBar.css';
+@import 'interactResult.css';
 
 #un-test{ 
     background-color: var(--pink);
