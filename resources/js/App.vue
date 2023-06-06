@@ -15,6 +15,7 @@ import BaseNotification from "./base/BaseNotification.vue";
 import Account from "./components/Account.vue";
 import BaseShopCard from "./base/BaseShopCard.vue";
 import Search from "./components/Search.vue";
+import Favorites from "./components/Favorites.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -27,9 +28,9 @@ watch(testNotif, () => {
 </script>
 
 <template>
-    <TheHeader />
+    
 
-    <Shop />
+    <!-- <Shop /> -->
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
@@ -40,6 +41,8 @@ watch(testNotif, () => {
     <TheHeader />
     <div id="un-test"><Home /></div>
     <div id="deux-test"><Search /></div>
+    <div id="trois-test"></div>
+    <div id="quatre-test"><Favorites /></div>
     <div id="cinq-test"><Account /></div>
     <!-- 
     <BaseMainCards
@@ -49,8 +52,7 @@ watch(testNotif, () => {
         link="#unLien"
         info="05:20:23"
     />
-    <div id="trois-test"></div>
-    <div id="quatre-test"></div>
+    
     
 
    
@@ -95,13 +97,13 @@ watch(testNotif, () => {
     <BaseLabel title="Football" :selected="true"/> -->
 
     <!-- <Interests /> -->
-    <BaseNotification
+    <!-- <BaseNotification
         type="brokenLike"
         :active="testNotif"
         link="#test"
         title="Inscris-toi"
         description="Inscris toi pour pouvoir liker du contenu"
-    />
+    /> -->
     <!-- <button @click="testNotif = true">Test</button> -->
 </template>
 
