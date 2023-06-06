@@ -1,0 +1,36 @@
+  .baseShopCard-container {
+    display: flex;
+    height: 146px;
+    background-color: var(--secondBlack);
+    flex-direction: column;
+    min-width: 45%;
+    justify-content: center;
+
+    color: var(--white);
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+  .baseShopCard-image {
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .baseShopCard-image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .baseShopCard-title {
+    padding: 5px;
+  }
+
+  .baseShopCard-price {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+
+    background-color: var(--pink);
+    border-radius: 3.5px 3.5px 3.5px 3.5px;
+    margin: 5px;
+  }

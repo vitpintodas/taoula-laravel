@@ -11,26 +11,51 @@
 @import 'baseInteractPollButton.css';
 @import 'baseInteractBar.css';
 @import 'interactResult.css';
+@import 'baseShopCard.css';
 
 #un-test{ 
-    background-color: var(--pink);
-}
-#deux-test{ 
     display: none;
-    background-color: red;
 }
-#trois-test{ 
-    background-color: yellow;
-}
+
 #un-test.active{
     display: block;
     width: 100%;
-    height: 600px;
 }
+
+#deux-test{ 
+    display: none;
+}
+
 #deux-test.active{
     display: block;
     width: 100%;
-    height: 600px;
+}
+
+#trois-test{ 
+    display: none;
+}
+
+#trois-test.active{
+    display: block;
+    width: 100%;
+}
+
+#quatre-test{ 
+    display: none;
+}
+
+#quatre-test.active{
+    display: block;
+    width: 100%;
+}
+
+#cinq-test{ 
+    display: none;
+}
+
+#cinq-test.active{
+    display: block;
+    width: 100%;
 }
 
 /* VARIABLES DES COULEURS */
@@ -129,6 +154,28 @@ body {
     font-family: var(--label);
     font-weight: var(--labelWidth);
     font-size: var(--labelSize);
+}
+
+.marginTB{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+:root{
+    --marginT: 20px;
+}
+
+.marginT{ 
+    margin-top: var(--marginT);
+}
+
+.marginB{
+    margin-bottom: 10px;
+}
+
+.marginLR{
+    margin-left: 10px;
+    margin-right: 10px
 }
 
 

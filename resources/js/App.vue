@@ -10,21 +10,31 @@ import TheHeader from "./base/TheHeader.vue";
 import BaseLabel from "./base/BaseLabel.vue";
 import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
+import Shop from "./components/Shop.vue";
 import BaseNotification from "./base/BaseNotification.vue";
+<<<<<<< HEAD
 import Live from "./components/Live.vue";
+=======
+import Account from "./components/Account.vue";
+import BaseShopCard from "./base/BaseShopCard.vue";
+import Search from "./components/Search.vue";
+>>>>>>> e22f030f4a6b5aebb750d3039bf7e6abd3382acd
 
-const testNotif = ref(false)
+const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
 watch(testNotif, () => {
-        setTimeout(() => {
-            testNotif.value = false
-            console.log('testNotif', testNotif)
-        }, 12000)
-  })
-
+    setTimeout(() => {
+        testNotif.value = false;
+        console.log("testNotif", testNotif);
+    }, 12000);
+});
 </script>
 
 <template>
+    <TheHeader />
+
+    <Shop />
+
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#un', '#deux', '#trois', '#quatre', '#cinq']"
@@ -32,18 +42,20 @@ watch(testNotif, () => {
     />
 
     <TheHeader />
-    <!-- <div id="un-test" class="active"></div>
-    <div id="deux-test"> 
+    <div id="un-test"><Home /></div>
+    <div id="deux-test"><Search /></div>
+    <div id="cinq-test"><Account /></div>
+    <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
         description="Heure musique"
         type="live"
         link="#unLien"
         info="05:20:23"
-    /></div>
+    />
     <div id="trois-test"></div>
     <div id="quatre-test"></div>
-    <div id="cinq-test"></div>
+    
 
    
     <BaseMainCards
@@ -83,7 +95,6 @@ watch(testNotif, () => {
 
     <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
     <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
-    <BaseSettingsButton title="Paramètres" type="podcast"/>
     <BaseLabel title="Basketball" :selected="false"/>
     <BaseLabel title="Football" :selected="true"/> -->
 
@@ -92,7 +103,17 @@ watch(testNotif, () => {
       <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
         <button @click="testNotif = true">Test</button> -->
 
-    <Live />
+    <Live />    <!-- <Interests /> -->
+    <BaseNotification
+        type="brokenLike"
+        :active="testNotif"
+        link="#test"
+        title="Inscris-toi"
+        description="Inscris toi pour pouvoir liker du contenu"
+    />
+    <!-- <button @click="testNotif = true">Test</button> -->
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

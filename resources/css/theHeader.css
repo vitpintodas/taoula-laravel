@@ -48,3 +48,28 @@ header {
     display: none;
   }
 }
+
+.coins :hover {
+  cursor: pointer;
+  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+        brightness(97%) contrast(94%);
+
+}
+
+.shop :hover {
+  cursor: pointer;
+  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+  brightness(97%) contrast(94%);
+}
+
+.c3-logo :hover {
+  cursor: pointer;
+  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+        brightness(97%) contrast(94%);
+}
+
+.back-arrow :hover {
+  cursor: pointer;
+  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+        brightness(97%) contrast(94%);
+}
