@@ -1,24 +1,14 @@
 <script setup>
 import { ref, watch } from "vue";
-import BaseMainCards from "./base/BaseMainCards.vue";
 import TheFooter from "./base/TheFooter.vue";
 // import LiveSvg from './assets/vue.svg'
-
-import BaseSettingsButton from "./base/BaseSettingsButton.vue";
-import BaseSmallCards from "./base/BaseSmallCards.vue";
 import TheHeader from "./base/TheHeader.vue";
-import BaseLabel from "./base/BaseLabel.vue";
-import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
 import Shop from "./components/Shop.vue";
 import BaseNotification from "./base/BaseNotification.vue";
-<<<<<<< HEAD
 import Live from "./components/Live.vue";
-=======
 import Account from "./components/Account.vue";
-import BaseShopCard from "./base/BaseShopCard.vue";
 import Search from "./components/Search.vue";
->>>>>>> e22f030f4a6b5aebb750d3039bf7e6abd3382acd
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -33,7 +23,7 @@ watch(testNotif, () => {
 <template>
     <TheHeader />
 
-    <Shop />
+    <!-- <Shop /> -->
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
@@ -41,9 +31,9 @@ watch(testNotif, () => {
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <TheHeader />
     <div id="un-test"><Home /></div>
     <div id="deux-test"><Search /></div>
+    <div id="trois-test"><Live/></div>
     <div id="cinq-test"><Account /></div>
     <!-- 
     <BaseMainCards
@@ -103,7 +93,8 @@ watch(testNotif, () => {
       <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
         <button @click="testNotif = true">Test</button> -->
 
-    <Live />    <!-- <Interests /> -->
+    <!-- <Live />     -->
+    <!-- <Interests /> -->
     <BaseNotification
         type="brokenLike"
         :active="testNotif"
