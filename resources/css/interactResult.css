@@ -1,0 +1,12 @@
+.interactResult-answear{
+    background-color: var(--secondBlack);
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.interactResult-icon {
+    margin-right: 20px;
+}
