@@ -30,37 +30,37 @@ watch(testNotif, () => {
             title="Créer un grand concours"
             type="contest"
             :selected="true"
-            link="#test"
+            link="#concours"
         />
         <BaseAnimButton
             title="Messages des auditeurs"
             type="mail"
             :selected="false"
-            link="#test"
+            link="#messages"
         />
         <BaseAnimButton
             title="Choix musical"
             type="music"
             :selected="false"
-            link="#test"
+            link="#choix-musique"
         />
         <BaseAnimButton
             title="Lance un vote"
             type="piechart"
             :selected="false"
-            link="#test"
+            link="#vote"
         />
         <BaseAnimButton
             title="Lance un défis"
             type="coin"
             :selected="false"
-            link="#test"
+            link="#defis"
         />
         <BaseAnimButton
             title="Information du live en cours"
             type="about"
             :selected="false"
-            link="#test"
+            link="#info-live"
         />
     </div>
 
