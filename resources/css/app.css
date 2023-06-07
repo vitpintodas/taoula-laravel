@@ -12,6 +12,7 @@
 @import 'baseInteractBar.css';
 @import 'interactResult.css';
 @import 'baseShopCard.css';
+@import 'baseAnimButton.css';
 
 #un-test{ 
     display: none;
