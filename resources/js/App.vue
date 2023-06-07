@@ -10,7 +10,6 @@ import Live from "./components/Live.vue";
 import Account from "./components/Account.vue";
 import Search from "./components/Search.vue";
 import Favorites from "./components/Favorites.vue";
-import BaseButton from "./base/BaseButton.vue";
 import BaseAnimButton from "./base/BaseAnimButton.vue";
 
 const testNotif = ref(false);
@@ -26,44 +25,6 @@ watch(testNotif, () => {
 <template>
     <TheHeader />
 
-    <div class="container-test">
-        <BaseAnimButton
-            title="Créer un grand concours"
-            type="contest"
-            :selected="true"
-            link="#concours"
-        />
-        <BaseAnimButton
-            title="Messages des auditeurs"
-            type="mail"
-            :selected="false"
-            link="#messages"
-        />
-        <BaseAnimButton
-            title="Choix musical"
-            type="music"
-            :selected="false"
-            link="#choix-musique"
-        />
-        <BaseAnimButton
-            title="Lance un vote"
-            type="piechart"
-            :selected="false"
-            link="#vote"
-        />
-        <BaseAnimButton
-            title="Lance un défis"
-            type="coin"
-            :selected="false"
-            link="#defis"
-        />
-        <BaseAnimButton
-            title="Information du live en cours"
-            type="about"
-            :selected="false"
-            link="#info-live"
-        />
-    </div>
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
@@ -144,21 +105,6 @@ watch(testNotif, () => {
         description="Inscris toi pour pouvoir liker du contenu"
     /> -->
     <!-- <button @click="testNotif = true">Test</button> -->
-    
-    <BaseButton size="small"
-        title="Envoyer"
-        type="plane"
-        link="#unLien"
-    />
-    <BaseButton size="large"
-        title="Connexion"
-        link="#unLien"
-    />
-    <BaseButton size="huge"
-        title="Lancer le concours"
-        link="#unLien"
-    />
-
 </template>
 
 <style scoped></style>
