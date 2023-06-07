@@ -5,8 +5,18 @@ import { getImagePath } from '../utils/getImagePath';
 //A changer pour mettre le nombre de coins de l'utilisateur
 const nbCoins = 0;
 
-//A changer pour mettre si le bouton back est possible ou non
-const backPossible = true;
+//Permet de retourner en arrière
+const goBack = () => {
+  window.history.back();
+}
+
+//Fonction permettant de voir si un retour en arrièere est possible
+const backPossible = () => {
+  if (window.history.length > 1) {
+    return true;
+  }
+}
+
 
 </script>
 
@@ -14,11 +24,11 @@ const backPossible = true;
 
 <header>
   <div class="back-arrow">
-    <img :src="getImagePath('arrow-back')" href="#shop" v-if="backPossible">
+    <img :src="getImagePath('arrow-back')" href="#shop" v-if="backPossible" @click="goBack">
   </div>
 
   <div class="c3-logo">
-    <img :src="getImagePath('c3-logo')" href="#home">
+    <img :src="getImagePath('c3-logo')" href="#un">
   </div>
 
   <div class="right-section">
