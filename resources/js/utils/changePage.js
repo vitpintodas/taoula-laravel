@@ -1,40 +1,63 @@
 export const changePage = () => {
-  const toggleSection = (hashSplit) => {
-      // Comme pour le menu, on enlève la classe active à la section en cours
+    const toggleSection = (hashSplit) => {
       const activeDiv = document.querySelector("div.active");
       if (activeDiv) {
-          activeDiv.classList.remove("active");
+        activeDiv.classList.remove("active");
       }
-
-      // et on essaie de trouver la section correspondante et l'afficher, en y ajoutant la classe active
+  
       const divElement = document.querySelector(`${hashSplit}-test`);
       if (divElement) {
-          divElement.classList.add("active");
+        divElement.classList.add("active");
       }
-  };
-
-  const handleHashChange = () => {
+    };
+  
+    const handleHashChange = () => {
       const hash = window.location.hash;
       const hashSplit = hash.split("#");
-
+  
       switch (hash) {
-          case "#un":
-          case "#deux":
-          case "#trois":
-          case "#quatre":
-          case "#cinq":
-              toggleSection(hash);
-              break;
-
-          default:
-              // Page inconnue
-              break;
+        case "#un":
+        case "#deux":
+        case "#trois":
+        case "#quatre":
+        case "#cinq":
+          toggleSection(hash);
+          break;
+  
+        default:
+          // Page inconnue
+          break;
       }
+  
+      const currentLink = document.querySelector(`a[href="${hash}"]`);
+      const activeLinks = document.querySelectorAll("a.active");
+      activeLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+  
+      if (currentLink) {
+        currentLink.classList.add("active");
+        const currentIndex = Array.from(currentLink.parentNode.parentNode.children).indexOf(currentLink.parentNode);
+        sessionStorage.setItem("lastClickedLinkIndex", currentIndex.toString());
+      }
+    };
+  
+    const handlePopstate = () => {
+      handleHashChange();
+    };
+  
+    window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handlePopstate);
+  
+    handleHashChange();
+  
+    const lastClickedIndex = sessionStorage.getItem("lastClickedLinkIndex");
+    if (lastClickedIndex !== null) {
+      const activeLink = document.querySelector(`li:nth-child(${parseInt(lastClickedIndex) + 1}) a`);
+      if (activeLink) {
+        const activeHash = activeLink.getAttribute("href");
+        window.location.hash = activeHash;
+      }
+    }
   };
-
-  // On link la fonction "handleHashChange" à l'événement hashchange pour être averti d'un changement de hash dans l'url
-  window.addEventListener("hashchange", handleHashChange);
-
-  // Exécute la fonction une première fois pour gérer le hash initial
-  handleHashChange();
-};
+  
