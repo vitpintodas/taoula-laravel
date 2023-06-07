@@ -25,44 +25,6 @@ watch(testNotif, () => {
 <template>
     <TheHeader />
 
-    <div class="container-test">
-        <BaseAnimButton
-            title="Créer un grand concours"
-            type="contest"
-            :selected="true"
-            link="#test"
-        />
-        <BaseAnimButton
-            title="Messages des auditeurs"
-            type="mail"
-            :selected="false"
-            link="#test"
-        />
-        <BaseAnimButton
-            title="Choix musical"
-            type="music"
-            :selected="false"
-            link="#test"
-        />
-        <BaseAnimButton
-            title="Lance un vote"
-            type="piechart"
-            :selected="false"
-            link="#test"
-        />
-        <BaseAnimButton
-            title="Lance un défis"
-            type="coin"
-            :selected="false"
-            link="#test"
-        />
-        <BaseAnimButton
-            title="Information du live en cours"
-            type="about"
-            :selected="false"
-            link="#test"
-        />
-    </div>
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
