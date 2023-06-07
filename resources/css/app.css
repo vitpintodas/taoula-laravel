@@ -8,6 +8,7 @@
 @import 'baseInput.css';
 @import 'baseNotification.css';
 @import 'baseShopCard.css';
+@import 'baseAnimButton.css';
 
 #un-test{ 
     display: none;
