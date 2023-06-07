@@ -20,5 +20,8 @@
     <div id="app">
 
     </div>
+    <div id="dashboard">
+
+    </div>
 </body>
 </html>
