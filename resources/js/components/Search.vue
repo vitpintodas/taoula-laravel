@@ -9,20 +9,20 @@ import BaseSmallCards from "../base/BaseSmallCards.vue";
 
     <div>
         <p class="small-description marginLR">05.06.2023</p>
-        <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
+        <BaseSmallCards title="ACDC - Al in blak" type="music" :likeStatus="false"/>
         <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
     </div>
 
     <div  class="marginT">
         <p class="small-description marginLR">04.06.2023</p>
+        <BaseSmallCards title="ACC - All in lack" type="music" :likeStatus="false"/>
         <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
-        <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
-        <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
+        <BaseSmallCards title="ADC - All in blck" type="music" :likeStatus="false"/>
     </div>
 
     <div  class="marginT">
         <p class="small-description marginLR">03.06.2023</p>
-        <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
+        <BaseSmallCards title="ACDC -All in back" type="music" :likeStatus="false"/>
     </div>
     
 </template>

@@ -1,0 +1,22 @@
+.baseInteractPollButton-container {
+    background-color: var(--black);
+    min-width: auto;
+    max-width: 450px;
+
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.baseInteractPollButton-textes {
+    text-align: center;
+}
+
+.interactPollButtonSelected {
+    background-color: var(--pink);
+}

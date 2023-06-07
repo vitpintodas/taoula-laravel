@@ -1,0 +1,34 @@
+.baseInteractBar-container{
+    background-color: var(--black);
+    min-width: auto;
+    max-width: 450px;
+
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.baseInteractBar-textes {
+    z-index: 10;
+}
+
+.baseInteractBar-pinkReslut {
+    position: absolute;
+    background-color: #F05CC8;
+    height: 100%;
+    border-radius: 6px;
+    margin-left: -10px;
+}

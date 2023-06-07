@@ -1,0 +1,8 @@
+.poll-InteractSection {
+    background-color: var(--secondBlack);
+    padding: 15px;
+}
+
+.poll-title {
+    margin-bottom: 10px;
+}

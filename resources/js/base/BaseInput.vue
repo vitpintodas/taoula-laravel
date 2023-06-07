@@ -18,6 +18,11 @@
     type: {
         type: String,
         required: false
+    }, 
+    color: {
+      type: Boolean,
+      required: false,
+      default: false,
     }
   })
 
@@ -28,7 +33,7 @@
 
 </script>
 <template>
-    <div class="baseInput-container">
+    <div class="baseInput-container" :class="{baseInputBlack: color}">
         <label class="baseInput-label" v-if="label">{{ label }}</label>
         <div class="baseInput-inputContainer">
             <img class="baseInput-icon" v-if="type" :src="getImagePath(type)" >

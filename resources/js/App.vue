@@ -1,20 +1,15 @@
 <script setup>
 import { ref, watch } from "vue";
-import BaseMainCards from "./base/BaseMainCards.vue";
 import TheFooter from "./base/TheFooter.vue";
 // import LiveSvg from './assets/vue.svg'
-
-import BaseSettingsButton from "./base/BaseSettingsButton.vue";
-import BaseSmallCards from "./base/BaseSmallCards.vue";
 import TheHeader from "./base/TheHeader.vue";
-import BaseLabel from "./base/BaseLabel.vue";
-import Interests from "./components/Login/Interests.vue";
 import Home from "./components/Home.vue";
 import Shop from "./components/Shop.vue";
 import BaseNotification from "./base/BaseNotification.vue";
+import Live from "./components/Live.vue";
 import Account from "./components/Account.vue";
-import BaseShopCard from "./base/BaseShopCard.vue";
 import Search from "./components/Search.vue";
+import Favorites from "./components/Favorites.vue";
 import BaseAnimButton from "./base/BaseAnimButton.vue";
 
 const testNotif = ref(false);
@@ -75,13 +70,78 @@ watch(testNotif, () => {
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <BaseNotification
+    <div id="un-test"><Home /></div>
+    <div id="deux-test"><Search /></div>
+    <div id="trois-test"></div>
+    <div id="quatre-test"><Favorites /></div>
+    <div id="trois-test"><Live/></div>
+    <div id="cinq-test"><Account /></div>
+    <!-- 
+    <BaseMainCards
+        title="Smash mouth - All star"
+        description="Heure musique"
+        type="live"
+        link="#unLien"
+        info="05:20:23"
+    />
+    
+    
+
+   
+    <BaseMainCards
+        title="Billets pour paléo"
+        description="Tente de ganger des billets pour paléo"
+        type="contest"
+        link="#unlien2"
+    />
+    <BaseMainCards
+        title="Smash mouth - All star"
+        description="Heure musique"
+        type="star"
+        link="#unLien"
+        info="05:20:23"
+    />
+    <BaseMainCards
+        title="Smash mouth - All star"
+        description="Heure musique"
+        type="poll"
+        link="#unLien"
+        info="05:20:23"
+    />
+
+    <BaseSmallCards
+        title="ACDC - All in black"
+        type="music"
+        :likeStatus="false"
+    />
+    <BaseSmallCards
+        title="Mashup - Lebron James, stephen curry, tony parker"
+        type="podcast"
+        :likeStatus="true"
+    />
+    <BaseSettingsButton title="Paramètres" type="podcast" />
+    <BaseLabel title="Basketball" :selected="false" />
+    <BaseLabel title="Football" :selected="true" />
+
+    <BaseSmallCards title="ACDC - All in black" type="music" :likeStatus="false"/>
+    <BaseSmallCards title="Mashup - Lebron James, stephen curry, tony parker" type="podcast" :likeStatus="true"/>
+    <BaseLabel title="Basketball" :selected="false"/>
+    <BaseLabel title="Football" :selected="true"/> -->
+
+      <!-- <Interests /> -->
+    <!-- <Home />
+      <BaseNotification type="brokenLike" :active="testNotif" link="#test" title="Inscris-toi" description="Inscris toi pour pouvoir liker du contenu"/>
+        <button @click="testNotif = true">Test</button> -->
+
+    <!-- <Live />     -->
+    <!-- <Interests /> -->
+    <!-- <BaseNotification
         type="brokenLike"
         :active="testNotif"
         link="#test"
         title="Inscris-toi"
         description="Inscris toi pour pouvoir liker du contenu"
-    />
+    /> -->
     <!-- <button @click="testNotif = true">Test</button> -->
 </template>
 
