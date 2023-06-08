@@ -110,8 +110,8 @@ console.log('api', getShowName())
             title="Vote pour la prochaine musique" 
             :options="pollFakeOption" 
             @emit-poll="getResult($event)" 
-            type="multipleChoice"/>
-            <InteractResult v-if="result" :interactType="'poll'" :results="fakeResults"/>
+            type="textInput"/>
+            <InteractResult v-if="result" :interactType="'text'" :results="fakeResults"/>
         </div>
 
         <div class="live-bottomInfoContainer">
