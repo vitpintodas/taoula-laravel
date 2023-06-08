@@ -1,0 +1,39 @@
+.durationInput-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.durationInput-container .durationInput-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.durationInput-container h2 {
+    font-family: var(--title);
+    font-weight: var(--titleWidth);
+    font-size: var(--titleSize);
+    margin: 20px 10px 20px 10px;
+}
+
+.durationInput-container p {
+    font-family: var(--text);
+    font-weight: 600;
+    font-size: 68px;
+}
+
+.durationInput-container input {
+    font-family: var(--text);
+    font-weight: 700;
+    font-size: 68px;
+    width: 218px;
+    height: 133px;
+    border: none;
+    border-radius: 8px;
+    background: var(--secondBlack);
+    color: var(--white);
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}

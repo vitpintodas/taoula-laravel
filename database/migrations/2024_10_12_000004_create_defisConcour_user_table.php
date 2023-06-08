@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reponses_users_sondages', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('defisConcour_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // clés étrangères
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->foreign('sondages_id')->references('id')->on('sondages');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('defisConcour_id');
+            $table->foreign('defisConcour_id')->references('id')->on('defisConcours');
 
             // table créé à et modifié à
             $table->timestamps();
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reponses_users_sondages');
+        Schema::dropIfExists('participations_users_defis');
     }
 };

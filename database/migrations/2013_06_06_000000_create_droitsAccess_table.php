@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('droits_acces', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('droitsAccess', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // droits d'accès
             $table->string('URL');
