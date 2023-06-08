@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('historiques_likes', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('artiste_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // clés étrangères
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->foreign('titres_id')->references('id')->on('titres');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('artiste_id');
+            $table->foreign('artiste_id')->references('id')->on('titres');
 
             // informations historique
             $table->dateTime('date_et_heure');
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('historiques_likes');
+        Schema::dropIfExists('historique_like_artiste');
     }
 };

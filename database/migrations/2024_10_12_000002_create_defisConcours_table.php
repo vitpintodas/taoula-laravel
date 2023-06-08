@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sondages', function (Blueprint $table) {
+        Schema::create('defisConcours', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             // clés étrangères
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            // informations sondage
-            $table->string('question');
-            $table->time('duree_affichage');
-            $table->dateTime('heure_publication');
+            // informations défi
+            $table->string('type');
+            $table->time('duree');
+            $table->string('password');
+            $table->dateTime('date_et_heure_publication');
 
             // table créé à et modifié à
             $table->timestamps();
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sondages');
+        Schema::dropIfExists('defis_concours');
     }
 };

@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('acces_roles', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('playlist_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // clés étrangères
-            $table->foreign('role_id')->references('id')->on('roles');
-            $table->foreign('droits_acces_id')->references('id')->on('droits_acces')->unique()->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('playlist_id');
+            $table->foreign('playlist_id')->references('id')->on('playlists');
 
             // table créé à et modifié à
             $table->timestamps();
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('acces_roles');
+        Schema::dropIfExists('playlists_users');
     }
 };

@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('playlists_users', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('playlist_titre', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // clés étrangères
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->foreign('playlists_id')->references('id')->on('playlists');
+            $table->unsignedBigInteger('playlist_id');
+            $table->foreign('playlist_id')->references('id')->on('playlists');
+            $table->unsignedBigInteger('titre_id');
+            $table->foreign('titre_id')->references('id')->on('titres');
 
-            // table créé à et modifié à
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('playlists_users');
+        Schema::dropIfExists('contenus_playlists');
     }
 };
