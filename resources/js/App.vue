@@ -37,6 +37,7 @@ watch(testNotif, () => {
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
+    <div id="gifts-section"><Shop /></div>
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"

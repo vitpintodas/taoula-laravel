@@ -10,7 +10,8 @@
 
     color: var(--white);
     border-radius: 10px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .smallCard-textContainer {
@@ -28,6 +29,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
 .smallCard-type {

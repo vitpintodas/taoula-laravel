@@ -1,0 +1,64 @@
+#audio-player {
+    display: none;
+}
+
+#seek-slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 2px; /* Specified height */
+    background: white; /* Grey background */
+
+}
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  #seek-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    border-radius: 10px;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: white; /* Green background */
+  }
+  
+  #seek-slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.baseAudio-container {
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
+
+    background-color: var(--pink);
+    height: 36px;
+    min-width: auto;
+    max-width: 450px;
+
+    border-radius: 8px;
+
+    margin: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.baseAudio-time{
+    margin-right: 15px;
+    width: 55px;
+
+}
+
+.baseAudio-currentTimeContainer {
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.baseAudio-icon{
+    margin-left: 15px;
+}
+
+/* test */

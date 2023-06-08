@@ -7,7 +7,7 @@
         :key="dateGroup.date"
       >
         <p class="small-description marginLR marginT">{{ dateGroup.date }}</p>
-        <div id="cardFav">
+        <div id="cardFav" class="marginLR">
           <BaseSmallCards
             v-for="item in dateGroup.items"
             :key="item.title"

@@ -1,0 +1,17 @@
+.live-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.live-bottomInfoContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    /* stick it to the bottom of the screen on top of the bottom nav */
+    position: fixed;
+    bottom: 56px;
+    width: calc(100% - 20px);
+
+}
+

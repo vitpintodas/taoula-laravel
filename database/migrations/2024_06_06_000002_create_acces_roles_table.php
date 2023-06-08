@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('acces_roles', function (Blueprint $table) {
             $table->increments('id');
 
-            // informations rôle
-            $table->string('type', 100);
+            // clés étrangères
+            $table->foreign('role_id')->references('id')->on('roles');
+            $table->foreign('droits_acces_id')->references('id')->on('droits_acces')->unique()->onDelete('cascade');
 
             // table créé à et modifié à
             $table->timestamps();
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('acces_roles');
     }
 };

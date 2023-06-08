@@ -12,10 +12,22 @@
 @import 'baseInteractBar.css';
 @import 'interactResult.css';
 @import 'baseShopCard.css';
+@import 'baseAudio.css';
+@import 'live.css';
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#un-test{ 
 @import 'baseAnimButton.css';
 @import 'baseButton.css';
 @import 'basePopUp.css';
+<<<<<<< HEAD
 @import 'baseDurationInput.css';
+=======
+}
+>>>>>>> f23e7dcd0a551d08993eaec64595c3872f729178
 
 #home-section{ 
     display: none;
@@ -62,6 +74,15 @@
     width: 100%;
 }
 
+#gifts-section{ 
+    display: none;
+}
+
+#gifts-section.active{
+    display: block;
+    width: 100%;
+}
+
 /* VARIABLES DES COULEURS */
 :root {
     /* VARIABLES DES COULEURS */
@@ -90,6 +111,8 @@
     --description: 'Inter', sans-serif;
     --descriptionWidth: 500;
     --descriptionSize: 13px;
+    /* DESCRIPTION BOLD */
+    --descriptionBoldWidth: 600;
 
     /* PETITE DESCRIPTION 2 */
     --smallDescription: 'Inter', sans-serif;
@@ -146,6 +169,13 @@ body {
     font-family: var(--description);
     font-weight: var(--descriptionWidth);
     font-size: var(--descriptionSize);
+}
+
+.descriptionBold {
+    font-family: var(--description);
+    font-weight: var(--descriptionWidth);
+    font-size: var(--descriptionSize);
+    font-weight: var(--descriptionBoldWidth);
 }
 
 .small-description {

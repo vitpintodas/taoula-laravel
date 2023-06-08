@@ -25,16 +25,15 @@ window.addEventListener('popstate', () => {
 <template>
   <header>
     <div class="back-arrow">
-      <img
-        :src="getImagePath('arrow-back')"
-        href="#shop"
-        v-if="isBackPossible"
-        @click="goBack"
-      />
+      <a :href="'#shop'" v-if="isBackPossible" @click="goBack">
+        <img :src="getImagePath('arrow-back')" />
+      </a>
     </div>
 
     <div class="c3-logo">
-      <img :src="getImagePath('c3-logo')" href="#un" />
+      <a :href="'#home'">
+        <img :src="getImagePath('c3-logo')" />
+      </a>
     </div>
 
     <div class="right-section">
@@ -44,11 +43,14 @@ window.addEventListener('popstate', () => {
       </div>
 
       <div class="shop">
-        <img :src="getImagePath('shop')" href="#shop" />
+        <a :href="'#gifts'">
+          <img :src="getImagePath('shop')" />
+        </a>
       </div>
     </div>
   </header>
 </template>
+
 
 <style scoped>
 </style>
