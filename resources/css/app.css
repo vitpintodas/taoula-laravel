@@ -15,6 +15,7 @@
 @import 'baseAnimButton.css';
 @import 'baseButton.css';
 @import 'basePopUp.css';
+@import 'baseDurationInput.css';
 
 #home-section{ 
     display: none;

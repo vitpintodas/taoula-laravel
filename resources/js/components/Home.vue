@@ -1,5 +1,6 @@
 <script setup>
 import BaseMainCards from "../base/BaseMainCards.vue";
+import BaseDurationInput from "../base/baseAnimateur/BaseDurationInput.vue";
 </script>
 
 <template>
