@@ -1,0 +1,78 @@
+.small {
+
+    display: flex;
+    height: 43px;
+    background: var(--pink);
+    flex-direction: row;
+    min-width: auto;
+    max-width: 358px;
+    color: var(--white);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    }
+
+    .small h2 {
+        font-family: var(--text);
+        font-weight: 580;
+        font-size: var(--title2Size);
+        margin-top: 6px;
+    }
+
+.large {
+
+    display: flex;
+    height: 61px;
+    background: var(--pink);
+    flex-direction: row;
+    min-width: auto;
+    max-width: 358px;
+    color: var(--white);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    }
+
+    .large h2 {
+        font-family: var(--text);
+        font-weight: 580;
+        font-size: var(--title2Size);
+        margin-top: 6px;
+    }
+    
+    .huge {
+    
+    display: flex;
+    height: 83px;
+    background: var(--pink);
+    flex-direction: row;
+    min-width: auto;
+    max-width: 492px;
+    color: var(--white);
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    }
+
+    .huge h2 {
+        font-family: var(--title);
+        font-weight: var(--titleWidth);
+        font-size: var(--titleSize);
+        margin-top: 5px;
+    }
+    
+    .baseButton-type {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: var(--pink);
+      padding: 7px;
+      
+    }

@@ -3,8 +3,8 @@ import BaseSettingsButton from "../base/BaseSettingsButton.vue";
 </script>
 
 <template>
-    <div id="compte" class="marginTB marginLR">
-        <p class="titre">test</p>
+    <div id="compte" class="marginLR">
+        <p class="titre">Test</p>
         <a href="#profilSettings">
             <img src="./../../assets/svg/settings.svg" alt="profilSettings" />
         </a>
@@ -24,6 +24,7 @@ import BaseSettingsButton from "../base/BaseSettingsButton.vue";
     </div>
     <div id="aPropos" class="marginT">
         <p class="small-description marginLR">À propos</p>
+        <BaseSettingsButton title="Envoyer un message à C3" type="message" link="#message" />
         <BaseSettingsButton title="Partager l'application" type="share" link="#share" />
         <BaseSettingsButton title="Aide" type="help" link="#help" />
         <BaseSettingsButton title="À propos" type="about" link="#about" />
@@ -35,13 +36,34 @@ import BaseSettingsButton from "../base/BaseSettingsButton.vue";
 </template>
 
 <style scoped>
-#compte img {
-    position: absolute;
-    top: 91px;
-    right: 10px;
+#compte {
+    margin-top: var(--marginT);
+    margin-bottom: var(--marginB);
 }
+#compte .titre{
+    float: left;
+}
+#compte .textes{
+    float: left;
+    width: 100%;
+}
+
+#compte img{
+    float: right;
+    margin-top: 6px;
+}
+
+#fonctionnalite, #reglage, #aPropos, #deconnexion {
+    float: left;
+    width: 100%;
+}
+
+#fonctionnalite{
+margin-top: 25px;
+}
+
 #deconnexion {
-    margin-top: calc(var(--marginT) + 22px);
+    margin-top: calc(var(--marginT) + 12px);
     margin-bottom: 100px;
 }
 </style>

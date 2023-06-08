@@ -21,6 +21,5 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
-        "vue-sound": "^0.1.10"
     }
 }

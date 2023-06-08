@@ -9,6 +9,8 @@ import BaseNotification from "./base/BaseNotification.vue";
 import Live from "./components/Live.vue";
 import Account from "./components/Account.vue";
 import Search from "./components/Search.vue";
+import Favorites from "./components/Favorites.vue";
+import BaseAnimButton from "./base/BaseAnimButton.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -23,18 +25,18 @@ watch(testNotif, () => {
 <template>
     <TheHeader />
 
-    <!-- <Shop /> -->
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
-        :links="['#un', '#deux', '#trois', '#quatre', '#cinq']"
+        :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <div id="un-test"><Home /></div>
-    <div id="deux-test"><Search /></div>
-    <div id="trois-test"><Live/></div>
-    <div id="cinq-test"><Account /></div>
+    <div id="home-section"><Home /></div>
+    <div id="search-section"><Search /></div>
+    <div id="live-section"><Live/></div>
+    <div id="favorites-section"><Favorites /></div>
+    <div id="account-section"><Account /></div>
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
@@ -43,8 +45,7 @@ watch(testNotif, () => {
         link="#unLien"
         info="05:20:23"
     />
-    <div id="trois-test"></div>
-    <div id="quatre-test"></div>
+    
     
 
    
@@ -95,16 +96,14 @@ watch(testNotif, () => {
 
     <!-- <Live />     -->
     <!-- <Interests /> -->
-    <BaseNotification
+    <!-- <BaseNotification
         type="brokenLike"
         :active="testNotif"
         link="#test"
         title="Inscris-toi"
         description="Inscris toi pour pouvoir liker du contenu"
-    />
+    /> -->
     <!-- <button @click="testNotif = true">Test</button> -->
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

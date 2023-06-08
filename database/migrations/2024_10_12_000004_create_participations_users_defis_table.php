@@ -11,20 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('appreciations', function (Blueprint $table) {
+        Schema::create('participations_users_defis', function (Blueprint $table) {
             $table->increments('id');
 
-            // tables liées
-            $table->foreign('id')
-                ->references('id')
-                ->on('users');
-            $table->foreign('id')
-                ->references('id')
-                ->on('artistes');
-            $table->foreign('id')
-                ->references('id')
-                ->on('titres');
-            
+            // clés étrangères
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('defis_concours_id')->references('id')->on('defis');
+
             // table créé à et modifié à
             $table->timestamps();
         });
@@ -35,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('appreciations');
+        Schema::dropIfExists('participations_users_defis');
     }
 };

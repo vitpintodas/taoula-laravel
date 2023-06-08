@@ -7,8 +7,13 @@ header {
 }
 
 .c3-logo {
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
-  text-align: center;
+}
+
+.c3-logo img {
+  margin: 0 auto;
 }
 
 .right-section {
@@ -38,17 +43,6 @@ header {
   border-radius: 5px;
 }
 
-@media (max-width: 600px) {
-  .back-arrow {
-    display: none;
-  }
-
-  .coins,
-  .shop {
-    display: none;
-  }
-}
-
 .coins :hover {
   cursor: pointer;
   filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
@@ -73,3 +67,4 @@ header {
   filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
         brightness(97%) contrast(94%);
 }
+

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('pseudo', 100)->unique();
             $table->string('email')->unique();
             $table->string('password');
+            $table->foreign('role_id')->references('id')->on('roles');
 
             // monnaie virtuelle
             $table->integer('coins')->default(0);
