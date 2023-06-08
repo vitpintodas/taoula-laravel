@@ -14,20 +14,18 @@
 @import 'baseShopCard.css';
 @import 'baseAudio.css';
 @import 'live.css';
+@import 'baseAnimButton.css';
+@import 'baseButton.css';
+@import 'basePopUp.css';
+@import 'baseDurationInput.css';
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
 #un-test{ 
-@import 'baseAnimButton.css';
-@import 'baseButton.css';
-@import 'basePopUp.css';
-<<<<<<< HEAD
-@import 'baseDurationInput.css';
-=======
+
 }
->>>>>>> f23e7dcd0a551d08993eaec64595c3872f729178
 
 #home-section{ 
     display: none;
