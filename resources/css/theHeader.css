@@ -6,6 +6,10 @@ header {
   background-color: var(--secondBlack);
 }
 
+.back-arrow img{
+  transition: opacity 0.3s ease;
+}
+
 .c3-logo {
   display: flex;
   justify-content: center;
@@ -14,6 +18,7 @@ header {
 
 .c3-logo img {
   margin: 0 auto;
+  transition: opacity 0.3s ease;
 }
 
 .right-section {
@@ -43,21 +48,26 @@ header {
   border-radius: 5px;
 }
 
-.shop :hover {
-  cursor: pointer;
-  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
-  brightness(97%) contrast(94%);
-}
+@media (hover: hover){
 
-.c3-logo :hover {
-  cursor: pointer;
-  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
-        brightness(97%) contrast(94%);
-}
-
-.back-arrow :hover {
-  cursor: pointer;
-  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
-        brightness(97%) contrast(94%);
+  .shop :hover {
+    cursor: pointer;
+    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+    brightness(97%) contrast(94%);
+  }
+  
+  .c3-logo :hover {
+    cursor: pointer;
+    opacity: 0.8;
+    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+          brightness(97%) contrast(94%);
+  }
+  
+  .back-arrow :hover {
+    cursor: pointer;
+    opacity: 0.8;
+    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+          brightness(97%) contrast(94%);
+  }
 }
 
