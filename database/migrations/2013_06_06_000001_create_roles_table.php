@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sondages', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('roles', function (Blueprint $table) {
+            $table->unsignedBigInteger('role_id');
 
-            // clés étrangères
-            $table->foreign('users_id')->references('id')->on('users');
-
-            // informations sondage
-            $table->string('question');
-            $table->time('duree_affichage');
-            $table->dateTime('heure_publication');
+            // informations rôle
+            $table->string('type', 100);
 
             // table créé à et modifié à
             $table->timestamps();
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sondages');
+        Schema::dropIfExists('roles');
     }
 };
