@@ -48,7 +48,7 @@ window.addEventListener('popstate', () => {
       </div>
 
       <div class="shop">
-        <a :href="'#gifts'">
+        <a href="#gifts">
           <img :src="getImagePath('shop')" />
         </a>
       </div>
