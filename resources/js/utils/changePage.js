@@ -13,7 +13,6 @@ export const changePage = () => {
   
     const handleHashChange = () => {
       const hash = window.location.hash;
-      const hashSplit = hash.split("#");
   
       switch (hash) {
         case "#home":

@@ -1,20 +1,3 @@
-<template>
-    <nav>
-      <ul>
-        <li v-for="(type, index) in types" :key="index">
-          <a
-            :href="links[index]"
-            @click="changeColor(index), changePage()"
-            :class="getLinkClass(index)"
-          >
-            <img :src="getImagePath(type)" />
-            <p>{{ names[index] }}</p>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </template>
-  
   <script setup>
   import { defineProps, ref, onMounted } from "vue";
   import { getImagePath } from "../utils/getImagePath";
@@ -52,16 +35,6 @@
     sessionStorage.setItem("activeLinkIndex", index.toString());
   };
   
-  const getStyle = (index) => {
-    if (activeLinkIndex.value === index) {
-      return {
-        filter: "invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg) brightness(97%) contrast(94%)",
-      };
-    }
-  
-    return {};
-  };
-  
   const getLinkClass = (index) => {
     return {
       active: activeLinkIndex.value === index && activeLinkIndex.value === getLastClickedLinkIndex(),
@@ -79,11 +52,26 @@
   onMounted(() => {
     changePage();
   });
+  
   </script>
+
+<template>
+  <nav>
+    <ul>
+      <li v-for="(type, index) in types" :key="index">
+        <a
+          :href="links[index]"
+          @click="changeColor(index), changePage()"
+          :class="getLinkClass(index)"
+        >
+          <img :src="getImagePath(type)" />
+          <p>{{ names[index] }}</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</template>
   
   <style scoped>
-  a.active {
-    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg) brightness(97%) contrast(94%);
-  }
   </style>
   

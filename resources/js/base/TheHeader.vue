@@ -20,6 +20,11 @@ onMounted(() => {
 window.addEventListener('popstate', () => {
   updateBackPossible();
 });
+
+  const redirectToHome = () => {
+    window.location.hash = '#home';
+  }
+
 </script>
 
 <template>
@@ -31,9 +36,9 @@ window.addEventListener('popstate', () => {
     </div>
 
     <div class="c3-logo">
-      <a :href="'#home'">
-        <img :src="getImagePath('c3-logo')" />
-      </a>
+      
+      <img :src="getImagePath('c3-logo')" @click="redirectToHome" />
+      
     </div>
 
     <div class="right-section">
