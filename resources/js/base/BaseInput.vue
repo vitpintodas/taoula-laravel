@@ -20,9 +20,14 @@
         required: false
     }, 
     color: {
-      type: Boolean,
+      type: String,
       required: false,
-      default: false,
+      default: 'baseInput-container',
+    },
+    color2:{
+      type: String,
+      required: false,
+      default: 'baseInput-inputContainer'
     }
   })
 
@@ -33,9 +38,9 @@
 
 </script>
 <template>
-    <div class="baseInput-container" :class="{baseInputBlack: color}">
+    <div :class="color">
         <label class="baseInput-label" v-if="label">{{ label }}</label>
-        <div class="baseInput-inputContainer">
+        <div :class="color2">
             <img class="baseInput-icon" v-if="type" :src="getImagePath(type)" >
             <input class="baseInput-input" :value="value" :placeholder="placeholder" @input="changeValue($event)">
         </div>

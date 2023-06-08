@@ -107,7 +107,7 @@ const audioDuration = () => {
 </script>
 
 <template>
-            <audio id="audio-player" src="http://stream.srg-ssr.ch/m/couleur3/mp3_128" controls autoplay>
+            <audio id="audio-player" src="http://stream.srg-ssr.ch/m/couleur3/mp3_128" controls >
         Votre navigateur n'est pas capable d'afficher le live
         </audio>
     <div class="baseAudio-container">

@@ -1,3 +1,12 @@
+.interest-container {
+    /* make  the height higher than the aprent one*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 10px;
+}
+
 .interest-interestsDiv{
     display: flex;
     flex-direction: row;
@@ -29,3 +38,4 @@
 .interestSelected-pink {
     background-color: var(--pink);
 }
+
