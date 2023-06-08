@@ -35,6 +35,7 @@ import BaseMainCards from "../base/BaseShopCard.vue";
     </div>
 </template>
 <style scoped>
+
 .titre {
     font-size: 2rem;
     margin: 1rem;

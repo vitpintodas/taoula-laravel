@@ -17,6 +17,7 @@
 @import 'baseAnimButton.css';
 @import 'baseButton.css';
 @import 'basePopUp.css';
+@import 'baseDurationInput.css';
 
 html, body {
     max-width: 100%;
@@ -67,6 +68,15 @@ html, body {
 }
 
 #account-section.active{
+    display: block;
+    width: 100%;
+}
+
+#gifts-section{ 
+    display: none;
+}
+
+#gifts-section.active{
     display: block;
     width: 100%;
 }

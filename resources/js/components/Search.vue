@@ -42,8 +42,8 @@ watch(filtre, (val) => {
   <BaseInput class="marginTB marginLR" :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)" />
   <p class="titre2 marginLR marginT marginB" v-if="showTitle">Rediffusions de la semaine</p>
 
-  <div>
-    <p class="small-description marginLR">05.06.2023</p>
+  <div class="marginLR">
+    <p class="small-description">05.06.2023</p>
     <BaseSmallCards v-for="card in filteredCards" :key="card.title" :title="card.title" :type="card.type" :likeStatus="card.likeStatus" />
   </div>
 </template>
