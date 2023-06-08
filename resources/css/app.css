@@ -14,6 +14,7 @@
 @import 'baseShopCard.css';
 @import 'baseAnimButton.css';
 @import 'baseButton.css';
+@import 'basePopUp.css';
 
 #un-test{ 
     display: none;
