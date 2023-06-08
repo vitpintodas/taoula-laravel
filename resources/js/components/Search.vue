@@ -18,9 +18,11 @@ const cards = ref([
 ]);
 
 const filtre = ref('');
+const showTitle = ref(true);
 
 const updateFiltre = (val) => {
   filtre.value = val;
+  showTitle.value = val === ''; // Vérifie si la valeur du filtre est vide
 };
 
 const filteredCards = ref(cards.value);
@@ -38,7 +40,7 @@ watch(filtre, (val) => {
 
 <template>
   <BaseInput class="marginTB marginLR" :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)" />
-  <p class="titre2 marginLR marginT marginB">Rediffusions de la semaine</p>
+  <p class="titre2 marginLR marginT marginB" v-if="showTitle">Rediffusions de la semaine</p>
 
   <div>
     <p class="small-description marginLR">05.06.2023</p>
