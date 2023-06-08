@@ -25,6 +25,10 @@ window.addEventListener('popstate', () => {
     window.location.hash = '#home';
   }
 
+  const goToShop = () => {
+    window.location.hash = '#gifts';
+  }
+
 </script>
 
 <template>
@@ -48,9 +52,7 @@ window.addEventListener('popstate', () => {
       </div>
 
       <div class="shop">
-        <a href="#gifts">
-          <img :src="getImagePath('shop')" />
-        </a>
+          <img :src="getImagePath('shop')" @click="goToShop" />
       </div>
     </div>
   </header>
