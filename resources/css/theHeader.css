@@ -7,8 +7,13 @@ header {
 }
 
 .c3-logo {
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
-  text-align: center;
+}
+
+.c3-logo img {
+  margin: 0 auto;
 }
 
 .right-section {
