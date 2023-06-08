@@ -5,7 +5,7 @@ export const changePage = () => {
         activeDiv.classList.remove("active");
       }
   
-      const divElement = document.querySelector(`${hashSplit}-test`);
+      const divElement = document.querySelector(`${hashSplit}-section`);
       if (divElement) {
         divElement.classList.add("active");
       }
@@ -16,11 +16,11 @@ export const changePage = () => {
       const hashSplit = hash.split("#");
   
       switch (hash) {
-        case "#un":
-        case "#deux":
-        case "#trois":
-        case "#quatre":
-        case "#cinq":
+        case "#home":
+        case "#search":
+        case "#live":
+        case "#favorites":
+        case "#account":
           toggleSection(hash);
           break;
   

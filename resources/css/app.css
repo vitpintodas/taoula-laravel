@@ -16,47 +16,47 @@
 @import 'baseButton.css';
 @import 'basePopUp.css';
 
-#un-test{ 
+#home-section{ 
     display: none;
 }
 
-#un-test.active{
+#home-section.active{
     display: block;
     width: 100%;
 }
 
-#deux-test{ 
+#search-section{ 
     display: none;
 }
 
-#deux-test.active{
+#search-section.active{
     display: block;
     width: 100%;
 }
 
-#trois-test{ 
+#live-section{ 
     display: none;
 }
 
-#trois-test.active{
+#live-section.active{
     display: block;
     width: 100%;
 }
 
-#quatre-test{ 
+#favorites-section{ 
     display: none;
 }
 
-#quatre-test.active{
+#favorites-section.active{
     display: block;
     width: 100%;
 }
 
-#cinq-test{ 
+#account-section{ 
     display: none;
 }
 
-#cinq-test.active{
+#account-section.active{
     display: block;
     width: 100%;
 }

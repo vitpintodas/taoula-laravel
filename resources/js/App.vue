@@ -28,16 +28,15 @@ watch(testNotif, () => {
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
-        :links="['#un', '#deux', '#trois', '#quatre', '#cinq']"
+        :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <div id="un-test"><Home /></div>
-    <div id="deux-test"><Search /></div>
-    <div id="trois-test"></div>
-    <div id="quatre-test"><Favorites /></div>
-    <div id="trois-test"><Live/></div>
-    <div id="cinq-test"><Account /></div>
+    <div id="home-section"><Home /></div>
+    <div id="search-section"><Search /></div>
+    <div id="live-section"><Live/></div>
+    <div id="favorites-section"><Favorites /></div>
+    <div id="account-section"><Account /></div>
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
