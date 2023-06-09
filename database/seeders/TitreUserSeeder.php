@@ -6,23 +6,27 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ArtisteUserSeeder extends Seeder
+class TitreUserSeeder extends Seeder
 {
-    //not finished yet, Léo Chollet 09/06/2023
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
         // suppression des données de la table
         DB::table('artiste_user')->delete();
 
         // ajout des données
-        for ($i = 1; $i <= 100; $i++) {
-            $numbers = range(1, 20);
-            shuffle($numbers);
+        for ($i = 2; $i <= 20; $i++) {
             $n = rand(3, 6);
             for ($j = 1; $j <= $n; $j++) {
-                DB::table('article_motcle')->insert([
-                'article_id' => $i,
-                'motcle_id' => $numbers[$j]]);
+                $a = range(1, 15);
+                shuffle($a);
+
+                DB::table('artiste_user')->insert([
+                    'user_id' => $i,
+                    'artiste_id' => $a
+                ]);
             }
         }
     }

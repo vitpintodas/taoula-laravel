@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RoleSeeder extends Seeder
+class droitAccessSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,15 +14,16 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('roles')->delete();
+        DB::table('droit_access')->delete();
 
         // création des données
-        $roles = ['admin', 'user'];
-        
+        $droit_access = 'url/';
+
         // insertion des données dans la table
-        foreach ($roles as $role) {
-            DB::table('roles')->insert([
-                'type' => $role,
+        for($i = 1; $i <= 5; $i++)
+        {
+            DB::table('droitAccess')->insert([
+                'url' => $droit_access.$i,
             ]);
         }
     }

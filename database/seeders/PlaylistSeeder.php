@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RoleSeeder extends Seeder
+class PlaylistSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,15 +14,13 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('roles')->delete();
+        DB::table('playlist')->delete();
 
-        // création des données
-        $roles = ['admin', 'user'];
-        
-        // insertion des données dans la table
-        foreach ($roles as $role) {
-            DB::table('roles')->insert([
-                'type' => $role,
+        // Ajout des données
+        for($i = 1; $i <= 100; $i++)
+        {
+            DB::table('playlist')->insert([
+                'nom' => 'playlist'.$i,
             ]);
         }
     }

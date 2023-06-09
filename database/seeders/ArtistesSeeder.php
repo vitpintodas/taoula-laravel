@@ -21,10 +21,13 @@ class ArtistesSeeder extends Seeder
     
     public function run(): void
     {
+        // suppression des données de la table
         DB::table('artistes')->delete();
 
+        // création des données
         $artistes = array("Stromae", "Angèle", "Maître Gims", "Zaz", "Indila", "Céline Dion", "David Guetta", "Soprano", "Kendji Girac", "Vianney", "Louane", "Amir", "Black M", "Jain", "Christine and The Queens", "Mister V");
        
+        // insertion des données dans la table
         for ($i = 1; $i <= 15; $i++) {
             $date = $this->randDate();
             $number = $this->randNumber();
