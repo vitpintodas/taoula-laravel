@@ -1,0 +1,50 @@
+.messageCouleur3-dropFile{
+    min-width: auto;
+    max-width: 450px;
+    border-radius: 6px;
+    height: 52px;
+
+    margin-top: 14px;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: var(--secondBlack);
+    color: #939393;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 14px;
+}
+
+.messageCouleur3-dropInput {
+    display: none;
+}
+
+.messageCouleur3-dropFileContainer {
+    margin-top: 35px;
+}
+
+/* .messageCouleur3-button {
+    position: fixed;
+    bottom: 56px;
+} */
+.messageCouleur3-fileName{
+    margin-left: 14px;
+}
+
+.messageCouleur3-container {
+    padding: 10px;
+}
+
+.messageCouleur3-errorMessage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.messageCouleur3-errorText{
+    margin-left: 15px;
+    width: 300px;
+}

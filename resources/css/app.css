@@ -19,16 +19,14 @@
 @import 'basePopUp.css';
 @import 'baseDurationInput.css';
 @import 'baseDefiButton.css';
+@import 'baseTextArea.css';
+@import 'messageCouleur3.css';
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
     margin-top: 60px;
 }
-
-a.active {
-    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg) brightness(97%) contrast(94%);
-  }
 
 #home-section{ 
     display: none;
@@ -80,6 +78,15 @@ a.active {
 }
 
 #gifts-section.active{
+    display: block;
+    width: 100%;
+}
+
+#message-section{ 
+    display: none;
+}
+
+#message-section.active{
     display: block;
     width: 100%;
 }

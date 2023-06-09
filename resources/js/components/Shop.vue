@@ -1,6 +1,5 @@
 <script setup>
 import BaseShopCard from "../base/BaseShopCard.vue";
-import BaseMainCards from "../base/BaseShopCard.vue";
 </script>
 
 <template>

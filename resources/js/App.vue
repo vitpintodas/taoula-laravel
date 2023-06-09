@@ -12,6 +12,7 @@ import Search from "./components/Search.vue";
 import Favorites from "./components/Favorites.vue";
 import BaseAnimButton from "./base/BaseAnimButton.vue";
 import Interests from "./components/Login/Interests.vue";
+import MessageCouleur3 from "./components/MessageCouleur3.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -40,6 +41,8 @@ watch(testNotif, () => {
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
     <div id="gifts-section"><Shop /></div>
+    <div id="message-section"><MessageCouleur3 /></div>
+    
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
