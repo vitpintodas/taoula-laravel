@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import BaseInteractPollButton from '../../base/BaseInteractPollButton.vue';
-import BaseInput from '../../base/BaseInput.vue'
+import BaseInput from '../../base/BaseInput.vue';
+import BaseButton from '../../base/BaseButton.vue';
 
 const props = defineProps({
     title: {
@@ -63,11 +64,13 @@ const props = defineProps({
     <h1 class="titre2 poll-title">{{ title }}</h1>
     <BaseInput 
     class="poll-textInput" 
-    :color="true"
+    color="blackInput"
+    color2="baseInput-inputContainerBlack"
     placeholder="Saisi ta réponse..."
     @emit-input="optionSelected($event, 'textInput')"/>
   </div>
- <button v-if="answear" @click="sendAnswear()">ENVOYER</button>
+ <BaseButton title="Envoyer" size="small" type="plane" v-if="answear"  @click="sendAnswear()"/>
+ 
 </div>
 
 

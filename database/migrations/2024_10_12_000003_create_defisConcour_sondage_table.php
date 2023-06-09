@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reponses', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('defisConcour_sondage', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             // clés étrangères
-            $table->foreign('sondages_id')->references('id')->on('sondages');
-            $table->foreign('defis__concours_id')->references('id')->on('defis');
+            $table->unsignedBigInteger('sondage_id');
+            $table->foreign('sondage_id')->references('id')->on('sondages');
+            $table->unsignedBigInteger('defisConcour_id');
+            $table->foreign('defisConcour_id')->references('id')->on('defisConcours');
 
             // informations réponse
             $table->string('reponse');

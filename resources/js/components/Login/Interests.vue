@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue';
 import BaseLabel from '../../base/BaseLabel.vue';
 import BaseInput from '../../base/BaseInput.vue';
+import BaseButton from '../../base/BaseButton.vue';
 
 const interests = ref([
     {
@@ -165,23 +166,24 @@ const updateFiltre = (val) => {
 
 </script>
 <template>
+    <div class="interest-container">
     <div class="interest-head">
-      <h1 class="titre">Quels sont tes centres d'intérêts ?</h1>
-      <p class="textes">Tu pourras modifier tes centres d'inérêts plus tard dans les paramètres</p>
-      <BaseInput :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)"/>
+        <h1 class="titre">Quels sont tes centres d'intérêts ?</h1>
+        <p class="textes">Tu pourras modifier tes centres d'inérêts plus tard dans les paramètres</p>
+        <BaseInput :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)"/>
+        </div>
+
+        <p class="titre2" v-if="selectedInterests.length>0">Sélectionnés</p>
+            <div class="interest-interestsSelectedDiv" v-if="selectedInterests.length>0">
+                <BaseLabel v-for="interest in selectedInterests " :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
+            </div>
+        <p class="titre2">Intérêts à choisir</p>
+            <div class="interest-interestsDiv">
+                <BaseLabel v-for="interest in interests" :key="interest" :class="{interestSelected:  interest.selected}" :title="interest.name" @click="addInterest(interest)"/>
+            </div>
+
+            <BaseButton title="Envoyer" size="large"/>
     </div>
-
-      <p class="titre2" v-if="selectedInterests.length>0">Sélectionnés</p>
-        <div class="interest-interestsSelectedDiv" v-if="selectedInterests.length>0">
-            <BaseLabel v-for="interest in selectedInterests " :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
-        </div>
-      <p class="titre2">Intérêts à choisir</p>
-        <div class="interest-interestsDiv">
-            <BaseLabel v-for="interest in interests" :key="interest" :class="{interestSelected:  interest.selected}" :title="interest.name" @click="addInterest(interest)"/>
-        </div>
-
-    <button>ENVOYER</button>
-
 </template>
 
 <!-- css : interest.css -->

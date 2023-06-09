@@ -11,7 +11,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
 
     .small h2 {
@@ -34,7 +35,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
 
     .large h2 {

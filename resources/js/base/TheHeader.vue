@@ -20,6 +20,15 @@ onMounted(() => {
 window.addEventListener('popstate', () => {
   updateBackPossible();
 });
+
+  const redirectToHome = () => {
+    window.location.hash = '#home';
+  }
+
+  const goToShop = () => {
+    window.location.hash = '#gifts';
+  }
+
 </script>
 
 <template>
@@ -31,9 +40,9 @@ window.addEventListener('popstate', () => {
     </div>
 
     <div class="c3-logo">
-      <a :href="'#home'">
-        <img :src="getImagePath('c3-logo')" />
-      </a>
+      
+      <img :src="getImagePath('c3-logo')" @click="redirectToHome" />
+      
     </div>
 
     <div class="right-section">
@@ -43,9 +52,7 @@ window.addEventListener('popstate', () => {
       </div>
 
       <div class="shop">
-        <a :href="'#gifts'">
-          <img :src="getImagePath('shop')" />
-        </a>
+          <img :src="getImagePath('shop')" @click="goToShop" />
       </div>
     </div>
   </header>
