@@ -1,0 +1,32 @@
+.baseDefiButton-container {
+
+    display: flex;
+    height: 55px;
+    background-color: var(--secondBlack);
+    flex-direction: row;
+    width: 380px;
+    color: var(--white);
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    border: none;
+    }
+
+    .baseDefiButton-container h2 {
+        font-family: var(--text);
+        font-weight: 580;
+        font-size: var(--title2Size);
+        margin-top: 6px;
+        margin-left: 25px;
+    }
+
+    .baseDefiButton-type {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 7px;
+        margin-left: 25px;
+        
+      }
