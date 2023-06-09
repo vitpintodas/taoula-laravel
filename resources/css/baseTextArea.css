@@ -1,0 +1,27 @@
+.baseTextArea-textArea {
+    font-family: var(--text);
+    font-weight: var(--textWidth);
+    font-size: var(--textSize);
+    background-color: var(--secondBlack);
+    color: var(--white);
+
+    border-radius: 6px;
+    resize: none;
+
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 10px;
+    margin-top: 14px;
+    height: 100px;
+    padding-top: 14px;
+    padding-left: 14px;
+
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.baseTextArea-container {
+    margin-top: 35px;
+}
+/* remove the border on focus */

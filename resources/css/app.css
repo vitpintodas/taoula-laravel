@@ -18,6 +18,8 @@
 @import 'baseButton.css';
 @import 'basePopUp.css';
 @import 'baseDurationInput.css';
+@import 'baseTextArea.css';
+@import 'messageCouleur3.css';
 
 html, body {
     max-width: 100%;
