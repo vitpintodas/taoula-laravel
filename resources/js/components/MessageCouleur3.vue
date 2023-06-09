@@ -73,3 +73,9 @@ const onPickFile = () => {
 
     </div>
 </template>
+
+<style scoped>
+.messageCouleur3-container{
+    margin-top: calc(var(--marginT) - 10px);
+}
+</style>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Brouillon</title>
+    <title>Couleur 3 | {{ isset($hashOnglet) ? $hashOnglet : '' }}</title>
+
     {{-- ici on injecte le css --}}
     @vite('resources/css/app.css')
     {{-- ici on injecte le javascript --}}
@@ -17,6 +18,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<script>
+    // Vérifie si le hash n'est pas déjà présent dans l'URL
+    if (window.location.hash === '') {
+        // Ajoute le hash '#home' à l'URL sans rechargement de page
+        window.history.replaceState(null, null, '#home');
+    }
+    
+    const updateHash = () => {
+        let hashOnglet = window.location.hash.substring(1); // Supprime le caractère "#" du hash
+        hashOnglet = hashOnglet.charAt(0).toUpperCase() + hashOnglet.slice(1); // Met la première lettre en majuscule
+
+        // Met à jour la valeur du titre de la page
+        document.title = `Couleur 3 | ${hashOnglet}`;
+    };
+
+    // Met à jour le hash lors de l'événement "hashchange"
+    window.addEventListener('hashchange', updateHash);
+    
+    // Appelle la fonction updateHash au chargement initial
+    updateHash();
+</script>
+
+
+
     <div id="app">
 
     </div>
