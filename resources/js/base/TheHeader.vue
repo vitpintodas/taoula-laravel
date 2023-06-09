@@ -24,6 +24,7 @@ window.addEventListener("popstate", () => {
 const redirectToHome = () => {
     window.location.hash = "#home";
 };
+
 </script>
 
 <template>
