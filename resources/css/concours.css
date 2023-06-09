@@ -1,0 +1,63 @@
+.concours-basInput {
+    margin-top: 0px;
+}
+
+.concours-radioInput {
+    /* Hide the default radio input */
+    display: none;
+  }
+  
+  /* Style the custom radio button */
+  .concours-radioInput + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  /* Style the custom indicator dot */
+  .concours-radioInput + label:before {
+    content: '';
+    position: absolute;
+    top: 2px; /* Adjust as needed to vertically center */
+    left: 0;
+    width: 18px; /* Adjust the size of the indicator */
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--secondBlack);
+  }
+  
+  /* Style the custom indicator dot when selected */
+  .concours-radioInput:checked + label:before {
+    width: 16px; /* Make this circle slightly smaller than the other one */
+    height: 16px;
+    background-color: var(--pink); /* Adjust the fill color */
+  }
+  
+  
+  /* Style the radio input label text */
+  .concours-radioInput + label:after {
+    content: attr(data-label);
+    position: relative;
+    top: -1px; /* Adjust as needed to vertically align */
+    margin-left: 10px; /* Adjust the spacing between the indicator and label */
+  }
+  
+
+  .concours-radioContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  .concours-errorContainer{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.concours-errorText{
+  margin-left: 20px;
+}

@@ -21,5 +21,7 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "@vuepic/vue-datepicker": "^5.2.0",
+        "vue-date-pick": "^1.5.1"
     }
 }

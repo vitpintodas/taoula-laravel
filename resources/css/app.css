@@ -20,6 +20,7 @@
 @import 'baseDurationInput.css';
 @import 'baseTextArea.css';
 @import 'messageCouleur3.css';
+@import 'concours.css';
 
 html, body {
     max-width: 100%;

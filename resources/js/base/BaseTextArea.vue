@@ -23,7 +23,7 @@ const changeValue = (event) => {
 <template>
     <div class="baseTextArea-container">
         <label class="baseInput-label" v-if="label">{{ label }}</label>
-    <br>
+    <br v-if="label">
     <textarea class="baseTextArea-textArea" @input="changeValue($event)" :placeholder="placeholder"></textarea>
     </div>
 </template>
