@@ -50,5 +50,8 @@
 </template>
   
   <style scoped>
+  a.active {
+  filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg) brightness(97%) contrast(94%);
+}
   </style>
   

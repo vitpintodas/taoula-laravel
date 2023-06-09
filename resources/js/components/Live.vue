@@ -140,5 +140,8 @@
   });
   </script>
   
-  <style scoped></style>
+  <style scoped>
+  .live-bottomInfoContainer{
+    padding-bottom: 11px;
+  }</style>
   
