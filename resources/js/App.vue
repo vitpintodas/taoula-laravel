@@ -34,14 +34,15 @@ watch(testNotif, () => {
         :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
-<!-- 
+
     <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
-    <div id="gifts-section"><Shop /></div> -->
-    <MessageCouleur3 />
+    <div id="gifts-section"><Shop /></div>
+    <div id="message-section"><MessageCouleur3 /></div>
+    
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
