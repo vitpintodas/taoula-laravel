@@ -125,6 +125,7 @@ onMounted(() => {
           :results="fakeResults"
         />
       </div>
-  
+    </div>
+    </template>
   <style scoped></style>
   
