@@ -50,14 +50,5 @@ export const changePage = () => {
     window.addEventListener("popstate", handlePopstate);
   
     handleHashChange();
-  
-    const lastClickedIndex = sessionStorage.getItem("lastClickedLinkIndex");
-    if (lastClickedIndex !== null) {
-      const activeLink = document.querySelector(`li:nth-child(${parseInt(lastClickedIndex) + 1}) a`);
-      if (activeLink) {
-        const activeHash = activeLink.getAttribute("href");
-        window.location.hash = activeHash;
-      }
-    }
   };
   

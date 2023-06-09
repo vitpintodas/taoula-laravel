@@ -126,16 +126,5 @@ onMounted(() => {
         />
       </div>
   
-      <div class="live-bottomInfoContainer">
-        <p class="descriptionBold">En cours</p>
-        <BaseSmallCards
-          v-for="card in filteredCards"
-          :key="card.title"
-          :title="card.title"
-          :type="card.type"
-          :likeStatus="card.likeStatus"
-        />
-      </div>
-    </div>
-  </template>
+  <style scoped></style>
   
