@@ -1,4 +1,5 @@
 <script setup>
+import BaseButton from "../base/BaseButton.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import BaseMainCards from "../base/BaseMainCards.vue";
 

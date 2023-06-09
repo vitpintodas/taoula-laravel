@@ -10,7 +10,7 @@
 
     link: {
       type: String,
-      required: false
+      required: true
     },
 
     type: {
@@ -33,7 +33,7 @@
         <div v-if="type" class="baseButton-type">
           <img :src="getImagePath(type)"/>
         </div>
-        <div class="baseButton-textContainer">
+        <div>
           <h2 class="titre">{{ title }} </h2>
         </div>
       </div>
