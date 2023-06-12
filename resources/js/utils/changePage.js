@@ -22,6 +22,7 @@ export const changePage = () => {
         case "#account":
         case "#gifts":
         case "#message":
+        case "#participer":
           toggleSection(hash);
           break;
   

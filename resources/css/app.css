@@ -93,6 +93,15 @@ html, body {
     width: 100%;
 }
 
+#participer-section{ 
+    display: none;
+}
+
+#participer-section.active{
+    display: block;
+    width: 100%;
+}
+
 /* VARIABLES DES COULEURS */
 :root {
     /* VARIABLES DES COULEURS */
