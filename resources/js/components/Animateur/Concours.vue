@@ -82,7 +82,7 @@ const updateContestData = (val, type) => {
 
 <style scoped>
 .VueDatePicker{
-    width: 45%;
+    width: 450px;
     margin-top: 5px;
    margin-left: calc(30% + 50px);
    
