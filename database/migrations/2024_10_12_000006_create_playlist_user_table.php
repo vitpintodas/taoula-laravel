@@ -16,9 +16,9 @@ return new class extends Migration
 
             // clés étrangères
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('playlist_id');
-            $table->foreign('playlist_id')->references('id')->on('playlists');
+            $table->foreign('playlist_id')->references('id')->on('playlists')->onDelete('cascade');
 
             // table créé à et modifié à
             $table->timestamps();
