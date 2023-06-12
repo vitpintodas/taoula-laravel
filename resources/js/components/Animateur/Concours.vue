@@ -47,38 +47,53 @@ const updateContestData = (val, type) => {
         <img class="baseInput-icon" :src="getImagePath('warning')" >
         <p class="titre2 concours-errorText">{{ errorMessage }}</p>
     </div>
-    <p class="titre">Titre</p>
+    <p class="titre2">Titre</p>
     <BaseInput placeholder="Saississez le titre du concours" @emit-input="updateContestData($event, 'title')" class="concours-basInput"/>
-    <p class="titre">Descripiton</p>
+    <p class="titre2">Description</p>
     <BaseTextArea placeholder="Saisissez la description du concours" @emit-text-area="updateContestData($event, 'description')" class="concours-basInput"/>
-    <p class="titre">Type de réponses attendue</p>
+    <p class="titre2">Type de réponses attendue</p>
     
     <div class="concours-radioContainer">
         <div>
         <input type="radio" id="texte" value="text" v-model="answearType" checked class="concours-radioInput">
-        <label for="texte" class="titre2">Texte</label>
+        <label for="texte" class="textes">Texte</label>
         </div>
         <div>
         <input type="radio" id="photo" value="photo" v-model="answearType" class="concours-radioInput">
-        <label for="photo" class="titre2">Photo</label>
+        <label for="photo" class="textes">Photo</label>
         </div>
         <div>
         <input type="radio" id="video" value="video" v-model="answearType" class="concours-radioInput">
-        <label for="video" class="titre2">Video</label>
+        <label for="video" class="textes">Video</label>
         </div>
         <div>
         <input type="radio" id="audio" value="audio" v-model="answearType" class="concours-radioInput">
-        <label for="audio" class="titre2">Audio</label>
+        <label for="audio" class="textes">Audio</label>
     </div>
 
     </div>
 
-    <p class="titre">Date et heure concours</p>
+    <p class="titre2">Date et heure concours</p>
     <!-- <input type="date" id="start" name="trip-start" :value="today()" > -->
-    <VueDatePicker v-model="date" placeholder="Saisissez la date et l'heure limite du concours" text-input />
-    <BaseButton title="Lancer le concours" size="huge" @click="launchContest()" value="00:00"/>
+    <VueDatePicker class="VueDatePicker" v-model="date" placeholder="Saisissez la date et l'heure limite du concours" text-input />
+    <BaseButton class="BaseButtonConcours" title="Lancer le concours" size="huge" @click="launchContest()" value="00:00"/>
 
 </template>
 
+<style scoped>
+.VueDatePicker{
+    width: 45%;
+    margin-top: 5px;
+   margin-left: calc(30% + 50px);
+   
 
-<style></style>
+}
+.dp__theme_light{
+    --dp-background-color: var(--secondBlack);
+    --dp-text-color: var(--white);
+    --dp-border-color: none;
+    --dp-font-family: var(--text);
+    --dp-font-size: var( --textSize);
+}
+
+</style>
