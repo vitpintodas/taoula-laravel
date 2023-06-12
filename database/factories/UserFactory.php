@@ -23,9 +23,9 @@ class UserFactory extends Factory
             'pseudo' => fake()->userName(),
             'email' => fake()->unique()->safeEmail(),
             'password' => fake()->password(),
-            'roles_id' => 2,
+            'role_id' => 2,
             'coins' => fake()->numberBetween(0, 1000),
-            'NPA' => fake()->postcode(),
+            'NPA' => 1401,
             'localite' => fake()->city(),
             'rue' => fake()->streetAddress(),
         ];

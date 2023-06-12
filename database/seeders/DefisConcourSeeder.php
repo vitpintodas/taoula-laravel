@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 
-class SondageSeeder extends Seeder
+class DefisConcourSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class SondageSeeder extends Seeder
     {
         // suppression des données de la table
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DB::table('sondages')->truncate();
+        DB::table('defisConcours')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // création d'une durée aléatoire
@@ -30,11 +30,11 @@ class SondageSeeder extends Seeder
 
         $duree = $minutes . ':' . $seconds;
 
-        DB::table('sondages')->insert([
+        DB::table('defisConcours')->insert([
             'user_id' => 1,
-            'question' => 'Quel est votre animal préféré ?',
-            'duree_affichage' => $duree,
-            'heure_publication' => Carbon::now(),
+            'type' => 'sélection à la main',
+            'duree' => $duree,
+            'date_et_heure_publication' => Carbon::now(),
         ]);
     }
 }
