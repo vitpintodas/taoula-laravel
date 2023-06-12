@@ -26,24 +26,66 @@ watch(testNotif, () => {
 </script>
 
 <template>
-    <TheHeader />
-    <!-- <Interests /> -->
-
+    <!-- <TheHeader />
+     <Interests />
 
     <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
+    /> -->
+
+    <BaseAnimButton
+        title="Créer un grand concours"
+        type="contest"
+        link="#bigContest"
     />
 
-    <!-- <div id="home-section"><Home /></div>
+    <BaseAnimButton
+        title="Message des auditeur"
+        type="mail"
+        link="#messageViewers"
+    />
+
+    <BaseAnimButton
+        title="Choix musical"
+        type="music"
+        link="#musicChoices"
+    />
+
+    <BaseAnimButton
+        title="Lancer un vote"
+        type="pieChart"
+        link="#voteStart"
+    />
+
+    <BaseAnimButton
+        title="Lancer un défi"
+        type="coin"
+        link="#challengeStart"
+    />
+
+    <BaseAnimButton
+        title="Informations du live en cours"
+        type="about"
+        link="#liveInfo"
+    />
+
+   <!-- <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
     <div id="gifts-section"><Shop /></div>
     <div id="message-section"><MessageCouleur3 /></div> -->
-    <Concours />
+
+    <!-- Animateur -->
+    <div id="bigContest-section"><Concours /></div>
+    <div id="messageViewers-section">Test</div>
+    <div id="musicChoices-section">Test</div>
+    <div id="voteStart-section">Test</div>
+    <div id="challengeStart-section">Test</div>
+    <div id="liveInfo-section">Test</div>
     
     <!-- 
     <BaseMainCards

@@ -29,67 +29,28 @@ html, body {
     margin-top: 60px;
 }
 
-#home-section{ 
+/* Utilisateur */
+#home-section, #search-section, #live-section, #favorites-section, #account-section, #gifts-section, #message-section{ 
     display: none;
 }
 
-#home-section.active{
+#home-section.active, #search-section.active, #live-section.active, #favorites-section.active, #account-section.active, #gifts-section.active, #message-section.active{
     display: block;
     width: 100%;
 }
 
-#search-section{ 
+/* Animateur */
+#bigContest-section, #messageViewers-section, #musicChoices-section, #voteStart-section, #challengeStart-section, #liveInfo-section{ 
     display: none;
 }
 
-#search-section.active{
+#bigContest-section.active, #messageViewers-section.active, #musicChoices-section.active, #voteStart-section.active, #challengeStart-section.active, #liveInfo-section.active{
     display: block;
     width: 100%;
 }
 
-#live-section{ 
-    display: none;
-}
-
-#live-section.active{
-    display: block;
-    width: 100%;
-}
-
-#favorites-section{ 
-    display: none;
-}
-
-#favorites-section.active{
-    display: block;
-    width: 100%;
-}
-
-#account-section{ 
-    display: none;
-}
-
-#account-section.active{
-    display: block;
-    width: 100%;
-}
-
-#gifts-section{ 
-    display: none;
-}
-
-#gifts-section.active{
-    display: block;
-    width: 100%;
-}
-
-#message-section{ 
-    display: none;
-}
-
-#message-section.active{
-    display: block;
-    width: 100%;
+#bigContest-section.active.selected {
+    background-color: var(--pink);
 }
 
 /* VARIABLES DES COULEURS */
@@ -153,6 +114,10 @@ body {
     margin: 0;
     padding: 0;
     
+}
+
+li {
+    list-style-type: none;
 }
 
 .titre{
@@ -221,5 +186,3 @@ body {
     margin-left: 10px;
     margin-right: 10px
 }
-
-

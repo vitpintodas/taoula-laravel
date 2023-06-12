@@ -22,6 +22,15 @@ export const changePage = () => {
         case "#account":
         case "#gifts":
         case "#message":
+        
+        //Animateur
+        case "#bigContest":
+        case "#messageViewers":
+        case "#musicChoices":
+        case "#voteStart":
+        case "#challengeStart":
+        case "#liveInfo":
+
           toggleSection(hash);
           break;
   
