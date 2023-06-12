@@ -14,6 +14,7 @@ import BaseAnimButton from "./base/BaseAnimButton.vue";
 import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
+import Participer from "./components/Participer.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -36,15 +37,15 @@ watch(testNotif, () => {
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     />
 
-    <!-- <div id="home-section"><Home /></div>
+    <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
     <div id="gifts-section"><Shop /></div>
-    <div id="message-section"><MessageCouleur3 /></div> -->
-    <Concours />
-    
+    <div id="message-section"><MessageCouleur3 /></div>
+    <!-- <Concours /> -->
+    <!-- <Participer /> -->
     <!-- 
     <BaseMainCards
         title="Smash mouth - All star"
