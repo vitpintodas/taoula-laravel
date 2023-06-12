@@ -3,7 +3,7 @@
 
     border-radius: 10px;
     height: auto;
-    width: 30%;
+    width: 100%;
 
     margin: 10px;
 }
@@ -34,15 +34,14 @@
 
 
 .baseAnimButton-img {
-    height: 45px;
-    width: 45px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .baseAnimButton-title {
-    font-family: var(--title);
+    font-family: var(--title2);
     color: var(--white);
-    font-size: var(--titleSize);
-
+    font-size: var(--title2Size);
+    font-weight: var(--title2Width);
 }

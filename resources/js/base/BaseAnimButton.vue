@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps, ref, onMounted } from "vue";
 import { getImagePath } from "../utils/getImagePath";
 import { changePage } from "../utils/changePage";
 
@@ -12,24 +12,18 @@ const props = defineProps({
         type: String,
         required: true,
     },
-    selected: {
-        type: Boolean,
-        required: false,
-    },
     link: {
         type: String,
         required: true,
     },
 });
 
-const Isselected = ref(props.selected);
-const toggleSelect = () => {
-    Isselected.value = !Isselected.value;
-    // emit('update:selected', props.selected)
-};
+onMounted(() => {
+    changePage();
+});
 </script>
 <template>
-    <div class="baseAnimButton-container" @click="toggleSelect()">
+    <div class="baseAnimButton-container">
         <ul>
             <li>
                 <a :href="props.link" @click="changePage()">
@@ -40,5 +34,7 @@ const toggleSelect = () => {
         </ul>
     </div>
 </template>
+
+<style scoped></style>
 
 <!-- css : baseAnimButton.css -->

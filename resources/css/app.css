@@ -23,12 +23,10 @@
 @import 'messageCouleur3.css';
 @import 'concours.css';
 @import 'participer.css';
-@import 'baseAnimeInput.css';
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    margin-top: 60px;
 }
 
 /* Utilisateur */
@@ -42,17 +40,33 @@ html, body {
 }
 
 /* Animateur */
+#interface-animateur{
+float: left;
+width: 30%;
+margin-right: 50px;
+}
+
+
+#hors-live, #en-live{
+    font-family: var(--title2);
+    color: var(--white);
+    font-size: var(--title2Size);
+    font-weight: var(--title2Width);
+    margin-left: 10px;
+}
+
+#en-live{
+    margin-top: 30px;
+}
+
 #bigContest-section, #messageViewers-section, #musicChoices-section, #voteStart-section, #challengeStart-section, #liveInfo-section{ 
     display: none;
+    margin-top: 10px;
 }
 
 #bigContest-section.active, #messageViewers-section.active, #musicChoices-section.active, #voteStart-section.active, #challengeStart-section.active, #liveInfo-section.active{
     display: block;
     width: 100%;
-}
-
-#bigContest-section.active.selected {
-    background-color: var(--pink);
 }
 
 #participer-section{ 

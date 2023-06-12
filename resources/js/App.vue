@@ -35,7 +35,8 @@ watch(testNotif, () => {
         :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
     /> -->
-
+        <div id="interface-animateur">
+            <div id="hors-live"><p>Hors-live</p></div>
     <BaseAnimButton
         title="Créer un grand concours"
         type="contest"
@@ -48,6 +49,7 @@ watch(testNotif, () => {
         link="#messageViewers"
     />
 
+    <div id="en-live"><p>Live</p></div>
     <BaseAnimButton
         title="Choix musical"
         type="music"
@@ -71,6 +73,8 @@ watch(testNotif, () => {
         type="about"
         link="#liveInfo"
     />
+        </div>
+    
 
    <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
