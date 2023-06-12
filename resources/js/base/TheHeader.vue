@@ -28,6 +28,7 @@ const redirectToHome = () => {
 </script>
 
 <template>
+    <div id="marginCachee"></div>
     <header>
         <div class="back-arrow">
             <a v-if="isBackPossible" @click="goBack">
