@@ -21,7 +21,6 @@ return new class extends Migration
             // informations défi
             $table->string('type');
             $table->time('duree');
-            $table->string('password');
             $table->dateTime('date_et_heure_publication');
 
             // table créé à et modifié à
