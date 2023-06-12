@@ -1,6 +1,7 @@
 <script setup>
 import { defineProps, ref } from "vue";
 import { getImagePath } from "../utils/getImagePath";
+import { changePage } from "../utils/changePage";
 
 const props = defineProps({
     title: {
@@ -28,12 +29,16 @@ const toggleSelect = () => {
 };
 </script>
 <template>
-    <a :href="props.link">
-        <div class="baseAnimButton-container" @click="toggleSelect()">
-            <img :src="getImagePath(type)" class="baseAnimButton-img" />
-            <h1 class="baseAnimButton-title">{{ title }}</h1>
-        </div>
-    </a>
+    <div class="baseAnimButton-container" @click="toggleSelect()">
+        <ul>
+            <li>
+                <a :href="props.link" @click="changePage()">
+                    <img :src="getImagePath(type)" class="baseAnimButton-img" />
+                    <h1 class="baseAnimButton-title">{{ title }}</h1>
+                </a>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <!-- css : baseAnimButton.css -->

@@ -31,13 +31,13 @@ onMounted(() => {
             title="Billets pour paléo"
             description="Tente de ganger des billets pour paléo"
             type="contest"
-            link="#unlien2"
+            link="#participer"
         />
         <BaseMainCards
             title="Musique star du jour"
             description="Instant Crush - Daft Punk"
             type="star"
-            link="#unlien2"
+            link="/"
             info="256 likes"
         />
         <BaseMainCards

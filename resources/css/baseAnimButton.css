@@ -5,19 +5,33 @@
     height: auto;
     width: 30%;
 
+    margin: 10px;
+}
+
+.baseAnimButton-container ul {
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+.baseAnimButton-container ul li a {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 16px;
     padding-right: 16px;
 
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+    border-radius: 10px;
+
+    display: block;
 }
 
-.selected {
+.baseAnimButton-container ul li a:hover {
     background-color: var(--pink);
 }
+
+.baseAnimButton-container ul li a.active {
+    background-color: var(--pink);
+}
+
 
 .baseAnimButton-img {
     height: 45px;

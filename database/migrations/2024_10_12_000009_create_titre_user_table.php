@@ -16,9 +16,9 @@ return new class extends Migration
 
             // clés étrangères
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('titre_id');
-            $table->foreign('titre_id')->references('id')->on('titres');
+            $table->foreign('titre_id')->references('id')->on('titres')->onDelete('cascade');
 
             // informations historique
             $table->dateTime('date_et_heure');
