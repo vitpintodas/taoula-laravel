@@ -23,6 +23,7 @@
 @import 'messageCouleur3.css';
 @import 'concours.css';
 @import 'participer.css';
+@import 'baseAnimeInput.css';
 
 html, body {
     max-width: 100%;

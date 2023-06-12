@@ -2,6 +2,9 @@
 import BaseButton from "../base/BaseButton.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import BaseMainCards from "../base/BaseMainCards.vue";
+import BaseDurationInput from '../base/BaseAnimateur/BaseDurationInput.vue'
+import BaseDefiButton from '../base/BaseDefiButton.vue'
+import BaseAnimeInput from '../base/BaseInput.vue';
 
 const showName = ref('...');
 
@@ -24,7 +27,7 @@ onMounted(() => {
 
 <template>
     <div class="marginT">
-        <BaseMainCards
+       <BaseMainCards
             title="Billets pour paléo"
             description="Tente de ganger des billets pour paléo"
             type="contest"
@@ -44,4 +47,6 @@ onMounted(() => {
             link="#live"
         />
     </div>
+
+  
 </template>
