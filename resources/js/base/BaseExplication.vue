@@ -17,7 +17,7 @@ const props = defineProps({
     },
    info: {
     type: String,
-    required: true,
+    required: false,
     },
 });
 
@@ -44,7 +44,7 @@ const toggleAnswer = (element) => {
 </div>
 <div class="about">
     <h2 class="titre2">À propos des données</h2>
-    <p classe="description">Le texte ou les fichiers que tu enverras seront traités uniquement dans le cadre du concours et supprimé dirctement après que le vainqueur ait été sélectionné, alors ne t’inquiètes pas !</p>
+    <p class="description">Le texte ou les fichiers que tu enverras seront traités uniquement dans le cadre du concours et supprimé dirctement après que le vainqueur ait été sélectionné, alors ne t’inquiètes pas !</p>
 </div>
 </template>
 

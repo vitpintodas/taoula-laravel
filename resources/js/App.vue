@@ -27,10 +27,10 @@ watch(testNotif, () => {
 </script>
 
 <template>
-    <!-- <TheHeader />
-     <Interests />
+    <!-- <TheHeader /> -->
+     <!-- <Interests /> -->
 
-    <TheFooter
+    <!-- <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
@@ -43,7 +43,7 @@ watch(testNotif, () => {
     />
 
     <BaseAnimButton
-        title="Message des auditeur"
+        title="Message des auditeurs"
         type="mail"
         link="#messageViewers"
     />
@@ -72,13 +72,14 @@ watch(testNotif, () => {
         link="#liveInfo"
     />
 
-   <!-- <div id="home-section"><Home /></div>
+   <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
     <div id="gifts-section"><Shop /></div>
-    <div id="message-section"><MessageCouleur3 /></div> -->
+    <div id="message-section"><MessageCouleur3 /></div>
+    <div id="participer-section"><Participer /></div>
 
     <!-- Animateur -->
     <div id="bigContest-section"><Concours /></div>

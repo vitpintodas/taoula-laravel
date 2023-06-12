@@ -73,7 +73,7 @@ const updateContestData = (val, type) => {
 
     </div>
 
-    <p class="titre">Date et heure concours</p>
+    <p class="titre">Date et heure du concours</p>
     <!-- <input type="date" id="start" name="trip-start" :value="today()" > -->
     <VueDatePicker v-model="date" placeholder="Saisissez la date et l'heure limite du concours" text-input />
     <BaseButton title="Lancer le concours" size="huge" @click="launchContest()" value="00:00"/>
