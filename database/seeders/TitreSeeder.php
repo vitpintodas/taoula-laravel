@@ -21,7 +21,9 @@ class TitreSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('titre')->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('titres')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // création des données
         $titres = ['Bohemian Rhapsody', 'Smells Like Teen Spirit', 'Imagine', 'Like a Rolling Stone', 'Hey Jude', 'Billie Jean', 'Hotel California', 'Stairway to Heaven', 'Thriller', 'Yesterday', 'Shape of You', 'Bohemian Like You', 'Rolling in the Deep', 'Sweet Child o Mine', 'Dont Stop Believin', 'Hallelujah', 'Crazy in Love', 'Wannabe', 'Seven Nation Army'];
@@ -43,7 +45,7 @@ class TitreSeeder extends Seeder
             // création d'un genre aléatoire
             $n = rand(0, 19);
 
-            DB::table('titre')->insert([
+            DB::table('titres')->insert([
                 'nom' => $titre,
                 'nbLikes' => $this->randNumber(),
                 'duree' => $duree,

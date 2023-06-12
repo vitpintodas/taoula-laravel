@@ -16,7 +16,9 @@ class userSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('users')->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('users')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // création des données
         DB::table('users')->insert([
@@ -25,7 +27,7 @@ class userSeeder extends Seeder
             'pseudo' => 'johndoe',
             'email' => 'john.doe@test.ch',
             'password' => Hash::make('password1'),
-            'roles_id' => 1,
+            'role_id' => 1,
             'coins' => 100,
             'NPA' => '1162',
             'localite' => 'St-Prex',

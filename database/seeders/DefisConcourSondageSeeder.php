@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class droitAccessSeeder extends Seeder
+class DefisConcourSondageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,17 +15,20 @@ class droitAccessSeeder extends Seeder
     {
         // suppression des données de la table
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DB::table('droitsaccess')->truncate();
+        DB::table('defisconcour_sondage')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
-        // création des données
-        $droit_access = 'url/';
+        $reponses = ['Oui', 'Non'];
 
-        // insertion des données dans la table
-        for($i = 1; $i <= 5; $i++)
+        // Ajout des données
+        for($i = 2; $i <= 20; $i++)
         {
-            DB::table('droitsaccess')->insert([
-                'url' => $droit_access.$i,
+            $aleatoire = $reponses[array_rand($reponses)];
+
+            DB::table('defisconcour_sondage')->insert([
+                'defisconcour_id' => 1,
+                'sondage_id' => 1,
+                'reponse' => $aleatoire,
             ]);
         }
     }

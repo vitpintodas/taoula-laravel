@@ -15,6 +15,8 @@ import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
 import Participer from "./components/Participer.vue";
+import MusicChoice from "./components/Animateur/MusicChoice.vue";
+import InformationsLive from "./components/Animateur/InformationsLive.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -27,10 +29,10 @@ watch(testNotif, () => {
 </script>
 
 <template>
-    <!-- <TheHeader />
-     <Interests />
+    <!-- <TheHeader /> -->
+     <!-- <Interests /> -->
 
-    <TheFooter
+    <!-- <TheFooter
         :types="['home', 'search', 'live', 'fav', 'account']"
         :links="['#home', '#search', '#live', '#favorites', '#account']"
         :names="['Accueil', 'Recherche', 'Live', 'Favoris', 'Compte']"
@@ -44,7 +46,7 @@ watch(testNotif, () => {
     />
 
     <BaseAnimButton
-        title="Message des auditeur"
+        title="Message des auditeurs"
         type="mail"
         link="#messageViewers"
     />
@@ -76,21 +78,22 @@ watch(testNotif, () => {
         </div>
     
 
-   <!-- <div id="home-section"><Home /></div>
+   <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
     <div id="account-section"><Account /></div>
     <div id="gifts-section"><Shop /></div>
-    <div id="message-section"><MessageCouleur3 /></div> -->
+    <div id="message-section"><MessageCouleur3 /></div>
+    <div id="participer-section"><Participer /></div>
 
     <!-- Animateur -->
     <div id="bigContest-section"><Concours /></div>
     <div id="messageViewers-section">Test</div>
-    <div id="musicChoices-section">Test</div>
+    <div id="musicChoices-section"><MusicChoice /></div>
     <div id="voteStart-section">Test</div>
     <div id="challengeStart-section">Test</div>
-    <div id="liveInfo-section">Test</div>
+    <div id="liveInfo-section"><InformationsLive /></div>
     
     <!-- 
     <BaseMainCards

@@ -28,8 +28,6 @@ const closePopup = () => {
     </div>
   </template>
   
-
-  
   <style scoped>
 
   </style>

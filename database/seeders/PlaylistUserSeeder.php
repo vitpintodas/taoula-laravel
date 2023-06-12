@@ -14,7 +14,9 @@ class PlaylistUserSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('playlist_user')->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('playlist_user')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // création numéro aléatoire
         $numbers = range(1, 100);
