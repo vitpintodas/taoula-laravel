@@ -16,9 +16,9 @@ return new class extends Migration
 
             // clés étrangères
             $table->unsignedBigInteger('playlist_id');
-            $table->foreign('playlist_id')->references('id')->on('playlists');
+            $table->foreign('playlist_id')->references('id')->on('playlists')->onDelete('cascade');
             $table->unsignedBigInteger('titre_id');
-            $table->foreign('titre_id')->references('id')->on('titres');
+            $table->foreign('titre_id')->references('id')->on('titres')->onDelete('cascade');
 
             $table->timestamps();
         });

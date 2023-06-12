@@ -1,0 +1,27 @@
+.faq {
+    padding: 0;
+  }
+  
+  .question {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .question h3 {
+    margin: 0;
+    font: var(--titre2);
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 10px;
+    font: var(--texte);
+  }
+
+.participer {
+    margin-top: var(--marginT);
+    margin-bottom: var(--marginB);
+    margin-left: var(--marginLR);
+    margin-right: var(--marginLR);
+    
+}

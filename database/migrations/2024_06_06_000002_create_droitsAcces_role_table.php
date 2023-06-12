@@ -16,9 +16,9 @@ return new class extends Migration
 
             // clés étrangères
             $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->unsignedBigInteger('droitsAcces_id');
-            $table->foreign('droitsAcces_id')->references('id')->on('droitsAccess');
+            $table->foreign('droitsAcces_id')->references('id')->on('droitsAccess')->onDelete('cascade');
 
             // table créé à et modifié à
             $table->timestamps();

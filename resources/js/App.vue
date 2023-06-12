@@ -14,6 +14,7 @@ import BaseAnimButton from "./base/BaseAnimButton.vue";
 import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
+import Participer from "./components/Participer.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait

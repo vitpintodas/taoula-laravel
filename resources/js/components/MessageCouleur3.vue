@@ -69,7 +69,7 @@ const onPickFile = () => {
         </div>
     </div>
 
-    <BaseButton class="messageCouleur3-button" title="Envoyer" size="large" @click="sendMessage()"/>
+    <BaseButton link="#home" class="messageCouleur3-button" title="Envoyer" size="large" @click="sendMessage()"/>
 
     </div>
 </template>

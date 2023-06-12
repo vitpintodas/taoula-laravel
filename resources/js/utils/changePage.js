@@ -31,6 +31,7 @@ export const changePage = () => {
         case "#challengeStart":
         case "#liveInfo":
 
+        case "#participer":
           toggleSection(hash);
           break;
   
