@@ -55,7 +55,8 @@ onBeforeUnmount(() => {
             currentSection === 'account' ||
             currentSection === 'gifts' ||
             currentSection === 'message' ||
-            currentSection === 'participer'
+            currentSection === 'participer' ||
+            currentSection === 'interests'
         "
     >
         <TheHeader />
@@ -76,6 +77,7 @@ onBeforeUnmount(() => {
         <div id="gifts-section"><Shop /></div>
         <div id="message-section"><MessageCouleur3 /></div>
         <div id="participer-section"><Participer /></div>
+        <div id="interests-section"><Interests /></div>
     </template>
 
     <!-- Animateur -->
