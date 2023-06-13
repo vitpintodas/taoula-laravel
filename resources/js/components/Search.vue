@@ -43,7 +43,7 @@ watch(filtre, (val) => {
   <p class="titre2 marginLR marginT marginB" v-if="showTitle">Rediffusions de la semaine</p>
 
   <div class="marginLR">
-    <p class="small-description">05.06.2023</p>
+    <p class="small-description" v-if="showTitle">05.06.2023</p>
     <BaseSmallCards v-for="card in filteredCards" :key="card.title" :title="card.title" :type="card.type" :likeStatus="card.likeStatus" />
   </div>
 </template>

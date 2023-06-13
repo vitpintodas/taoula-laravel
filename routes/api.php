@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArtisteController;
+use App\Http\Controllers\ReponseController;
+use App\Http\Controllers\TitreController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -21,3 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //API pour donners les informations d'un utilisateur, exemple: http://1270.0.0.1:8000/api/users/1
 Route::get('/users/{id}', [UserController::class, 'show']);
+Route::get('/reponses/{id}', [ReponseController::class, 'show']);
+Route::get('/titres/{id}', [TitreController::class, 'show']);
+Route::get('/artistes/{id}', [ArtisteController::class, 'show']);

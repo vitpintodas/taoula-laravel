@@ -33,9 +33,8 @@ class DatabaseSeeder extends Seeder
         $this->call(PlaylistUserSeeder::class);
         $this->call(TitreUserSeeder::class);
         $this->call(ArtisteUserSeeder::class);
-        $this->call(SondageSeeder::class);
-        $this->call(DefisConcourSeeder::class);
+        $this->call(SondageDefisConcourSeeder::class);
         $this->call(ReponsesSeeder::class);
-        $this->call(SondageUserSeeder::class);
+        $this->call(SondageDefisConcoursUserSeeder::class);
     }
 }
