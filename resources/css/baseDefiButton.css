@@ -1,13 +1,12 @@
 .baseDefiButton-container {
-
     background-color: var(--secondBlack);
     border-radius: 10px;
     height: 55px;
     width: 355px;
     position: relative;
-}
-
-.baseDefiButton-container ul li a {
+  }
+  
+  .baseDefiButton-container ul li a {
     position: absolute;
     top: 0;
     right: 0;
@@ -18,30 +17,18 @@
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-
-   
-}
-
-.baseDefiButton-container ul li a img {
-    margin-left: 25px; 
+  }
+  
+  .baseDefiButton-container ul li a img {
+    margin-left: 25px;
     margin-top: 8px;
-}
-
-.baseDefiButton-container ul li a h2 {
-    margin-left: 30px; 
+  }
+  
+  .baseDefiButton-container ul li a h2 {
+    margin-left: 30px;
     margin-top: 7px;
-}
-
-
-.baseDefiButton-container ul li a:hover {
+  }
+  
+  .baseDefiButton-container ul li a:hover {
     background-color: var(--pink);
-}
-
-.baseDefiButton-container ul li a.active {
-    background-color: var(--pink);
-}
-
-
-
-
-
+  }
