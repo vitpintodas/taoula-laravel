@@ -67,8 +67,6 @@
         date,
         items
       }))
-
-      groupedLikedItems.value = sortedGroups.reverse();
   
     groupedLikedItems.value = sortedGroups
   }
