@@ -32,6 +32,14 @@ html, body {
     padding-bottom: 100px;
 }
 
+@media (max-width: 480px) {
+    /* Styles for phone format */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+}
 /* Utilisateur */
 #home-section, #search-section, #live-section, #favorites-section, #account-section, #gifts-section, #message-section, #interests-section{ 
     display: none;
