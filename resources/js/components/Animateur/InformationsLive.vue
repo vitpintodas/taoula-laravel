@@ -195,7 +195,7 @@ const updateFiltre = (val) => {
             <br>
 
             <!-- <BasePopUp ref="popupRef" title="Choix enregistrés" message="Vos choix ont bien été sauvegardés pour ce live" /> -->
-            <BaseButton class="info-button" title="Envoyer" size="large" link="/" />
+            <BaseButton class="info-button" title="Envoyer" size="large" link="#liveInfo" />
             
 
 
@@ -208,17 +208,14 @@ a.info-button{
 float: left;
 margin-left: calc(30% + 55px);
 width: 450px;
-padding-left: 55px;
 
 }
 
 .interest-interestsDiv{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-left: calc(30% + 55px);
-    width: 450px;
-    margin-right: 55px;
+    margin-right: 0px;
 }
 
 .sub-title{
