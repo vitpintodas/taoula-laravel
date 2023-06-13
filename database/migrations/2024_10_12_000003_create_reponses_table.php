@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('defisConcour_sondage', function (Blueprint $table) {
+        Schema::create('reponses', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             // clés étrangères

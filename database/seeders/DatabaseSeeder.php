@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ArtisteUserSeeder::class);
         $this->call(SondageSeeder::class);
         $this->call(DefisConcourSeeder::class);
-        $this->call(DefisConcourSondageSeeder::class);
+        $this->call(ReponsesSeeder::class);
         $this->call(SondageUserSeeder::class);
     }
 }
