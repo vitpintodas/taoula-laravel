@@ -32,17 +32,26 @@ const launchVote = () => {
 
 
 <template>
-    <h1 class="titre">Sujet du vote</h1>
+    <h1 class="titre2">Sujet du vote</h1>
     <BaseInput placeholder="Sujet du vote" @emit-input="vote.title = $event"/>
-    <h1 class="titre">Choix possibles</h1>
+    <h1 class="titre2">Choix possibles</h1>
 
     <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
 
     <BaseDurationInput @emit-time="updateTime($event)"/>
 
-    <BaseButton title="Lancer le vote" size="large"  @click="launchVote()"/>
+    <BaseButton class="vote-button" title="Lancer le vote" size="large"  @click="launchVote()"/>
 
 </template>
 
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 1206px){
+    a.vote-button {
+    float: left;
+    margin-left: calc(30% + 50px);
+    width: 450px;
+}
+}
+
+</style>
