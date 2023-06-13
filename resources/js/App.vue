@@ -77,6 +77,14 @@ onBeforeUnmount(() => {
         <div id="message-section"><MessageCouleur3 /></div>
         <div id="participer-section"><Participer /></div>
         <div id="interests-section"><Interests /></div>
+
+        <BaseNotification
+            type="brokenLike"
+            :active="testNotif"
+            link="#test"
+            title="Inscris-toi"
+            description="Inscris toi pour pouvoir liker du contenu"
+        />
     </template>
 
     <!-- Animateur -->
