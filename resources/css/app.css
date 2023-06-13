@@ -32,11 +32,11 @@ html, body {
 }
 
 /* Utilisateur */
-#home-section, #search-section, #live-section, #favorites-section, #account-section, #gifts-section, #message-section{ 
+#home-section, #search-section, #live-section, #favorites-section, #account-section, #gifts-section, #message-section, #interests-section{ 
     display: none;
 }
 
-#home-section.active, #search-section.active, #live-section.active, #favorites-section.active, #account-section.active, #gifts-section.active, #message-section.active{
+#home-section.active, #search-section.active, #live-section.active, #favorites-section.active, #account-section.active, #gifts-section.active, #message-section.active, #interests-section.active{
     display: block;
     width: 100%;
 }
