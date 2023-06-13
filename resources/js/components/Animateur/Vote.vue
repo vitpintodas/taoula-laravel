@@ -40,9 +40,18 @@ const launchVote = () => {
 
     <BaseDurationInput @emit-time="updateTime($event)"/>
 
-    <BaseButton title="Lancer le vote" size="large"  @click="launchVote()"/>
+    <BaseButton class="vote-button" title="Lancer le vote" size="large"  @click="launchVote()"/>
 
 </template>
 
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 1206px){
+    a.vote-button {
+    float: left;
+    margin-left: calc(30% + 50px);
+    width: 450px;
+}
+}
+
+</style>
