@@ -24,6 +24,7 @@ export const changePage = () => {
             case "#gifts":
             case "#message":
             case "#participer":
+            case "#interests":
 
             //Animateur
             case "#homeAnimateur":
