@@ -142,5 +142,6 @@ onMounted(() => {
   <style scoped>
   .live-bottomInfoContainer{
     padding-bottom: 11px;
-  }</style>
+  }
+  </style>
   
