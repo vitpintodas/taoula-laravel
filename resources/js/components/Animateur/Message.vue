@@ -47,7 +47,7 @@ import BaseMessage from "../../base/BaseAnimateur/BaseMessage.vue";
 
 <style scoped>
 .firstMess {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 
