@@ -118,10 +118,11 @@ const updateContestData = (val, type) => {
         placeholder="Saisissez la date et l'heure limite du concours"
         text-input
     />
+    <br>
     <BaseButton
         class="BaseButtonConcours"
         title="Lancer le concours"
-        size="huge"
+        size="large"
         @click="launchContest()"
         value="00:00"
     />
