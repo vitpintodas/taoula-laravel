@@ -48,9 +48,60 @@ const updateInput = (value, input) => {
 
 <template>
     <BaseInput v-for="input in extraInputs" :key="input" :placeholder="`Option/Choix n°${input.id}`" @emit-input="updateInput($event, input)"/>
-    <Button @click="addInput()" v-if="addButton">ajouter une option</Button>
-    <Button v-if="removeButton" @click="removeInput()">Retirer une option</Button>
+    <Button class="add-button" @click="addInput()" v-if="addButton">+ ajouter une option</Button>
+    <Button class="remove-button " v-if="removeButton" @click="removeInput()">- Retirer une option</Button>
 </template>
 
 
-<style></style>
+<style scoped>
+.add-button{
+    background: var(--pink);
+    color: var(--white);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    min-height: 20px;
+    max-width: fit-content;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.add-button:hover{
+    background: rgb(196, 62, 156);
+    color: var(--white);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    min-height: 20px;
+    max-width: fit-content;
+}
+
+.remove-button{
+    background: rgb(222, 80, 80);
+    color: var(--white);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    min-height: 20px;
+    max-width: fit-content;
+    padding: 10px;
+}
+
+.remove-button:hover{
+    background: rgb(197, 57, 57);
+    color: var(--white);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    min-height: 20px;
+    max-width: fit-content;
+}
+</style>
