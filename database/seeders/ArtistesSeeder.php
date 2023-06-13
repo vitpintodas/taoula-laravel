@@ -22,7 +22,9 @@ class ArtistesSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('artistes')->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('artistes')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // création des données
         $artistes = array("Stromae", "Angèle", "Maître Gims", "Zaz", "Indila", "Céline Dion", "David Guetta", "Soprano", "Kendji Girac", "Vianney", "Louane", "Amir", "Black M", "Jain", "Christine and The Queens", "Mister V");

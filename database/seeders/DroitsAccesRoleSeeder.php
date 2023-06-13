@@ -14,14 +14,16 @@ class DroitsAccesRoleSeeder extends Seeder
     public function run(): void
     {
         // suppression des données de la table
-        DB::table('droitsaccess_role')->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::table('droitsacces_role')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
         // insérer les données
         for($i = 2; $i <= 20; $i++)
         {
-            DB::table('droitsaccess_role')->insert([
+            DB::table('droitsacces_role')->insert([
                 'role_id' => 2,
-                'droitsaccess_id' => 1,
+                'droitsAcces_id' => 1,
             ]);
         }
 

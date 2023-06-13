@@ -1,12 +1,13 @@
 <script setup>
 import BaseSettingsButton from "../base/BaseSettingsButton.vue";
+import { getImagePath } from "../utils/getImagePath";
 </script>
 
 <template>
     <div id="compte" class="marginLR">
         <p class="titre">Test</p>
         <a href="#profilSettings">
-            <img src="./../../assets/svg/settings.svg" alt="profilSettings" />
+            <img :src=getImagePath(settings) alt="profilSettings" />
         </a>
 
         <p class="textes">mail@test</p>

@@ -26,6 +26,7 @@ export const changePage = () => {
             case "#participer":
 
             //Animateur
+            case "#homeAnimateur":
             case "#bigContest":
             case "#messageViewers":
             case "#musicChoices":

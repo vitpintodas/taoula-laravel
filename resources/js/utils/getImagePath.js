@@ -7,5 +7,5 @@ export const getImagePath = (type) => {
     //return the path of the svg using import.meta.url
     // console.log(`${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`)
     // console.log(`${import.meta.url.split('resources')[0]}`)
-    return `${import.meta.url.split('resources')[0]}resources/assets/svg/${type}.svg`
+    return `${window.location.origin}/storage/${type}.svg`;
 }

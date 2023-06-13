@@ -13,6 +13,8 @@
     position: relative;
     padding-left: 25px; /* Adjust as needed */
     cursor: pointer;
+    top:2px;
+    padding-top: 1px;
   }
   
   /* Style the custom indicator dot */
@@ -60,4 +62,8 @@
 
 .concours-errorText{
   margin-left: 20px;
+}
+
+.baseInput-input{
+  padding-left: 0px;
 }

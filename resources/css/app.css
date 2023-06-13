@@ -24,10 +24,11 @@
 @import 'concours.css';
 @import 'participer.css';
 @import 'defi.css';
+@import 'baseMessage.css';
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* Utilisateur */
@@ -54,6 +55,7 @@ margin-right: 50px;
     font-size: var(--title2Size);
     font-weight: var(--title2Width);
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 #en-live{

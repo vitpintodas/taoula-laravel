@@ -14,6 +14,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
     }
+    .small:hover{
+        cursor: pointer;
+    }
 
     .small h2 {
         font-family: var(--text);
@@ -39,6 +42,10 @@
     margin-bottom: 10px;
     }
 
+    .large:hover{
+        cursor: pointer;
+    }
+
     .large h2 {
         font-family: var(--text);
         font-weight: 580;
@@ -60,6 +67,9 @@
     align-items: center;
     text-decoration: none;
     margin: 10px;
+    }
+    .huge:hover{
+        cursor: pointer;
     }
 
     .huge h2 {
