@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
 
         <BaseNotification
             type="brokenLike"
-            :active="testNotif"
+            :active="false"
             link="#test"
             title="Inscris-toi"
             description="Inscris toi pour pouvoir liker du contenu"
