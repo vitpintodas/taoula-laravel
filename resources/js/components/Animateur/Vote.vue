@@ -32,9 +32,9 @@ const launchVote = () => {
 
 
 <template>
-    <h1 class="titre">Sujet du vote</h1>
+    <h1 class="titre2">Sujet du vote</h1>
     <BaseInput placeholder="Sujet du vote" @emit-input="vote.title = $event"/>
-    <h1 class="titre">Choix possibles</h1>
+    <h1 class="titre2">Choix possibles</h1>
 
     <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
 
