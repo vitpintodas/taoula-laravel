@@ -23,6 +23,7 @@
 @import 'messageCouleur3.css';
 @import 'concours.css';
 @import 'participer.css';
+@import 'baseMessage.css';
 
 html, body {
     max-width: 100%;
@@ -53,6 +54,7 @@ margin-right: 50px;
     font-size: var(--title2Size);
     font-weight: var(--title2Width);
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 #en-live{

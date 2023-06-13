@@ -1,5 +1,5 @@
 <script setup>
-
+import BaseButton from '../BaseButton.vue';
 
 const props = defineProps({
     title: {
@@ -12,8 +12,13 @@ const props = defineProps({
     },
 });
 
+const popup = document.querySelector('.popup');
+const closeButton = document.querySelector('.close-button');
+
 const closePopup = () => {
-    emit('update:selected', props.selected)
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
 };
 
 </script>
@@ -23,11 +28,12 @@ const closePopup = () => {
       <div class="popup-content">
         <h2>{{ title }}</h2>
         <p>{{ message }}</p>
-        <button @click="closePopup">Fermer</button>
+        <BaseButton title="OK" size="large" @click="closePopUp()"/>
       </div>
     </div>
   </template>
   
   <style scoped>
+
 
   </style>

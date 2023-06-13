@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 import BaseInput from '../../base/BaseInput.vue';
 import BaseLabel from '../../base/BaseLabel.vue';
 import BaseButton from '../../base/BaseButton.vue';
+// import BasePopUp from '../../base/BaseAnimateur/BasePopUp.vue';
 
 const interests = ref([
     {
@@ -171,23 +172,61 @@ const updateFiltre = (val) => {
 <template>
 
 <h1 class="titre2">Titre du live</h1>
-<BaseInput value="Titre du live" />
+<BaseInput placeholder="Titre du live"/>
 <h1 class="titre2">Description du live</h1>
-<BaseInput :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)"/>
+<BaseInput :value="filtre" type="searchInput" placeholder=" Rechercher..." @emit-input="updateFiltre($event)"/>
 
 <p class="titre2" v-if="selectedInterests.length>0">Sélectionnés</p>
             <div class="interest-interestsSelectedDiv" v-if="selectedInterests.length>0">
                 <BaseLabel v-for="interest in selectedInterests " :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
             </div>
-        <p class="titre2">Thèmes</p>
+        <p class="titre2">Autres thèmes</p>
+        <br>
+        <p class="sub-title textes">Audio</p>
+            <div class="interest-interestsDiv">
+                <BaseLabel v-for="interest in interests" :key="interest" :class="{interestSelected:  interest.selected}" :title="interest.name" @click="addInterest(interest)"/>
+            </div>
+        <br>
+        <p class="sub-title textes">Podcast</p>
             <div class="interest-interestsDiv">
                 <BaseLabel v-for="interest in interests" :key="interest" :class="{interestSelected:  interest.selected}" :title="interest.name" @click="addInterest(interest)"/>
             </div>
 
-            <BaseButton title="Envoyer" size="large"/>
+            <br>
+
+            <!-- <BasePopUp ref="popupRef" title="Choix enregistrés" message="Vos choix ont bien été sauvegardés pour ce live" /> -->
+            <BaseButton class="info-button" title="Envoyer" size="large" link="#liveInfo" />
+            
+
 
 
 </template>
 
 
-<style></style>
+<style scoped>
+a.info-button{
+float: left;
+margin-left: calc(30% + 55px);
+width: 450px;
+
+}
+
+.interest-interestsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(30% + 55px);
+    margin-right: 0px;
+}
+
+.sub-title{
+    margin-left: calc(30% + 55px);
+    width: 450px;
+    font-weight: bold;
+}
+
+.baseInput-container{
+    margin-top: 0;
+}
+
+
+</style>

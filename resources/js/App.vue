@@ -15,6 +15,7 @@ import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
 import Participer from "./components/Participer.vue";
+import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
@@ -79,7 +80,7 @@ watch(testNotif, () => {
         </div>
     
 
-   <div id="home-section"><Home /></div>
+    <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
@@ -90,7 +91,7 @@ watch(testNotif, () => {
 
     <!-- Animateur -->
     <div id="bigContest-section"><Concours /></div>
-    <div id="messageViewers-section">Test</div>
+    <div id="messageViewers-section"><Message /></div>
     <div id="musicChoices-section"><MusicChoice /></div>
     <div id="voteStart-section"><Vote /></div>
     <div id="challengeStart-section">Test</div>
