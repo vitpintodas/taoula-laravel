@@ -78,7 +78,7 @@ watch(testNotif, () => {
         </div>
     
 
-   <div id="home-section"><Home /></div>
+    <div id="home-section"><Home /></div>
     <div id="search-section"><Search /></div>
     <div id="live-section"><Live/></div>
     <div id="favorites-section"><Favorites /></div>
