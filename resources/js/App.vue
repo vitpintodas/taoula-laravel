@@ -17,6 +17,7 @@ import Concours from "./components/Animateur/Concours.vue";
 import Participer from "./components/Participer.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
+import Vote from "./components/Animateur/Vote.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -91,7 +92,7 @@ watch(testNotif, () => {
     <div id="bigContest-section"><Concours /></div>
     <div id="messageViewers-section">Test</div>
     <div id="musicChoices-section"><MusicChoice /></div>
-    <div id="voteStart-section">Test</div>
+    <div id="voteStart-section"><Vote /></div>
     <div id="challengeStart-section">Test</div>
     <div id="liveInfo-section"><InformationsLive /></div>
     
