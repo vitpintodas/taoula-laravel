@@ -104,6 +104,12 @@ const audioDuration = () => {
     const audioDuration = (timeNow - firstTime) / 1000
     return audioDuration
 }
+
+//l'emit qui va s'occuper de checker si on veut la vidéo
+const emits = defineEmits(['emitVideo']);
+const emitVideo = () => {
+    emits('emitVideo', 'video')
+}
 </script>
 
 <template>
@@ -118,7 +124,10 @@ const audioDuration = () => {
       </div>
         <input type="range" id="seek-slider" max="100" value="100" @change="slider()">
 
+        <img @click="emitVideo()" :src="getImagePath('live')" class="baseAudio-icon" />
+
         <img v-if="playing" :src="getImagePath('play')" @click="toggleAudio()" class="baseAudio-icon"/>
         <img v-if="!playing" :src="getImagePath('pause')" @click="toggleAudio()" class="baseAudio-icon"/>
+
     </div>
 </template>
