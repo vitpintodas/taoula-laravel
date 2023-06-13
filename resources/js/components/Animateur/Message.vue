@@ -35,7 +35,7 @@ import BaseMessage from "../../base/BaseAnimateur/BaseMessage.vue";
             date="16h53 13.06.2023"
         />
     </div>
-    <div class="lastMess">
+    <div>
         <BaseMessage
             nom="Nathan"
             prenom="Gretillat"
@@ -50,7 +50,5 @@ import BaseMessage from "../../base/BaseAnimateur/BaseMessage.vue";
     padding-top: 25px;
 }
 
-.lastMess{
-    padding-bottom: 100px;
-}
+
 </style>
