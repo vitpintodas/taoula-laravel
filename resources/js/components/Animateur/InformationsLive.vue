@@ -204,6 +204,8 @@ const updateFiltre = (val) => {
 
 
 <style scoped>
+
+
 a.info-button{
 float: left;
 margin-left: calc(30% + 55px);
