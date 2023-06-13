@@ -127,9 +127,6 @@ const updateContestData = (val, type) => {
 </template>
 
 <style scoped>
-.concours-basInput {
-    margin-top: -4px;
-}
 
 .texteTitre3 {
     margin-bottom: 10px;
