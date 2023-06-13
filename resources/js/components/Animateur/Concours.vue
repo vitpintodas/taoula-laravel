@@ -113,6 +113,7 @@ const updateContestData = (val, type) => {
     <!-- <input type="date" id="start" name="trip-start" :value="today()" > -->
     <VueDatePicker
         class="VueDatePicker"
+        :min-date="new Date()"
         v-model="date"
         placeholder="Saisissez la date et l'heure limite du concours"
         text-input
@@ -127,7 +128,6 @@ const updateContestData = (val, type) => {
 </template>
 
 <style scoped>
-
 .texteTitre3 {
     margin-bottom: 10px;
 }

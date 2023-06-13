@@ -1,0 +1,33 @@
+.baseMessage-container {
+    background-color: var(--secondBlack);
+
+    padding: 15px;
+    border-radius: 6px;
+
+    margin-left: calc(30% + 50px);
+    margin-right: 10px;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.de-container {
+    width: 25px;
+    padding-right: 15px;
+}
+
+.nomPrenom-container {
+    width: 200px;
+    padding-right: 40px;
+}
+
+.message-container {
+    width: 500px;
+    padding-right: 40px;
+}
+
+.date-container {
+    width: 250px;
+    text-align: right;
+}
