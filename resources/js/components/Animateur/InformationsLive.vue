@@ -1,97 +1,131 @@
 <script setup>
-import { ref, watch } from "vue";
-import BaseInput from "../../base/BaseInput.vue";
-import BaseLabel from "../../base/BaseLabel.vue";
-import BaseButton from "../../base/BaseButton.vue";
-// import BasePopUp from '../../base/BaseAnimateur/BasePopUp.vue';
+import { ref, watch } from 'vue';
+import BaseInput from '../../base/BaseInput.vue';
+import BaseLabel from '../../base/BaseLabel.vue';
+import BaseButton from '../../base/BaseButton.vue';
 
-const interests = ref([
+const audioInterests = ref([
     {
-        name: "Musique",
+        name: 'Musique',
         selected: false,
     },
     {
-        name: "Rock",
+        name: 'Rock',
         selected: false,
     },
     {
-        name: "Actualités",
+        name: 'Pop',
         selected: false,
     },
     {
-        name: "Rap",
+        name: 'Jazz',
         selected: false,
     },
     {
-        name: "Humour",
+        name: 'Electro',
         selected: false,
     },
     {
-        name: "Pop",
+        name: 'Variété',
         selected: false,
     },
     {
-        name: "Classique",
+        name: 'Mix',
         selected: false,
     },
     {
-        name: "Jazz",
+        name: 'Classique',
         selected: false,
     },
     {
-        name: "Country",
+        name: 'Rap',
         selected: false,
     },
     {
-        name: "Electronique",
+        name: 'RnB',
         selected: false,
     },
     {
-        name: "Hip-hop",
+        name: 'Reggae',
         selected: false,
     },
     {
-        name: "Reggae",
+        name: 'Soul',
         selected: false,
     },
     {
-        name: "Dance",
+        name: 'Funk',
         selected: false,
     },
     {
-        name: "Soul",
+        name: 'Disco',
         selected: false,
     },
     {
-        name: "R&B",
+        name: 'Country',
         selected: false,
     },
     {
-        name: "Gospel",
+        name: 'Latino',
         selected: false,
     },
     {
-        name: "Humour",
+        name: 'Blues',
         selected: false,
     },
     {
-        name: "Actualité",
+        name: 'Metal',
         selected: false,
     },
     {
-        name: "Politique",
+        name: 'Folk',
         selected: false,
     },
     {
-        name: "Sport",
+        name: 'Gospel',
         selected: false,
     },
     {
-        name: "Technologie",
+        name: 'Reggaeton',
         selected: false,
     },
     {
-        name: "Science",
+        name: 'K-Pop',
+        selected: false,
+    },
+    {
+        name: 'Bande originale',
+        selected: false,
+    },
+]);
+
+const podcastInterests = ref([
+    {
+        name: 'Actualités',
+        selected: false,
+    },
+    {
+        name: 'Discussion',
+        selected: false,
+    },
+    {
+        name: 'Société',
+        selected: false,
+    },
+    {
+        name: 'Culture',
+        selected: false,
+    },
+    {
+        name: 'Humour',
+        selected: false,
+    },
+    {
+        name: 'Sport',
+        selected: false,
+    },
+    {
+        name: 'Politique',
         selected: false,
     },
     {
@@ -99,64 +133,57 @@ const interests = ref([
         selected: false,
     },
     {
-        name: "Télévision",
+        name: "Arts",
         selected: false,
     },
     {
-        name: "Art",
+        name: "Gastronomie",
         selected: false,
     },
     {
-        name: "Mode",
+        name: 'High-tech',
         selected: false,
     },
     {
-        name: "Histoire",
+        name: 'Jeux-vidéo',
         selected: false,
     },
     {
-        name: "Cuisine",
+        name: 'Voyage',
         selected: false,
-    },
-    {
-        name: "Voyages",
-        selected: false,
-    },
-    {
-        name: "Technologie",
-        selected: false,
-    },
-    {
-        name: "Environnement",
-        selected: false,
-    },
+    }
 ]);
 
-const filtre = ref("");
+const filtre = ref('');
 
 const selectedInterests = ref([]);
 
 const addInterest = (interest) => {
-    //push interest if not already in array
+    // push interest if not already in array
     interest.selected = !interest.selected;
     if (!selectedInterests.value.includes(interest)) {
-        //push the name into the selectedInterests array
+        // push the name into the selectedInterests array
         selectedInterests.value.push(interest);
-        filtre.value = "";
+        filtre.value = '';
     } else {
-        //remove the interest from  selectedInterests array
-        selectedInterests.value.splice(
-            selectedInterests.value.indexOf(interest),
-            1
-        );
+        // remove the interest from selectedInterests array
+        selectedInterests.value.splice(selectedInterests.value.indexOf(interest), 1);
     }
 
-    console.log("selectedInterests", selectedInterests.value);
+    console.log('selectedInterests', selectedInterests.value);
 };
 
 watch(filtre, (val) => {
-    console.log("filtre", val);
-    interests.value.forEach((interest) => {
+    console.log('filtre', val);
+    audioInterests.value.forEach((interest) => {
+        if (interest.name.toLowerCase().includes(val.toLowerCase())) {
+            interest.selected = false;
+        } else {
+            interest.selected = true;
+        }
+    });
+
+    podcastInterests.value.forEach((interest) => {
         if (interest.name.toLowerCase().includes(val.toLowerCase())) {
             interest.selected = false;
         } else {
@@ -168,79 +195,52 @@ watch(filtre, (val) => {
 const updateFiltre = (val) => {
     filtre.value = val;
 };
+
 </script>
 
+
 <template>
-    <h1 class="titre2">Titre du live</h1>
-    <BaseInput placeholder="Titre du live" />
-    <h1 class="titre2">Description du live</h1>
-    <BaseInput
-        :value="filtre"
-        type="searchInput"
-        placeholder=" Rechercher..."
-        @emit-input="updateFiltre($event)"
-    />
 
-    <p class="titre2" v-if="selectedInterests.length > 0">Sélectionnés</p>
-    <div
-        class="interest-interestsSelectedDiv"
-        v-if="selectedInterests.length > 0"
-    >
-        <BaseLabel
-            v-for="interest in selectedInterests"
-            :key="interest"
-            :title="interest.name"
-            @click="addInterest(interest)"
-            class="selected"
-        />
-    </div>
-    <p class="titre2">Autres thèmes</p>
-    <br />
-    <p class="sub-title textes">Audio</p>
-    <div class="interest-interestsDiv">
-        <BaseLabel
-            v-for="interest in interests"
-            :key="interest"
-            :class="{ interestSelected: interest.selected }"
-            :title="interest.name"
-            @click="addInterest(interest)"
-        />
-    </div>
-    <br />
-    <p class="sub-title textes">Podcast</p>
-    <div class="interest-interestsDiv">
-        <BaseLabel
-            v-for="interest in interests"
-            :key="interest"
-            :class="{ interestSelected: interest.selected }"
-            :title="interest.name"
-            @click="addInterest(interest)"
-        />
-    </div>
+<h1 class="titre2">Titre du live</h1>
+<BaseInput placeholder="Titre du live"/>
+<h1 class="titre2">Description du live</h1>
+<BaseInput :value="filtre" type="searchInput" placeholder="Rechercher..." @emit-input="updateFiltre($event)"/>
 
-    <br />
+<p class="titre2" v-if="selectedInterests.length > 0">Sélectionnés</p>
+<div class="interest-interestsSelectedDiv" v-if="selectedInterests.length > 0">
+    <BaseLabel v-for="interest in selectedInterests" :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
+</div>
+<p class="titre2">Autres thèmes</p>
+<br>
+<p class="sub-title textes">Audio</p>
+<div class="interest-interestsDiv">
+    <BaseLabel v-for="interest in audioInterests" :key="interest" :class="{ interestSelected: interest.selected }" :title="interest.name" @click="addInterest(interest)"/>
+</div>
+<br>
+<p class="sub-title textes">Podcast</p>
+<div class="interest-interestsDiv">
+    <BaseLabel v-for="interest in podcastInterests" :key="interest" :class="{ interestSelected: interest.selected }" :title="interest.name" @click="addInterest(interest)"/>
+</div>
+<br>
 
-    <!-- <BasePopUp ref="popupRef" title="Choix enregistrés" message="Vos choix ont bien été sauvegardés pour ce live" /> -->
-    <BaseButton
-        class="info-button"
-        title="Envoyer"
-        size="large"
-        link="#liveInfo"
-    />
+<BaseButton class="info-button" title="Envoyer" size="large" link="#liveInfo"/>
+
 </template>
 
+
 <style scoped>
-@media screen and (max-width: 1206px){
-    a.info-button {
+
+a.info-button{
     float: left;
-    margin-left: calc(30% + 50px);
+    margin-left: calc(30% + 55px);
     width: 450px;
-}
 }
 
 .interest-interestsDiv {
     display: flex;
     flex-wrap: wrap;
+    margin-left: calc(30% + 55px);
+    margin-right: 0px;
 }
 
 .sub-title {
@@ -252,4 +252,5 @@ const updateFiltre = (val) => {
 .baseInput-container {
     margin-top: 0;
 }
+
 </style>
