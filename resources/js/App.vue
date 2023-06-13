@@ -15,6 +15,7 @@ import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
 import Participer from "./components/Participer.vue";
+import Defi from "./components/Animateur/Defi.vue";
 
 const testNotif = ref(false);
 //au bout de 12 secondes, la notification disparait
@@ -90,7 +91,7 @@ watch(testNotif, () => {
     <div id="messageViewers-section">Test</div>
     <div id="musicChoices-section">Test</div>
     <div id="voteStart-section">Test</div>
-    <div id="challengeStart-section">Test</div>
+    <div id="challengeStart-section"><Defi/></div>
     <div id="liveInfo-section">Test</div>
     
     <!-- 

@@ -3,16 +3,21 @@ import { defineProps, ref } from 'vue'
 
 const props = defineProps({
     value1: {
-        type: String,
+        type: Number,
         required: true
     },
     value2: {
-        type: String,
+        type: Number,
         required: true
     },
     value3: {
-        type: String,
+        type: Number,
         required: true
+    },
+
+    placeholder: {
+      type: String,
+      required: false
     }
 
 })
@@ -27,11 +32,11 @@ const changeValue = (event) => {
     <div class="durationInput-container">
         <h2>Durée d’affichage hh : min : sec</h2>
         <div class="durationInput-time">
-            <input :value="value1" @input="changeValue($event)">
+            <input :value="value1" :placeholder="placeholder" @input="changeValue($event)">
             <p>:</p>
-            <input :value="value2" @input="changeValue($event)">
+            <input :value="value2" :placeholder="placeholder" @input="changeValue($event)">
             <p>:</p>
-            <input :value="value3" @input="changeValue($event)">
+            <input :value="value3" :placeholder="placeholder" @input="changeValue($event)">
         </div>
     </div>
 </template>

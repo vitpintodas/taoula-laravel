@@ -1,35 +1,38 @@
 <script setup>
-  import { defineProps } from 'vue'
+import { defineProps, ref } from "vue";
   import { getImagePath } from '../utils/getImagePath.js';
+
   
-  defineProps({
+  const props = defineProps({
     title: {
-      type: String,
-      required: true
+        type: String,
+        required: true,
     },
-
     type: {
-      type: String,
-      required: false
-    },
+        type: String,
+        required: true,
+    }
+});
 
-   
-  })
+const isActive = ref(false);
+
 </script>
 
+
 <template>
-  <button class="baseDefiButton-container">
-    
-      <div class="baseDefiButton-type">
-        <img :src="getImagePath(type)"/>
-      </div>
-      <div>
-        <h2 class="titre">{{ title }} </h2>
-      </div>
-    
-  </button>
+    <div class="baseDefiButton-container">
+        <ul>
+            <li>
+                <a :class="{ active: isActive }">
+                  <img :src="getImagePath(type)" class="baseDefiButton-type"/>
+                  <h2 class="titre">{{ title }}  </h2>
+                </a>
+            </li>
+        </ul>
+    </div>
 </template>
 
-<style scoped>
 
-</style>
+
+<!-- css : baseDefiButton.css -->
+

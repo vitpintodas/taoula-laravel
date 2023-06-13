@@ -11,24 +11,24 @@
     margin-bottom: 20px;
 }
 .durationInput-container h2 {
-    font-family: var(--title);
-    font-weight: var(--titleWidth);
-    font-size: var(--titleSize);
+    font-family: var(--title2);
+    font-weight: var(--title2Width);
+    font-size: var(--title2Size);
     margin: 20px 10px 20px 10px;
 }
 
 .durationInput-container p {
     font-family: var(--text);
     font-weight: 600;
-    font-size: 68px;
+    font-size: 51px;
 }
 
 .durationInput-container input {
     font-family: var(--text);
     font-weight: 700;
-    font-size: 68px;
-    width: 218px;
-    height: 133px;
+    font-size: 55px;
+    width: 159px;
+    height: 97px;
     border: none;
     border-radius: 8px;
     background: var(--secondBlack);
