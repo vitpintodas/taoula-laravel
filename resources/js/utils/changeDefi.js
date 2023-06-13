@@ -1,4 +1,4 @@
-export const changePage = () => {
+export const changeDefi = () => {
     const toggleSection = (hashSplit) => {
         const activeDiv = document.querySelector("div.active");
         if (activeDiv) {
@@ -16,24 +16,12 @@ export const changePage = () => {
 
         switch (hash) {
             // Utilisateur
-            case "#home":
-            case "#search":
-            case "#live":
-            case "#favorites":
-            case "#account":
-            case "#gifts":
-            case "#message":
-            case "#participer":
-            case "#interests":
+            case "#defi-rapidite":
+            case "#defi-tirage":
+            case "#defi-selection":
+            case "#defi-main":
 
-            //Animateur
-            case "#homeAnimateur":
-            case "#bigContest":
-            case "#messageViewers":
-            case "#musicChoices":
-            case "#voteStart":
-            case "#challengeStart":
-            case "#liveInfo":
+
                 toggleSection(hash);
                 break;
 

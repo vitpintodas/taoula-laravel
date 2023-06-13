@@ -7,7 +7,7 @@ import { getImagePath } from "../utils/getImagePath";
     <div id="compte" class="marginLR">
         <p class="titre">Test</p>
         <a href="#profilSettings">
-            <img :src=getImagePath(settings) alt="profilSettings" />
+            <img :src="getImagePath('settings')" alt="profilSettings" />
         </a>
 
         <p class="textes">mail@test</p>
@@ -65,6 +65,5 @@ margin-top: 25px;
 
 #deconnexion {
     margin-top: calc(var(--marginT) + 12px);
-    margin-bottom: 100px;
 }
 </style>

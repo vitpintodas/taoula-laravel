@@ -1,0 +1,30 @@
+.defi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.typeDefi-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.defi2 {
+    margin-left: 20px;
+
+}
+
+
+.defi-container h2 {
+    font-family: var(--title2);
+    font-size: var(--title2Size);
+    font-weight: var(--title2Width);
+    color: var(--white);
+    
+}
+
+.defi-input {
+    margin-top: 0px;
+}   

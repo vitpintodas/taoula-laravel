@@ -14,6 +14,7 @@ import Interests from "./components/Login/Interests.vue";
 import MessageCouleur3 from "./components/MessageCouleur3.vue";
 import Concours from "./components/Animateur/Concours.vue";
 import Participer from "./components/Participer.vue";
+import Defi from "./components/Animateur/Defi.vue";
 import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
@@ -54,7 +55,8 @@ onBeforeUnmount(() => {
             currentSection === 'account' ||
             currentSection === 'gifts' ||
             currentSection === 'message' ||
-            currentSection === 'participer'
+            currentSection === 'participer' ||
+            currentSection === 'interests'
         "
     >
         <TheHeader />
@@ -75,6 +77,15 @@ onBeforeUnmount(() => {
         <div id="gifts-section"><Shop /></div>
         <div id="message-section"><MessageCouleur3 /></div>
         <div id="participer-section"><Participer /></div>
+        <div id="interests-section"><Interests /></div>
+
+        <BaseNotification
+            type="brokenLike"
+            :active="false"
+            link="#test"
+            title="Inscris-toi"
+            description="Inscris toi pour pouvoir liker du contenu"
+        />
     </template>
 
     <!-- Animateur -->
@@ -133,7 +144,7 @@ onBeforeUnmount(() => {
         <div id="messageViewers-section"><Message /></div>
         <div id="musicChoices-section"><MusicChoice /></div>
         <div id="voteStart-section"><Vote /></div>
-        <div id="challengeStart-section">Test</div>
+        <div id="challengeStart-section"><Defi /></div>
         <div id="liveInfo-section"><InformationsLive /></div>
     </template>
 </template>

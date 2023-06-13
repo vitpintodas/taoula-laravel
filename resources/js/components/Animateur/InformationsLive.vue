@@ -210,7 +210,7 @@ const updateFiltre = (val) => {
 <div class="interest-interestsSelectedDiv" v-if="selectedInterests.length > 0">
     <BaseLabel v-for="interest in selectedInterests" :key="interest" :title="interest.name" @click="addInterest(interest)" class="selected"/>
 </div>
-<p class="titre2">Autres thèmes</p>
+<p class="titre2">Thèmes</p>
 <br>
 <p class="sub-title textes">Audio</p>
 <div class="interest-interestsDiv">
