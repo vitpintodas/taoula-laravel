@@ -26,8 +26,7 @@ class ReponsesSeeder extends Seeder
             $aleatoire = $reponses[array_rand($reponses)];
 
             DB::table('reponses')->insert([
-                'defisConcour_id' => 1,
-                'sondage_id' => 1,
+                'sondageDefisConcours_id' => 1,
                 'reponse' => $aleatoire,
             ]);
         }
