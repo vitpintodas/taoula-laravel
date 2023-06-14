@@ -32,6 +32,22 @@ Comme cité plus haut, nous avions quelques technologies imposées comme :
 
 ## Comment utiliser ce projet pour vous
 
+1. Récupérez le projet sur votre ordinateur avec la commande git clone <url du projet>
+    
+2. Copiez le fichier .env.example , ensuite collez-le dans le même dossier et renommez-le en
+.env /!\ NE SUPPRIMER PAS LE FICHIER .env.example
+    
+3. pour que le projet fonctionne, vous devez executez plusieurs commandes dans le terminal :
+npm install pour installer les dépandances
+composer install pour installer les dépendances
+php artisan key:generate pour générer la clé de l'application
+php artisan migrate pour créer les tables dans la base de données
+php artisan db:seed pour remplir les tables avec des données
+    
+4. Vous pouvez maintenant lancer le projet avec la commande php artisan serve
+    
+5. Ouvrez un deuxième terminal et lancez la commande npm run dev
+
 
 ## Remerciements
 
