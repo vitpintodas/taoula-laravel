@@ -63,7 +63,7 @@ import { getImagePath } from "../utils/getImagePath";
 }
 
 #fonctionnalite{
-margin-top: 15px;
+margin-top: 25px;
 }
 
 #deconnexion {
