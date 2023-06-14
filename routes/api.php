@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ArtisteController;
+use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\ReponseController;
+use App\Http\Controllers\SondageDefisConcourController;
 use App\Http\Controllers\TitreController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +29,5 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 Route::get('/reponses/{id}', [ReponseController::class, 'show']);
 Route::get('/titres/{id}', [TitreController::class, 'show']);
 Route::get('/artistes/{id}', [ArtisteController::class, 'show']);
+Route::get('/playlists/{id}', [PlaylistController::class, 'show']);
+Route::get('/sondages/{id}', [SondageDefisConcourController::class, 'show']);
