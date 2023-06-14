@@ -1,52 +1,92 @@
 <template>
     <div class="defi-container">
-      <h2>Sujet du défi</h2>
-      <BaseInput class="defi-input" placeholder="Sujet du défi..." @input="changeValue($event)">
-      </BaseInput>
-      <h2>Type du défi</h2>
-      <div class="typeDefi-container">
-        <div>
-          <BaseDefiButton title="Rapidité" type="fast" :class="{ active: defiRapidite }" @click="rapidite"></BaseDefiButton>
-          <BaseDefiButton title="Tirage parmi bonne réponse" type="box" :class="{ active: defiTirage }" @click="tirage"></BaseDefiButton>
+        <h2>Sujet du défi</h2>
+        <BaseInput
+            class="defi-input"
+            placeholder="Sujet du défi..."
+            @input="changeValue($event)"
+        >
+        </BaseInput>
+        <h2>Type du défi</h2>
+        <div class="typeDefi-container">
+            <div>
+                <BaseDefiButton
+                    title="Rapidité"
+                    type="fast"
+                    :class="{ active: defiRapidite }"
+                    @click="rapidite"
+                ></BaseDefiButton>
+                <BaseDefiButton
+                    title="Tirage parmi bonne réponse"
+                    type="box"
+                    :class="{ active: defiTirage }"
+                    @click="tirage"
+                ></BaseDefiButton>
+            </div>
+            <div class="defi2">
+                <BaseDefiButton
+                    title="Gagnant sélectionné à la main"
+                    type="thumbsUp"
+                    :class="{ active: defiSelection }"
+                    @click="gagne"
+                ></BaseDefiButton>
+                <BaseDefiButton
+                    title="Les bonnes réponses gagnent"
+                    type="thumbsUp"
+                    :class="{ active: defiMain }"
+                    @click="main"
+                ></BaseDefiButton>
+            </div>
         </div>
-        <div class="defi2">
-          <BaseDefiButton title="Gagnant sélectionné à la main" type="thumbsUp" :class="{ active: defiSelection }" @click="gagne"></BaseDefiButton>
-          <BaseDefiButton title="Les bonnes réponses gagnent" type="thumbsUp" :class="{ active: defiMain }" @click="main"></BaseDefiButton>
-        </div>
-      </div>
-      <div class="affiche-defi">
-        <div v-if="defiRapidite" id="defi-rapidite">
-          <h2>Bonne réponse</h2>
-                <BaseInput class="defi-input" placeholder="Ecris ici la bonne réponse à la question" @input="changeValue($event)">
+        <div class="affiche-defi">
+            <div v-if="defiRapidite" id="defi-rapidite">
+                <h2>Bonne réponse</h2>
+                <BaseInput
+                    class="defi-input"
+                    placeholder="Ecris ici la bonne réponse à la question"
+                    @input="changeValue($event)"
+                >
                 </BaseInput>
                 <BaseDurationInput></BaseDurationInput>
                 <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-        </div>
-        <div v-if="defiTirage" id="defi-tirage">
-          <h2>Bonne réponse</h2>
-               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
-               <h2>Autres réponses</h2>
-                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
+            </div>
+            <div v-if="defiTirage" id="defi-tirage">
+                <h2>Bonne réponse</h2>
+                <BaseInput
+                    class="defi-input"
+                    placeholder="Choix correcte"
+                    @input="changeValue($event)"
+                ></BaseInput>
+                <h2>Autres réponses</h2>
+                <BaseMultipleInput
+                    @emit-multiple-input="updateChoices($event)"
+                />
                 <BaseDurationInput></BaseDurationInput>
                 <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-        </div>
-        <div v-if="defiSelection" id="defi-main">
-          <BaseDurationInput></BaseDurationInput>
-                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-        </div>
-        <div v-if="defiMain" id="defi-gagne">
-          <h2>Bonne réponse</h2>
-               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
-               <h2>Autres réponses</h2>
-                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
+            </div>
+            <div v-if="defiSelection" id="defi-main">
                 <BaseDurationInput></BaseDurationInput>
                 <BaseButton size="large" title="Lancer le défi"> </BaseButton>
+            </div>
+            <div v-if="defiMain" id="defi-gagne">
+                <h2>Bonne réponse</h2>
+                <BaseInput
+                    class="defi-input"
+                    placeholder="Choix correcte"
+                    @input="changeValue($event)"
+                ></BaseInput>
+                <h2>Autres réponses</h2>
+                <BaseMultipleInput
+                    @emit-multiple-input="updateChoices($event)"
+                />
+                <BaseDurationInput></BaseDurationInput>
+                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
+            </div>
         </div>
-      </div>
     </div>
-  </template>
-  
-  <script setup>
+</template>
+
+<script setup>
 import { ref, onMounted } from "vue";
 import BaseDefiButton from "../../base/BaseDefiButton.vue";
 import BaseInput from "../../base/BaseInput.vue";
@@ -60,115 +100,65 @@ const defiSelection = ref(false);
 const defiMain = ref(false);
 
 const rapidite = () => {
-  defiRapidite.value = true;
-  defiTirage.value = false;
-  defiSelection.value = false;
-  defiMain.value = false;
-  updateActiveState("rapidite");
+    defiRapidite.value = true;
+    defiTirage.value = false;
+    defiSelection.value = false;
+    defiMain.value = false;
+    updateActiveState("rapidite");
 };
 
 const tirage = () => {
-  defiRapidite.value = false;
-  defiTirage.value = true;
-  defiSelection.value = false;
-  defiMain.value = false;
-  updateActiveState("tirage");
+    defiRapidite.value = false;
+    defiTirage.value = true;
+    defiSelection.value = false;
+    defiMain.value = false;
+    updateActiveState("tirage");
 };
 
-const selection = () => {
+const gagne = () => {
     defiRapidite.value = false;
     defiTirage.value = false;
     defiSelection.value = true;
     defiMain.value = false;
-    isActive.value = true;
-}
+    updateActiveState("selection");
+};
 
 const main = () => {
-  defiRapidite.value = false;
-  defiTirage.value = false;
-  defiSelection.value = false;
-  defiMain.value = true;
-  updateActiveState("main");
+    defiRapidite.value = false;
+    defiTirage.value = false;
+    defiSelection.value = false;
+    defiMain.value = true;
+    updateActiveState("main");
 };
 
 const updateActiveState = (activeButton) => {
-  const url = new URL(window.location.href);
-  url.searchParams.set("activeButton", activeButton);
-  window.history.replaceState({}, "", url);
+    const url = new URL(window.location.href);
+    url.searchParams.set("activeButton", activeButton);
+    window.history.replaceState({}, "", url);
 };
 
 onMounted(() => {
-  const url = new URL(window.location.href);
-  const activeButton = url.searchParams.get("activeButton");
-  if (activeButton) {
-    switch (activeButton) {
-      case "rapidite":
-        rapidite();
-        break;
-      case "tirage":
-        tirage();
-        break;
-      case "selection":
-        gagne();
-        break;
-      case "main":
-        main();
-        break;
-      default:
-        break;
+    const url = new URL(window.location.href);
+    const activeButton = url.searchParams.get("activeButton");
+    if (activeButton) {
+        switch (activeButton) {
+            case "rapidite":
+                rapidite();
+                break;
+            case "tirage":
+                tirage();
+                break;
+            case "selection":
+                gagne();
+                break;
+            case "main":
+                main();
+                break;
+            default:
+                break;
+        }
     }
-  }
 });
 </script>
-
-<template>
-    <div class="defi-container">
-        <h2>Sujet du défi</h2>
-        <BaseInput class="defi-input" placeholder="Sujet du défi..." @input="changeValue($event)">
-        </BaseInput>
-        <h2>Type du défi</h2>
-        <div class="typeDefi-container">
-            <div>
-                <BaseDefiButton title="Rapidité" type="fast" @click="rapidite()"></BaseDefiButton>
-                <BaseDefiButton title="Tirage parmi bonne réponse" type="box" @click="tirage()"></BaseDefiButton>
-            </div>
-            <div class="defi2">
-                <BaseDefiButton title="Gagnant sélectionné à la main" type="thumbsUp" @click="main()">
-                </BaseDefiButton>
-                <BaseDefiButton title="Les bonnes réponses gagnent" type="thumbsUp" @click="selection()"></BaseDefiButton>
-            </div>
-
-        </div>
-        <div class="affiche-defi">
-            <div v-if="defiRapidite" id="defi-rapidite">
-                <h2>Bonne réponse</h2>
-                <BaseInput class="defi-input" placeholder="Ecris ici la bonne réponse à la question" @input="changeValue($event)">
-                </BaseInput>
-                <BaseDurationInput></BaseDurationInput>
-                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-            </div>
-            <div v-if="defiTirage" id="defi-tirage">
-                <h2>Bonne réponse</h2>
-               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
-               <h2>Autres réponses</h2>
-                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
-                <BaseDurationInput></BaseDurationInput>
-                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-            </div>
-            <div v-if="defiMain" id="defi-main">
-                <BaseDurationInput></BaseDurationInput>
-                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-            </div>
-            <div v-if="defiSelection" id="defi-selection">
-                <h2>Bonne réponse</h2>
-               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
-               <h2>Autres réponses</h2>
-                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
-                <BaseDurationInput></BaseDurationInput>
-                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
-            </div>
-        </div>
-    </div>
-</template>
 
 <style></style>
