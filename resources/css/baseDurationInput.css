@@ -14,7 +14,7 @@
     font-family: var(--title2);
     font-weight: var(--title2Width);
     font-size: var(--title2Size);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .durationInput-container p {
