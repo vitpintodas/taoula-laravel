@@ -51,6 +51,27 @@ onMounted(() => {
 onBeforeUnmount(() => {
     removeHashChangeListener();
 });
+
+//TEST of fetch to the database via API and modify datas 
+  onMounted(() => {
+    console.log('mounted')
+    fetch('/api/users/1', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prenom: 'caCA',
+      nom: 'dIDIER',
+      // et ainsi de suite pour tous les autres champs à mettre à jour
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+})
 </script>
 <template>
     <!-- Utilisateur -->

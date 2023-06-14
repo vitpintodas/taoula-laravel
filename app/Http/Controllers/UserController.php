@@ -21,9 +21,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         User::create($request->only("prenom", "nom", "pseudo", "email", "password", "role_id", "coins", "NPA", "localite", "rue"));
-        return response()->json(["data" => [
-            "success" => true
-        ]]);
+        return response()->json([
+            "data" => [
+                "success" => true
+            ]
+        ]);
     }
 
     /**
@@ -36,11 +38,14 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resource in storage. Ajouté par Léo le 14.06.2023
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->update($request->all());
+        //** return the user as validation */
+        return response()->json($user, 200);
     }
 
     /**

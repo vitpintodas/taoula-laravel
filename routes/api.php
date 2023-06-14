@@ -26,6 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //API pour donners les informations d'un utilisateur, exemple: http://1270.0.0.1:8000/api/users/1
 Route::get('/users/{id}', [UserController::class, 'show']);
+Route::put('/users/{id}', [UserController::class, 'update']);
 Route::get('/reponses/{id}', [ReponseController::class, 'show']);
 Route::get('/titres/{id}', [TitreController::class, 'show']);
 Route::get('/artistes/{id}', [ArtisteController::class, 'show']);
