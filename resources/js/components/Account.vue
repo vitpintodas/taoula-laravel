@@ -37,6 +37,9 @@ import { getImagePath } from "../utils/getImagePath";
 </template>
 
 <style scoped>
+.marginT{
+    margin-top: calc(var(--marginT) - 10px);
+}
 #compte {
     margin-top: var(--marginT);
     margin-bottom: var(--marginB);
@@ -60,10 +63,10 @@ import { getImagePath } from "../utils/getImagePath";
 }
 
 #fonctionnalite{
-margin-top: 25px;
+margin-top: 15px;
 }
 
 #deconnexion {
-    margin-top: calc(var(--marginT) + 12px);
+    margin-top: calc(var(--marginT) + 2px);
 }
 </style>
