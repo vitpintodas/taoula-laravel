@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import BaseButton from "../../base/BaseButton.vue";
 import BaseInput from "../../base/BaseInput.vue";
 
 const removeButton = ref(false);
@@ -55,12 +54,8 @@ const updateInput = (value, input) => {
         :placeholder="`Option/Choix n°${input.id}`"
         @emit-input="updateInput($event, input)"
     />
-    <Button class="add-button" @click="addInput()" v-if="addButton"
-        >+ Ajouter une option</Button
-    >
-    <Button class="remove-button" v-if="removeButton" @click="removeInput()"
-        >- Retirer une option</Button
-    >
+    <button class="add-button" @click="addInput()" v-if="addButton">+ Ajouter une option</button>
+    <button class="remove-button" v-if="removeButton" @click="removeInput()">- Retirer une option</button>
 </template>
 
 <style scoped>
