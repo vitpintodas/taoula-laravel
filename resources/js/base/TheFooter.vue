@@ -33,7 +33,7 @@
   </script>
 
 <template>
-  <nav>
+  <nav class="footer">
     <ul>
       <li v-for="(type, index) in types" :key="index">
         <a
@@ -55,6 +55,10 @@
   }
   a.active {
   filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg) brightness(97%) contrast(94%);
+}
+
+.footer {
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ajout de l'ombre au-dessus du footer */
 }
   </style>
   
