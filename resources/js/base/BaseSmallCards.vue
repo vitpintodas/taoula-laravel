@@ -13,7 +13,7 @@
         />
         <img
           v-else
-          :src="getImagePath('unliked')"
+          :src="getImagePath('unLiked')"
           @click="toggleLiked()"
         />
       </div>
