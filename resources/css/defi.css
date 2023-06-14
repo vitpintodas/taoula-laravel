@@ -16,13 +16,16 @@
 
 }
 
+.affiche-defi {
+    margin-top: 15px;
+}
+
 
 .defi-container h2 {
     font-family: var(--title2);
     font-size: var(--title2Size);
     font-weight: var(--title2Width);
     color: var(--white);
-    
 }
 
 .defi-input {

@@ -11,7 +11,13 @@ import { defineProps, ref } from "vue";
     type: {
         type: String,
         required: true,
-    }
+    },
+
+    active: {
+        type: Boolean,
+        required: false,
+        default: false,
+    },
 });
 
 const isActive = ref(false);
