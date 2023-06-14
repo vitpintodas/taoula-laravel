@@ -1,29 +1,31 @@
-const BASE_URL = "http://localhost:8000/";
+const BASE_URL = "http://localhost:8000/api/";
 
 function loadJson(url) {
     return fetch(url).then((response) => response.json())
   }
 
   function getArtists(nb) {
-    return loadJson(`${BASE_URL}/api/artistes/${nb}`)   
+    return loadJson(`${BASE_URL}artistes/${nb}`)   
   }
 
   function getUser(nb) {
-    return loadJson(`${BASE_URL}/api/users/${nb}`)
+    return loadJson(`${BASE_URL}users/${nb}`)
   }
 
   function getTitles(nb) {
-    return loadJson(`${BASE_URL}/api/titres/${nb}`)
+    return loadJson(`${BASE_URL}titres/${nb}`)
   }
 
   function getPlaylists(nb) {
-    return loadJson(`${BASE_URL}/api/playlists/${nb}`)
+    return loadJson(`${BASE_URL}playlists/${nb}`)
   }
 
 function getResponse(nb) {
-    return loadJson(`${BASE_URL}/api/reponses/${nb}`)
+    return loadJson(`${BASE_URL}reponses/${nb}`)
 }
 
-function getSondageDefisConcourss(nb) {
-    return loadJson(`${BASE_URL}/api/sondageDefisConcours/${nb}`)
+function getSondages(nb) {
+    return loadJson(`${BASE_URL}sondages/${nb}`)
 }
+
+export { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages }

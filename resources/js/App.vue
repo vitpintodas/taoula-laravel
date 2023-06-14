@@ -19,6 +19,14 @@ import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
+import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
+
+console.log(getArtists(1));
+console.log(getUser(1));
+console.log(getTitles(1));
+console.log(getPlaylists(1));
+console.log(getResponse(1));
+console.log(getSondages(1));
 
 const currentSection = ref("");
 
