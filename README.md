@@ -39,11 +39,11 @@ Comme cité plus haut, nous avions quelques technologies imposées comme :
     
 3. pour que le projet fonctionne, vous devez executez plusieurs commandes dans le terminal :
     
-> npm install pour installer les dépandances
-> composer install pour installer les dépendances
-> php artisan key:generate pour générer la clé de l'application
-> php artisan migrate pour créer les tables dans la base de données
-> php artisan db:seed pour remplir les tables avec des données
+-> npm install pour installer les dépandances
+-> composer install pour installer les dépendances
+-> php artisan key:generate pour générer la clé de l'application
+-> php artisan migrate pour créer les tables dans la base de données
+-> php artisan db:seed pour remplir les tables avec des données
     
 4. Vous pouvez maintenant lancer le projet avec la commande > php artisan serve
     
