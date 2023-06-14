@@ -61,7 +61,7 @@
                 <BaseMultipleInput
                     @emit-multiple-input="updateChoices($event)"
                 />
-                <BaseDurationInput></BaseDurationInput>
+                <BaseDurationInput class="marginT"></BaseDurationInput>
                 <BaseButton size="large" title="Lancer le défi"> </BaseButton>
             </div>
             <div v-if="defiSelection" id="defi-main">
@@ -79,7 +79,7 @@
                 <BaseMultipleInput
                     @emit-multiple-input="updateChoices($event)"
                 />
-                <BaseDurationInput></BaseDurationInput>
+                <BaseDurationInput class="marginT"></BaseDurationInput>
                 <BaseButton size="large" title="Lancer le défi"> </BaseButton>
             </div>
         </div>
