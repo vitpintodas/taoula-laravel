@@ -32,7 +32,8 @@ Comme cité plus haut, nous avions quelques technologies imposées comme :
 
 ## Comment utiliser ce projet pour vous
 
-## remerciements
+
+## Remerciements
 
 Nous souhaitons remercier les personnes qui ont aidé et nous ont cadré dans la réalisation de ce projet :
 
