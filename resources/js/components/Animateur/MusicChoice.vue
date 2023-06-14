@@ -19,7 +19,7 @@ import BaseButton from '../../base/BaseButton.vue';
 <!-- Bouton permmettant d'envoyer sur l'interface utilisateur les musiques choisies au-dessus -->
 <BaseButton title="Lancer le vote" 
             size="large" 
-            link="/"
+            link="#musicChoices"
 />
 
 </template>
