@@ -16,16 +16,31 @@
       </div>
       <div class="affiche-defi">
         <div v-if="defiRapidite" id="defi-rapidite">
-          <h1>caca1</h1>
+          <h2>Bonne réponse</h2>
+                <BaseInput class="defi-input" placeholder="Ecris ici la bonne réponse à la question" @input="changeValue($event)">
+                </BaseInput>
+                <BaseDurationInput></BaseDurationInput>
+                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
         </div>
         <div v-if="defiTirage" id="defi-tirage">
-          <h1>caca2</h1>
+          <h2>Bonne réponse</h2>
+               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
+               <h2>Autres réponses</h2>
+                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
+                <BaseDurationInput></BaseDurationInput>
+                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
         </div>
         <div v-if="defiSelection" id="defi-main">
-          <h1>caca3</h1>
+          <BaseDurationInput></BaseDurationInput>
+                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
         </div>
         <div v-if="defiMain" id="defi-gagne">
-          <h1>caca4</h1>
+          <h2>Bonne réponse</h2>
+               <BaseInput class="defi-input" placeholder="Choix correcte" @input="changeValue($event)"></BaseInput>
+               <h2>Autres réponses</h2>
+                <BaseMultipleInput @emit-multiple-input="updateChoices($event)"/>
+                <BaseDurationInput></BaseDurationInput>
+                <BaseButton size="large" title="Lancer le défi"> </BaseButton>
         </div>
       </div>
     </div>
@@ -35,6 +50,9 @@
 import { ref, onMounted } from "vue";
 import BaseDefiButton from "../../base/BaseDefiButton.vue";
 import BaseInput from "../../base/BaseInput.vue";
+import BaseDurationInput from "../../base/BaseAnimateur/BaseDurationInput.vue";
+import BaseButton from "../../base/BaseButton.vue";
+import BaseMultipleInput from "../../base/BaseAnimateur/BaseMultipleInput.vue";
 
 const defiRapidite = ref(false);
 const defiTirage = ref(false);
