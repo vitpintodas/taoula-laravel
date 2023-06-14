@@ -15,10 +15,8 @@ return new class extends Migration
             $table->bigIncrements('id');
 
             // clés étrangères
-            $table->unsignedBigInteger('sondage_id');
-            $table->foreign('sondage_id')->references('id')->on('sondages')->onDelete('cascade');
-            $table->unsignedBigInteger('defisConcour_id');
-            $table->foreign('defisConcour_id')->references('id')->on('defisConcours')->onDelete('cascade');
+            $table->unsignedBigInteger('sondageDefisConcours_id');
+            $table->foreign('sondageDefisConcours_id')->references('id')->on('sondageDefisConcours')->onDelete('cascade');
 
             // informations réponse
             $table->string('reponse');

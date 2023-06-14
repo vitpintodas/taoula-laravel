@@ -229,13 +229,6 @@ const updateFiltre = (val) => {
 
 
 <style scoped>
-
-a.info-button{
-    float: left;
-    margin-left: calc(30% + 55px);
-    width: 450px;
-}
-
 .interest-interestsDiv {
     display: flex;
     flex-wrap: wrap;

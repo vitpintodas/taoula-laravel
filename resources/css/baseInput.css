@@ -9,6 +9,10 @@
     font-size: var(--textSize);
 }
 
+.baseInput-icon{
+    padding-right: 10px;
+}
+
 .baseInput-inputContainer {
     display: flex;
     align-items: center;

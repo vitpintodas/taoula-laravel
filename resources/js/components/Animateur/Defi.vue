@@ -14,20 +14,20 @@ const defiSelection = ref(false);
 const defiMain = ref(false);
 
 const rapidite = () => {
-    defiRapidite.value = true;
-    defiTirage.value = false;
-    defiSelection.value = false;
-    defiMain.value = false;
-    isActive.value = true;
-}
+  defiRapidite.value = true;
+  defiTirage.value = false;
+  defiSelection.value = false;
+  defiMain.value = false;
+  updateActiveState("rapidite");
+};
 
 const tirage = () => {
-    defiRapidite.value = false;
-    defiTirage.value = true;
-    defiSelection.value = false;
-    defiMain.value = false;
-    isActive.value = true;
-}
+  defiRapidite.value = false;
+  defiTirage.value = true;
+  defiSelection.value = false;
+  defiMain.value = false;
+  updateActiveState("tirage");
+};
 
 const selection = () => {
     defiRapidite.value = false;
@@ -38,13 +38,41 @@ const selection = () => {
 }
 
 const main = () => {
-    defiRapidite.value = false;
-    defiTirage.value = false;
-    defiSelection.value = false;
-    defiMain.value = true;
-    isActive.value = true;
-}
+  defiRapidite.value = false;
+  defiTirage.value = false;
+  defiSelection.value = false;
+  defiMain.value = true;
+  updateActiveState("main");
+};
 
+const updateActiveState = (activeButton) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set("activeButton", activeButton);
+  window.history.replaceState({}, "", url);
+};
+
+onMounted(() => {
+  const url = new URL(window.location.href);
+  const activeButton = url.searchParams.get("activeButton");
+  if (activeButton) {
+    switch (activeButton) {
+      case "rapidite":
+        rapidite();
+        break;
+      case "tirage":
+        tirage();
+        break;
+      case "selection":
+        gagne();
+        break;
+      case "main":
+        main();
+        break;
+      default:
+        break;
+    }
+  }
+});
 </script>
 
 <template>

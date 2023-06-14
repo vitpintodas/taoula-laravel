@@ -4,6 +4,9 @@ import Interact from './Interact/Interact.vue';
 import InteractResult from './Interact/InteractResult.vue';
 import BaseAudio from '../base/BaseAudio.vue';
 import BaseSmallCards from '../base/BaseSmallCards.vue';
+import BaseVideo from '../base/BaseVideo.vue';
+
+const videoOrAudio = ref('audio');
 
 const pollFakeOption = ref([
   {
@@ -107,11 +110,16 @@ onMounted(() => {
 
   onUnmounted(() => clearInterval(interval));
 });
+
+const switchVideoAudio = (val) => {
+  videoOrAudio.value = val;
+};
 </script>
 <template>
     <div class="live-container">
       <div>
-        <BaseAudio />
+        <BaseVideo v-if="videoOrAudio == 'video'"  @emit-video="switchVideoAudio($event)"/>
+        <BaseAudio v-if="videoOrAudio == 'audio'" @emit-video="switchVideoAudio($event)"/>
         <Interact
           v-if="result === null"
           title="Vote pour la prochaine musique"

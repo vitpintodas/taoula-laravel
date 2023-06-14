@@ -25,6 +25,7 @@
 @import 'participer.css';
 @import 'defi.css';
 @import 'baseMessage.css';
+@import 'video.css';
 
 html, body {
     max-width: 100%;
