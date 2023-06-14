@@ -21,6 +21,7 @@
     font-family: var(--text);
     font-weight: 600;
     font-size: 51px;
+    margin-right: 10px;
 }
 
 .durationInput-container input {
