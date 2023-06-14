@@ -40,7 +40,7 @@ const launchVote = () => {
 
     <BaseMultipleInput @emit-multiple-input="updateChoices($event)" />
 
-    <BaseDurationInput @emit-time="updateTime($event)" />
+    <BaseDurationInput class="marginT" @emit-time="updateTime($event)" />
 
     <BaseButton
         title="Lancer le vote"
@@ -55,4 +55,5 @@ const launchVote = () => {
     padding-top: 0px;
     margin-top: 0px;
 }
+
 </style>

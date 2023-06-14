@@ -14,7 +14,7 @@
     font-family: var(--title2);
     font-weight: var(--title2Width);
     font-size: var(--title2Size);
-    margin: 20px 10px 20px 10px;
+    margin-bottom: 10px;
 }
 
 .durationInput-container p {
@@ -34,6 +34,5 @@
     background: var(--secondBlack);
     color: var(--white);
     text-align: center;
-    margin-left: 10px;
     margin-right: 10px;
 }
