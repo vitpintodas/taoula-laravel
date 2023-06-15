@@ -20,7 +20,8 @@ class SondageDefisConcourController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sondageDefisConcour = Sondagedefisconcour::create($request->all());
+        return response()->json($sondageDefisConcour);
     }
 
     /**
@@ -37,7 +38,9 @@ class SondageDefisConcourController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $sondageDefisConcour = Sondagedefisconcour::findOrFail($id);
+        $sondageDefisConcour->update($request->all());
+        return response()->json($sondageDefisConcour, 200);
     }
 
     /**
@@ -45,6 +48,9 @@ class SondageDefisConcourController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $sondageDefisConcour = Sondagedefisconcour::findOrFail($id);
+        $sondageDefisConcour->delete();
+
+        return response()->json(null, 204);
     }
 }
