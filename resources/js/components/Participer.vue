@@ -11,11 +11,11 @@ import BaseExplication from "../base/BaseExplication.vue"
 <div class="participer-container">
 
 <!-- base-explication permet de définir le nom du concours ainsi que sa description -->
-<base-explication name="Paléo 2023" description="En participant à ce concours tu gagneras peut-être une toute nouvelle voiture de la marque Volkswagen !
-Pour tenter ta chance tu dois envoyer un audio où tu fais le bruit le plus drôle de ta panoplie."/>
+<base-explication name="Paléo 2023" description="En participant à ce concours tu gagneras peut-être deux abonnement pour Paléo 2023 !
+Pour tenter ta chance envoie nous ta vanne la plus nulle sur la ville de Nyon. Le gagnant sera tiré au sort parmi les plus drôles."/>
 
 <!-- L'input permet à l'utilisateur de rentrer sa réponse -->
-<base-input type="plane" placeholder="Envoie nous ta réponse!" label="Réponse" />
+<base-input type="plane" placeholder="Envoie nous ta blague!" label="Réponse" />
 
 <!-- Le bouton envoie la réponse rentrée dans l'input vers la bd -->
 <base-button title="Je tente ma chance!" link="#home" size="large" />

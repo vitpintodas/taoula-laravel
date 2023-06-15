@@ -19,10 +19,10 @@ import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
-// import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
+import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
 
-// console.log(getArtists(1));
-// console.log(getUser(1));
+// console.log(getArtists(2));
+// console.log(getUser(2));
 // console.log(getTitles(1));
 // console.log(getPlaylists(1));
 // console.log(getResponse(1));
@@ -91,7 +91,11 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 
+<<<<<<< HEAD
 //   //🔵Adding a user in the database via API
+=======
+//   //Adding a user in the database via API
+>>>>>>> 9dbd046a99c3cad1204e22875eb9dbbe313e9e21
 //   fetch('/api/users', {
 //     method: 'POST',
 //     headers: {
@@ -116,7 +120,11 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 
+<<<<<<< HEAD
 //   //🔵Deleting a user in the database via API
+=======
+//   //Deleting a user in the database via API
+>>>>>>> 9dbd046a99c3cad1204e22875eb9dbbe313e9e21
 //   fetch('/api/users/1', {
 //     method: 'DELETE',
 //   })
