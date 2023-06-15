@@ -29,7 +29,7 @@ onMounted(() => {
     <div class="marginT">
        <BaseMainCards
             title="Billets pour paléo"
-            description="Tente de ganger des billets pour paléo"
+            description="Tente de gagner des billets pour paléo"
             type="contest"
             link="#participer"
         />

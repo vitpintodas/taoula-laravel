@@ -8,13 +8,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-        Couleur 3 |
-        @if(Request::path() === 'login')
-            Login
-        @elseif(Request::path() === 'register')
-            Register
-        @endif
-    </title>
+    Couleur 3
+    @if(Request::path() === 'login')
+        Login
+    @elseif(Request::path() === 'register')
+        Register
+    @endif
+    {!! Request::path() !== 'login' && Request::path() !== 'register' ? '|' : '' !!}
+</title>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
