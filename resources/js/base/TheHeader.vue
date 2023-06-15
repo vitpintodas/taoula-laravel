@@ -30,7 +30,7 @@ const redirectToHome = () => {
 <template>
     <div id="marginCachee" style="background-image: url(https://img4.tokyvideo.com/videos/474/47441/previews/previews_0000.jpg); background-repeat: repeat-x; background-size: contain;"></div>
 
-    <header>
+    <header class="fixed-header">
         <div class="back-arrow">
             <a v-if="isBackPossible" @click="goBack">
                 <img :src="getImagePath('arrow-back')" />

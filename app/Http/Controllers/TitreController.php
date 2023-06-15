@@ -20,7 +20,8 @@ class TitreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $titre = Titre::create($request->all());
+        return response()->json($titre);
     }
 
     /**
@@ -37,7 +38,9 @@ class TitreController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $titre = Titre::findOrFail($id);
+        $titre->update($request->all());
+        return response()->json($titre, 200);
     }
 
     /**
@@ -45,6 +48,9 @@ class TitreController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $titre = Titre::findOrFail($id);
+        $titre->delete();
+
+        return response()->json(null, 204);
     }
 }

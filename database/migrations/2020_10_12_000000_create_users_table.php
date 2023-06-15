@@ -33,6 +33,9 @@ return new class extends Migration
             $table->string('localite', 100)->nullable();
             $table->string('rue', 100)->nullable();
 
+            // informations de connexion
+            $table->rememberToken();
+
             // table créé à et modifié à
             $table->timestamps();
         });

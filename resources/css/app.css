@@ -27,6 +27,7 @@
 @import 'baseMessage.css';
 @import 'video.css';
 @import 'login_register.css';
+@import 'baseVideo.css';
 
 html, body {
     max-width: 100%;

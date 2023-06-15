@@ -20,7 +20,8 @@ class PlaylistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $playlist = Playlist::create($request->all());
+        return response()->json($playlist);
     }
 
     /**
@@ -37,7 +38,9 @@ class PlaylistController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $playlist = Playlist::findOrFail($id);
+        $playlist->update($request->all());
+        return response()->json($playlist, 200);
     }
 
     /**
@@ -45,6 +48,9 @@ class PlaylistController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $playlist = Playlist::findOrFail($id);
+        $playlist->delete();
+
+        return response()->json(null, 204);
     }
 }
