@@ -1,0 +1,12 @@
+#player_container {
+    position: relative;
+    height: 300px;
+  }
+  
+  .video-micIcon {
+    z-index: 100;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

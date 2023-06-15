@@ -1,46 +1,47 @@
-<script setup>
-import { getImagePath } from '../utils/getImagePath';
-import { ref, onMounted } from 'vue';
+<template>
+  <div id="player_container" >
+    <!-- <img @click="emitVideo()" :src="getImagePath('eyeOff')" class="video-micIcon" /> -->
+  </div>
+  
 
-const letterbox = ref(null);
+</template>
 
-const loadExternalScript = (src) => {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = () => resolve(script);
-    script.onerror = (error) => reject(error);
-    document.head.appendChild(script);
-  });
+<script>
+export default {
+  async beforeMount() {
+      await this.loadExternalScript(
+          "https://letterbox-web.srgssr.ch/production/letterbox.js"
+      );
+      this.letterbox = new window.SRGLetterbox({
+          container: "#player_container",
+      });
+      this.letterbox.loadUrn("urn:rts:video:8841634");
+  },
+  created() {
+      this.loadExternalStylesheet(
+          "https://letterbox-web.srgssr.ch/production/letterbox.css"
+      );
+  },
+  methods: {
+      loadExternalScript(src) {
+          return new Promise((resolve, reject) => {
+              const script = document.createElement("script");
+              script.src = src;
+              script.onload = () => resolve(script);
+              script.onerror = (error) => reject(error);
+              document.head.appendChild(script);
+          });
+      },
+      loadExternalStylesheet(href) {
+          const link = document.createElement("link");
+          link.href = href;
+          link.rel = "stylesheet";
+          document.head.appendChild(link);
+      },
+  },
 };
-
-const loadExternalStylesheet = (href) => {
-  const link = document.createElement('link');
-  link.href = href;
-  link.rel = 'stylesheet';
-  document.head.appendChild(link);
-};
-
-onMounted(async () => {
-  await loadExternalScript('https://letterbox-web.srgssr.ch/production/letterbox.js');
-  letterbox.value = new window.SRGLetterbox({
-    container: '#player_container',
-  });
-  letterbox.value.loadUrn('urn:rts:video:8841634');
-  loadExternalStylesheet('https://letterbox-web.srgssr.ch/production/letterbox.css');
-});
-
-const emits = defineEmits(['emitVideo']);
-const emitVideo = () => {
-    emits('emitVideo', 'audio')
-}
 </script>
 
-<template>
-  <div id="player_container" class="video-video">
-    <img @click="emitVideo()" :src="getImagePath('eyeOff')" class="video-micIcon" />
-  </div>
-</template>
 <style scoped>
 #player_container {
   position: relative;

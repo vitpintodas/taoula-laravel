@@ -26,6 +26,7 @@
 @import 'defi.css';
 @import 'baseMessage.css';
 @import 'video.css';
+@import 'baseVideo.css';
 
 html, body {
     max-width: 100%;
