@@ -12,7 +12,8 @@ class SondageDefisConcourController extends Controller
      */
     public function index()
     {
-        //
+        $sondageDefisConcours = Sondagedefisconcour::all();
+        return response()->json($sondageDefisConcours);
     }
 
     /**

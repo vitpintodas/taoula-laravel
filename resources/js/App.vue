@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
     removeHashChangeListener();
 });
 
-//TEST of fetch to the database via API and modify datas 
+//🔵TEST of fetch to the database via API and modify datas 
 //   onMounted(() => {
 //     console.log('mounted')
 //     fetch('/api/users/1', {
@@ -91,7 +91,6 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 
-//   //Adding a user in the database via API
 //   fetch('/api/users', {
 //     method: 'POST',
 //     headers: {
@@ -116,7 +115,7 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 
-//   //Deleting a user in the database via API
+
 //   fetch('/api/users/1', {
 //     method: 'DELETE',
 //   })

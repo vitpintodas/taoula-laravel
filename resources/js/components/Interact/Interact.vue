@@ -24,8 +24,7 @@ const props = defineProps({
   const optionSelected = (option, type) => {
     //option ça correspond soit à l'option choisie de le choix multiple
     //soit à la valeur du textInput
-
-    if(type == 'multipleChoice'){
+    if(type == 'poll'){
       props.options.forEach((option) => {
         option.selected = false
     })
@@ -41,8 +40,9 @@ const props = defineProps({
   const emits = defineEmits(['emitPoll'])
   const sendAnswear = () => {
     //TODO: Faudra s'occuper d'envoyer la réponse à la bd
-    if(props.type == 'multipleChoice'){
-      emits('emitPoll', {result: answear.value, type:'multipleChoice'})
+    console.log('answear', answear.value)
+    if(props.type == 'poll'){
+      emits('emitPoll', {result: answear.value, type:'poll'})
     } else if (props.type == 'textInput'){
       emits('emitPoll', {result: answear.value, type:'textInput'})
     }
@@ -51,13 +51,13 @@ const props = defineProps({
 
 <template>
  <div class="poll-InteractSection">
-  <div v-if="props.type == 'multipleChoice'">
+  <div v-if="props.type == 'poll'">
       <h1 class="titre2 poll-title">{{ title }}</h1>
       <BaseInteractPollButton
           v-for="option in props.options"
           :title="option.title"
           :selected="option.selected"
-          @click="optionSelected(option, 'multipleChoice')"
+          @click="optionSelected(option, 'poll')"
       />
   </div>
   <div v-if="props.type == 'textInput'" class="poll-InteractSection">

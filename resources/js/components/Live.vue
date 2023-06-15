@@ -5,23 +5,27 @@ import InteractResult from './Interact/InteractResult.vue';
 import BaseAudio from '../base/BaseAudio.vue';
 import BaseSmallCards from '../base/BaseSmallCards.vue';
 import BaseVideo from '../base/BaseVideo.vue';
+import {getSondages2} from '../utils/loadJson';
 
 const videoOrAudio = ref('audio');
 
-const pollFakeOption = ref([
-  {
-    title: 'Iggy Pop the passenger',
-    selected: false,
-  },
-  {
-    title: 'All star smash mouth',
-    selected: false,
-  },
-  {
-    title: 'The Beatles Hey Jude',
-    selected: false,
-  },
-]);
+// const pollFakeOption = ref([
+//   {
+//     title: 'Iggy Pop the passenger',
+//     selected: false,
+//   },
+//   {
+//     title: 'All star smash mouth',
+//     selected: false,
+//   },
+//   {
+//     title: 'The Beatles Hey Jude',
+//     selected: false,
+//   },
+// ]);
+
+//interactData is a really important ref, it's the one that has the data of the sondage
+const interactData = ref(null);
 
 const showName = ref('...');
 const cardData = ref([]);
@@ -44,8 +48,27 @@ const fakeResults = ref([
 const result = ref(null);
 
 const getResult = (theResult) => {
+  console.log('getResult', theResult)
+  //s'occupe de récupérer le résultat du sondage
   result.value = theResult;
+  //TODO: Envoyer les résultats à la bd
+  fetch('/api/reponses', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      sondageDefisConcours_id: 1,
+      reponse: 'test',
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch((error) => {
+    console.error('Error:', error);
+   });
 
+  //s'occupe de mettre les résultats en pourcentage
   let total = 0;
   fakeResults.value.forEach((element) => {
     total += element.value;
@@ -56,6 +79,7 @@ const getResult = (theResult) => {
   });
 };
 
+//s'occupe de récupérer le nom de l'émission
 const getShowName = async () => {
   const url =
     'https://il.srgssr.ch/integrationlayer/2.0/mediaComposition/byUrn/urn:rts:audio:3262363.json?onlyChapters=true&vector=portalplay';
@@ -76,6 +100,30 @@ const getShowName = async () => {
     cardData.value.push(card);
   }
 };
+//s'occupe de récupérer les sondages 
+const listenSondage = () => {
+  console.log('listen sondage', getSondages2());
+  getSondages2().then((data) => {
+    //get the last object of the array
+    data = data[data.length - 1];
+    console.log('data', data);
+    
+    if(data.type == 'challengePoll' || data.type == 'poll'){
+      data.choix = data.choix.split(',').map((choix, index) => {
+      return {
+        title: choix.trim(),
+        selected: false,
+      }
+    })
+    }
+    console.log('data', data);
+    interactData.value = data;
+  }).then(() => {
+    console.log('INTERACT type', interactData.value.type)
+    console.log('INTERACT choix', interactData.value.choix[1])
+
+  })
+}
 
 const getCardLikeStatus = (title) => {
   const localStorageKey = `card-${title}-state`;
@@ -105,10 +153,35 @@ const updateFiltre = (val) => {
 
 onMounted(() => {
   getShowName();
+  listenSondage();
 
   const interval = setInterval(getShowName, 10000);
+  // const interval2 = setInterval(listenSondage, 5000);
 
+
+  //   //🔵Adding a sondage in the database via API
+  // fetch('/api/sondages', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     user_id: 2,
+  //     titre: 'Test',
+  //     type: 'challengePoll',
+  //     duree: '00:00:01',
+  //     date_et_heure_publication: '2021-06-01',
+  //     choix: '12, 22, 32, 42',
+  //     bReponse: '12',
+  //   }),
+  // })
+  // .then(response => response.json())
+  // .then(data => console.log('Success:', data))
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  //  });
   onUnmounted(() => clearInterval(interval));
+  // onUnmounted(() => clearInterval(interval2));
 });
 
 const switchVideoAudio = (val) => {
@@ -121,11 +194,11 @@ const switchVideoAudio = (val) => {
         <BaseVideo v-if="videoOrAudio == 'video'"  @emit-video="switchVideoAudio($event)"/>
         <BaseAudio v-if="videoOrAudio == 'audio'" @emit-video="switchVideoAudio($event)"/>
         <Interact
-          v-if="result === null"
-          title="Vote pour la prochaine musique"
-          :options="pollFakeOption"
+          v-if="result === null && interactData !== null"
+          :title="interactData.titre"
+          :options="interactData.choix"
           @emit-poll="getResult($event)"
-          type="textInput"
+          :type="interactData.type"
         />
         <InteractResult
           v-if="result"

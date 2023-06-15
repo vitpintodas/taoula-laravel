@@ -28,4 +28,8 @@ function getSondages(nb) {
     return loadJson(`${BASE_URL}sondages/${nb}`)
 }
 
-export { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages }
+function getSondages2(){
+    return loadJson(`${BASE_URL}sondages`)
+}
+
+export { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages, getSondages2 }
