@@ -53,7 +53,6 @@ onBeforeUnmount(() => {
 });
 
 //TEST of fetch to the database via API and modify datas 
-<<<<<<< HEAD
 //   onMounted(() => {
 //     console.log('mounted')
 //     fetch('/api/users/1', {
@@ -73,7 +72,6 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 // })
-=======
   onMounted(() => {
     console.log('mounted')
     fetch('/api/users/1', {
@@ -128,7 +126,7 @@ onBeforeUnmount(() => {
   });
 
 })
->>>>>>> deeb25462499099325c32e3fbe76411ef83654af
+
 </script>
 <template>
     <!-- Utilisateur -->
