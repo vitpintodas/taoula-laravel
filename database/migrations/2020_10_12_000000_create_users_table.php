@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->unsignedBigInteger('role_id')->nullable();
-            $table->foreign('role_id')->references('id')->on('roles')->nullable()->onDelete('cascade');
+            $table->foreign('role_id')->references('id')->on('roles')->default(2)->onDelete('cascade');
 
             // monnaie virtuelle
             $table->integer('coins')->default(0);
