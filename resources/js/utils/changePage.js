@@ -25,6 +25,7 @@ export const changePage = () => {
             case "#message":
             case "#participer":
             case "#interests":
+            case "#notification":
 
             //Animateur
             case "#homeAnimateur":

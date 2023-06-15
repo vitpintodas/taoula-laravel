@@ -12,6 +12,7 @@ onMounted(async () => {
     console.log(data);
 });
 
+//Fonction permettant de partager l'application via l'API Web Share
 const shareApp = () => {
     if (navigator.share) {
     // Appelle la fonction share() de l'API Web Share avec les détails de partage
