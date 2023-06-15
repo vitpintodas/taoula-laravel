@@ -25,6 +25,7 @@
 @import 'participer.css';
 @import 'defi.css';
 @import 'baseMessage.css';
+@import 'login_register.css';
 @import 'baseVideo.css';
 
 html, body {
@@ -57,7 +58,6 @@ float: left;
 width: 30%;
 margin-right: 50px;
 }
-
 
 #hors-live, #en-live{
     font-family: var(--title2);

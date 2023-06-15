@@ -1,0 +1,32 @@
+{
+    "theme_color": "#F05CC8",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "#home",
+    "name": "Couleur 3 - Interact",
+    "short_name": "C3 Interact",
+    "description": "Couleur 3 - Interact te permettera de profiter encore plus de ta radio en int\u00e9ragissant avec tes animateurs pr\u00e9f\u00e9r\u00e9s! ",
+    "icons": [
+        {
+            "src": "/storage/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/storage/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/storage/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/storage/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

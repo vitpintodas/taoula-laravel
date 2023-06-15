@@ -1,0 +1,106 @@
+html{
+    background-color: var(--black);
+    
+}
+
+body{
+    scrollbar-width: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondBlack);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a{
+    margin-left: calc(50% - 12px);
+}
+
+.navbar a:hover{
+    filter: invert(54%) sepia(55%) saturate(2135%) hue-rotate(286deg)
+    brightness(97%) contrast(94%);
+}
+
+.py-4{
+    height: 120%;
+    font-family: var(--text);
+    background-color: var(--black);
+}
+
+.card-body{
+    background-color: var(--secondBlack);
+    
+}
+
+.col-md-4{
+    color: var(--white);
+}
+
+.form-check{
+    color: var(--white);
+}
+#remember.form-check-input:checked{
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.btn.btn-primary{
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.btn.btn-primary:hover{
+    color: var(--black);
+    --bs-btn-hover-bg: var(--white);
+    --bs-btn-hover-border-color: var(--white);
+}
+
+.btn.btn-link{
+    color: var(--pink);
+}
+
+.btn.btn-link:hover{
+    color: var(--white);
+}
+
+.registerRouteTexte{
+    color: var(--white);
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.loginRouteTexte{
+    color: var(--white);
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px){
+    .registerRouteTexte{
+        margin-left: calc(var(--bs-gutter-x) * 0.5 + 33.33333333% - 4px);
+       
+    }
+
+    .registerRoute{
+        margin-left: calc(var(--bs-gutter-x) * 0.5 + 33.33333333% - 4px);
+       
+    }
+
+    .loginRouteTexte{
+        margin-left: calc(var(--bs-gutter-x) * 0.5 + 33.33333333% - 4px);
+       
+    }
+
+    .loginRoute{
+        margin-left: calc(var(--bs-gutter-x) * 0.5 + 33.33333333% - 4px);
+       
+    }
+}
+
+
+

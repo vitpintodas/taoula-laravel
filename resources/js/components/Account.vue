@@ -1,37 +1,19 @@
 <script setup>
 import BaseSettingsButton from "../base/BaseSettingsButton.vue";
 import { getImagePath } from "../utils/getImagePath";
-</script>
 
-<script>
+// code non fonctionnel pour check si l'utilisateur est connecté
+import { ref, onMounted } from "vue";
 import axios from "axios";
 
-export default {
-    data() {
-        return {
-            user: null,
-        };
-    },
-    methods: {
-        async checkUserLoggedIn() {
-            try {
-                const reponse = await axios.get("/api/user");
-                this.user = reponse.data;
-            } catch (error) {
-                console.log(error);
-            }
-        },
-    },
-    created() {
-        this.checkUserLoggedIn();
-    },
-};
+const user = ref();
+onMounted(async () => {
+    const data = await axios.get("/api/user");
+    console.log(data);
+});
 </script>
 
 <template>
-    <div v-if="user">
-        <h1>Bonjour, je suis connecté</h1>
-    </div>
     <div id="compte" class="marginLR">
         <p class="titre">Test</p>
         <a href="#profilSettings">
