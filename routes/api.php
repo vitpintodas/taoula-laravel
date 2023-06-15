@@ -59,6 +59,7 @@ Route::delete('/playlists/{id}', [PlaylistController::class, 'destroy']);
 
 //API pour sondagesDefisConcours
 Route::get('/sondages/{id}', [SondageDefisConcourController::class, 'show']);
+Route::get('/sondages', [SondageDefisConcourController::class, 'index']);
 Route::post('/sondages', [SondageDefisConcourController::class, 'store']);
 Route::put('/sondages/{id}', [SondageDefisConcourController::class, 'update']);
 Route::delete('/sondages/{id}', [SondageDefisConcourController::class, 'destroy']);

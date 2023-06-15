@@ -6,26 +6,26 @@ import { getImagePath } from "../utils/getImagePath";
 <script>
 import axios from "axios";
 
-export default {
-    data() {
-        return {
-            user: null,
-        };
-    },
-    methods: {
-        async checkUserLoggedIn() {
-            try {
-                const reponse = await axios.get("/api/user");
-                this.user = reponse.data;
-            } catch (error) {
-                console.log(error);
-            }
-        },
-    },
-    created() {
-        this.checkUserLoggedIn();
-    },
-};
+// export default {
+//     data() {
+//         return {
+//             user: null,
+//         };
+//     },
+//     methods: {
+//         async checkUserLoggedIn() {
+//             try {
+//                 const reponse = await axios.get("/api/user");
+//                 this.user = reponse.data;
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         },
+//     },
+//     created() {
+//         this.checkUserLoggedIn();
+//     },
+// };
 </script>
 
 <template>
