@@ -4,9 +4,10 @@
   }
   
   .video-micIcon {
-    z-index: 100;
-    margin: 10px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 100px;
+    right: 10px;
+    height: 20px;
+    margin: 10px;
+    z-index: 100;
   }

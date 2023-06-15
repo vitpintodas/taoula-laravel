@@ -19,14 +19,14 @@ import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
-import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
+// import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
 
-console.log(getArtists(1));
-console.log(getUser(1));
-console.log(getTitles(1));
-console.log(getPlaylists(1));
-console.log(getResponse(1));
-console.log(getSondages(1));
+// console.log(getArtists(1));
+// console.log(getUser(1));
+// console.log(getTitles(1));
+// console.log(getPlaylists(1));
+// console.log(getResponse(1));
+// console.log(getSondages(1));
 
 const currentSection = ref("");
 
@@ -53,6 +53,25 @@ onBeforeUnmount(() => {
 });
 
 //TEST of fetch to the database via API and modify datas 
+//   onMounted(() => {
+//     console.log('mounted')
+//     fetch('/api/users/1', {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       prenom: 'caCA',
+//       nom: 'dIDIER',
+//       // et ainsi de suite pour tous les autres champs à mettre à jour
+//     }),
+//   })
+//   .then(response => response.json())
+//   .then(data => console.log('Success:', data))
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+// })
   onMounted(() => {
     console.log('mounted')
     fetch('/api/users/1', {
@@ -107,6 +126,7 @@ onBeforeUnmount(() => {
   });
 
 })
+
 </script>
 <template>
     <!-- Utilisateur -->

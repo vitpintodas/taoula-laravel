@@ -1,3 +1,6 @@
+{{-- ici on injecte le css --}}
+    @vite('resources/css/app.css')
+
 @extends('layouts.app')
 
 @section('content')
@@ -106,6 +109,10 @@
                             </div>
                         </div>
                     </form>
+                    <p class="loginRouteTexte">Déjà inscrit ?</p>
+                    <button class="btn btn-primary loginRoute" onclick="window.location.href = '{{ route('login') }}'">
+    {{ __('Login') }}
+</button>
                 </div>
             </div>
         </div>
