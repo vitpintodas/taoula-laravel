@@ -11,6 +11,26 @@ onMounted(async () => {
     const data = await axios.get("/api/user");
     console.log(data);
 });
+
+const shareApp = () => {
+    if (navigator.share) {
+    // Appelle la fonction share() de l'API Web Share avec les détails de partage
+    navigator.share({
+      title: 'Couleur 3 - Interact',
+      text: 'Couleur 3 - Interact te permettera de profiter encore plus de ta radio en int\u00e9ragissant avec tes animateurs pr\u00e9f\u00e9r\u00e9s!',
+      url: 'https://taoula-pingouin.heig-vd.ch/#home' // L'URL de ton application
+    })
+      .then(() => {
+        console.log('Partage réussi !');
+      })
+      .catch((error) => {
+        console.log('Erreur lors du partage :', error);
+      });
+  } else {
+    console.log('L\'API Web Share n\'est pas prise en charge par ce navigateur.');
+  }
+}
+
 </script>
 
 <template>
@@ -36,7 +56,7 @@ onMounted(async () => {
     <div id="aPropos" class="marginT">
         <p class="small-description marginLR">À propos</p>
         <BaseSettingsButton title="Envoyer un message à C3" type="message" link="#message" />
-        <BaseSettingsButton title="Partager l'application" type="share" link="#share" />
+        <BaseSettingsButton id="bouton-partage" title="Partager l'application" type="share" @click="shareApp" />
         <BaseSettingsButton title="Aide" type="help" link="#help" />
         <BaseSettingsButton title="À propos" type="about" link="#about" />
     </div>
