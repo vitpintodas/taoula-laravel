@@ -26,6 +26,7 @@
 @import 'defi.css';
 @import 'baseMessage.css';
 @import 'video.css';
+@import 'login_register.css';
 
 html, body {
     max-width: 100%;
@@ -57,7 +58,6 @@ float: left;
 width: 30%;
 margin-right: 50px;
 }
-
 
 #hors-live, #en-live{
     font-family: var(--title2);
