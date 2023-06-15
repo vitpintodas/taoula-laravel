@@ -1,30 +1,38 @@
-const CACHE_NAME = 'c3-interact-cache--v1';
-const urlsToCache = [
-  '/js/app.js',
-  '/css/app.css',
-  '/storage/icon-192x192.png',
-    '/storage/icon-512x512.png',
-    '/storage/icon-384x384.png',
-    '/storage/icon-256x256.png',
-    '/storage/stickers.jpg',
-    '/storage/studio.jpg',
-    '/storage/stylo.jpg',
-    '/storage/t-shirt.jpg',
-    '/storage/tablier.jpg',
-];
+self.addEventListener('push', (event) => {
+  const data = event.data ? event.data.json() : {};
 
-self.addEventListener('install', (event) => {
+  const options = {
+    body: data.body || 'Nouvelle notification',
+    icon: '/storage/notification.svg',
+    badge: '/storage/c3-logo.svg',
+    vibrate: [200, 100, 200],
+    data: {
+      url: data.url || '/',
+    },
+  };
+
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
+    self.registration.showNotification(data.title || 'Notification', options)
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => response || fetch(event.request))
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  const url = event.notification.data.url;
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window' })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === url && 'focus' in client) {
+            return client.focus();
+          }
+        }
+
+        if (clients.openWindow) {
+          return clients.openWindow(url);
+        }
+      })
   );
 });
-
-

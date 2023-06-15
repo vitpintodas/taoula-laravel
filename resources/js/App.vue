@@ -20,6 +20,7 @@ import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
 import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
+import Notification from "./components/Notification.vue";
 
 // console.log(getArtists(2));
 // console.log(getUser(2));
@@ -139,7 +140,8 @@ onBeforeUnmount(() => {
             currentSection === 'gifts' ||
             currentSection === 'message' ||
             currentSection === 'participer' ||
-            currentSection === 'interests'
+            currentSection === 'interests' ||
+            currentSection === 'notification'
         "
     >
         <TheHeader />
@@ -161,6 +163,7 @@ onBeforeUnmount(() => {
         <div id="message-section"><MessageCouleur3 /></div>
         <div id="participer-section"><Participer /></div>
         <div id="interests-section"><Interests /></div>
+        <div id="notification-section"><Notification /></div>
 
         <BaseNotification
             type="brokenLike"
