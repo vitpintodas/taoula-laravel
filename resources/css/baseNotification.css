@@ -15,7 +15,7 @@
 }
 
 .baseNotificationContainerActive {
-    animation: slideNotification 5s 2s ease-in-out 1;
+    animation: slideNotification 5s 1s ease-in-out 1;
 }
 
 @keyframes slideNotification {

@@ -167,11 +167,11 @@ onBeforeUnmount(() => {
         <div id="gifts-section">
             <Shop />
             <BaseNotification
-                type="brokenLike"
+                type="contest"
                 :active="true"
                 link="#test"
-                title="Inscris-toi"
-                description="Inscris-toi pour pouvoir liker du contenu"
+                title="Félicitations !"
+                description="Laura tu es l'heureuse gagnante du billet pour Paléo"
             />
         </div>
         <div id="message-section"><MessageCouleur3 /></div>
