@@ -32,16 +32,20 @@ const cardData = ref([]);
 
 const fakeResults = ref([
   {
-    title: 'Iggy Pop the passenger',
+    title: 'Iggy Pop - the passenger',
     value: 21,
   },
   {
-    title: 'All star smash mouth',
+    title: 'All star - smash mouth',
     value: 3,
   },
   {
-    title: 'The Beatles Hey Jude',
+    title: 'The Beatles - Hey Jude',
     value: 22,
+  },
+  {
+    title: 'Post Malone - Sunflower',
+    value: 41,
   },
 ]);
 
@@ -50,23 +54,23 @@ const result = ref(null);
 const getResult = (theResult) => {
   console.log('getResult', theResult)
   //s'occupe de récupérer le résultat du sondage
-  result.value = theResult;
-  //TODO: Envoyer les résultats à la bd
-  fetch('/api/reponses', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      sondageDefisConcours_id: 1,
-      reponse: 'test',
-    }),
-  })
-  .then(response => response.json())
-  .then(data => console.log('Success:', data))
-  .catch((error) => {
-    console.error('Error:', error);
-   });
+  //FIXME:
+  // result.value = theResult;
+  // fetch('/api/reponses', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     sondageDefisConcours_id: 1,
+  //     reponse: 'test',
+  //   }),
+  // })
+  // .then(response => response.json())
+  // .then(data => console.log('Success:', data))
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  //  });
 
   //s'occupe de mettre les résultats en pourcentage
   let total = 0;
@@ -77,6 +81,7 @@ const getResult = (theResult) => {
   fakeResults.value.forEach((element) => {
     element.value = Math.round((element.value * 100) / total);
   });
+  result.value = true;
 };
 
 //s'occupe de récupérer le nom de l'émission
@@ -202,7 +207,7 @@ const switchVideoAudio = (val) => {
         />
         <InteractResult
           v-if="result"
-          :interactType="'text'"
+          :interactType="'poll'"
           :results="fakeResults"
         />
       </div>
