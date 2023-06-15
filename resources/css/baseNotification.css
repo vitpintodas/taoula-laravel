@@ -15,7 +15,7 @@
 }
 
 .baseNotificationContainerActive {
-    animation: slideNotification 10s 0s ease-in-out 1;
+    animation: slideNotification 5s 2s ease-in-out 1;
 }
 
 @keyframes slideNotification {
@@ -33,13 +33,12 @@
     }
 }
 
-
 .baseNotification-type {
     display: flex;
     min-width: 86px;
     height: 74px;
     background: var(--pink);
-    
+
     border-radius: 10px 0px 0px 10px;
     justify-content: center;
     align-items: center;

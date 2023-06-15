@@ -19,7 +19,14 @@ import Message from "./components/Animateur/Message.vue";
 import MusicChoice from "./components/Animateur/MusicChoice.vue";
 import InformationsLive from "./components/Animateur/InformationsLive.vue";
 import Vote from "./components/Animateur/Vote.vue";
-import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages } from "./utils/loadJson";
+import {
+    getArtists,
+    getUser,
+    getTitles,
+    getPlaylists,
+    getResponse,
+    getSondages,
+} from "./utils/loadJson";
 import Notification from "./components/Notification.vue";
 
 // console.log(getArtists(2));
@@ -53,7 +60,7 @@ onBeforeUnmount(() => {
     removeHashChangeListener();
 });
 
-//🔵TEST of fetch to the database via API and modify datas 
+//🔵TEST of fetch to the database via API and modify datas
 //   onMounted(() => {
 //     console.log('mounted')
 //     fetch('/api/users/1', {
@@ -116,7 +123,6 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 
-
 //   fetch('/api/users/1', {
 //     method: 'DELETE',
 //   })
@@ -126,7 +132,6 @@ onBeforeUnmount(() => {
 //   });
 
 // })
-
 </script>
 <template>
     <!-- Utilisateur -->
@@ -159,19 +164,22 @@ onBeforeUnmount(() => {
         <div id="live-section"><Live /></div>
         <div id="favorites-section"><Favorites /></div>
         <div id="account-section"><Account /></div>
-        <div id="gifts-section"><Shop /></div>
+        <div id="gifts-section">
+            <Shop />
+            <BaseNotification
+                type="brokenLike"
+                :active="true"
+                link="#test"
+                title="Inscris-toi"
+                description="Inscris-toi pour pouvoir liker du contenu"
+            />
+        </div>
         <div id="message-section"><MessageCouleur3 /></div>
         <div id="participer-section"><Participer /></div>
         <div id="interests-section"><Interests /></div>
-        <div id="notification-section"><Notification /></div>
-
-        <BaseNotification
-            type="brokenLike"
-            :active="false"
-            link="#test"
-            title="Inscris-toi"
-            description="Inscris toi pour pouvoir liker du contenu"
-        />
+        <div id="notification-section">
+            <Notification />
+        </div>
     </template>
 
     <!-- Animateur -->
