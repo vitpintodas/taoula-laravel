@@ -182,7 +182,7 @@ const updateFiltre = (val) => {
                 <BaseLabel v-for="interest in interests" :key="interest" :class="{interestSelected:  interest.selected}" :title="interest.name" @click="addInterest(interest)"/>
             </div>
 
-            <BaseButton title="Envoyer" size="large"/>
+            <BaseButton title="Envoyer" size="large" link="#home"/>
     </div>
 </template>
 
