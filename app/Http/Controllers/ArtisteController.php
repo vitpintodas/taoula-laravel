@@ -20,7 +20,8 @@ class ArtisteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $artiste = Artiste::create($request->all());
+        return response()->json($artiste);
     }
 
     /**
@@ -37,7 +38,9 @@ class ArtisteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $artiste = Artiste::findOrFail($id);
+        $artiste->update($request->all());
+        return response()->json($artiste, 200);
     }
 
     /**
@@ -45,6 +48,9 @@ class ArtisteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $artiste = Artiste::findOrFail($id);
+        $artiste->delete();
+
+        return response()->json(null, 204);
     }
 }

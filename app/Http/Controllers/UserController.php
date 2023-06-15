@@ -20,12 +20,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        User::create($request->only("prenom", "nom", "pseudo", "email", "password", "role_id", "coins", "NPA", "localite", "rue"));
-        return response()->json([
-            "data" => [
-                "success" => true
-            ]
-        ]);
+        $user = User::create($request->all());
+        return response()->$user;
     }
 
     /**
@@ -53,6 +49,9 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return response()->json(null, 204);
     }
 }

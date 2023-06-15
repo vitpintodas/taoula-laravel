@@ -20,7 +20,8 @@ class ReponseController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $reponse = Reponse::findOrFail($request);
+        return response()->json($reponse);
     }
 
     /**
@@ -37,7 +38,9 @@ class ReponseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $reponse = Reponse::findOrFail($id);
+        $reponse->update($request->all());
+        return response()->json($reponse, 200);
     }
 
     /**
@@ -45,6 +48,9 @@ class ReponseController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $reponse = Reponse::findOrFail($id);
+        $reponse->delete();
+
+        return response()->json(null, 204);
     }
 }

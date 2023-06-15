@@ -53,6 +53,7 @@ onBeforeUnmount(() => {
 });
 
 //TEST of fetch to the database via API and modify datas 
+<<<<<<< HEAD
 //   onMounted(() => {
 //     console.log('mounted')
 //     fetch('/api/users/1', {
@@ -72,6 +73,62 @@ onBeforeUnmount(() => {
 //     console.error('Error:', error);
 //   });
 // })
+=======
+  onMounted(() => {
+    console.log('mounted')
+    fetch('/api/users/1', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prenom: 'Léo',
+      nom: 'Chollet',
+      // et ainsi de suite pour tous les autres champs à mettre à jour
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+  //Adding a user in the database via API
+  fetch('/api/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prenom: 'Léo',
+      nom: 'Chollet',
+      pseudo: 'didier124',
+      email: 'didier@gmail.com',
+      password: 'Test2023__$',
+      role_id: 1,
+      coins: 669,
+      NPA: 1110,
+      localite: 'Morges',
+      rue: 'Rue de la gare 1',
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+  //Deleting a user in the database via API
+  fetch('/api/users/1', {
+    method: 'DELETE',
+  })
+  .then(response => console.log('Success:', response.status))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+})
+>>>>>>> deeb25462499099325c32e3fbe76411ef83654af
 </script>
 <template>
     <!-- Utilisateur -->
