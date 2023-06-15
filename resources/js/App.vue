@@ -25,8 +25,8 @@ import  { getArtists, getUser, getTitles, getPlaylists, getResponse, getSondages
 // console.log(getUser(2));
 // console.log(getTitles(1));
 // console.log(getPlaylists(1));
-console.log(getResponse(1));
-console.log(getSondages(1));
+// console.log(getResponse(1));
+// console.log(getSondages(1));
 
 const currentSection = ref("");
 
