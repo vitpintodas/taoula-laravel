@@ -6,7 +6,6 @@ import { getImagePath } from "../utils/getImagePath";
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
-<<<<<<< HEAD
 // export default {
 //     data() {
 //         return {
@@ -27,7 +26,7 @@ import axios from "axios";
 //         this.checkUserLoggedIn();
 //     },
 // };
-=======
+
 const user = ref();
 onMounted(async () => {
     const data = await axios.get("/api/user");
@@ -53,7 +52,6 @@ const shareApp = () => {
   }
 }
 
->>>>>>> 9dbd046a99c3cad1204e22875eb9dbbe313e9e21
 </script>
 
 <template>
